@@ -1,0 +1,111 @@
+.footer{
+    width: 100%;
+    background-color: #e7dbd9;
+    padding-top: 90px;
+    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/*T 上部階層まとめ*/
+.footer_top{
+    font-family: 'Zen Kaku Gothic NEW';
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer_top a{
+    text-decoration: none;
+    color: #3E3A39;
+}
+hr{
+    width: 150px;
+    border: none;
+    border-bottom: #3E3A39 solid 3px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+/*M 中部階層まとめ*/
+.footer_list_cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*L 左側リンク*/
+.footer_left_list{
+    display: flex;
+    flex-direction: column;
+}
+h5{
+    width: 300px;
+    font-family: 'Zen Kaku Gothic NEW';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 15.5px 0 15.5px 0;
+}
+h5 a{
+    text-decoration: none;
+    color: #3E3A39;
+}
+
+/*I 内側装飾*/
+.footer_logo{
+    max-width: 360px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.footer_line{
+    display: none;
+}
+
+/*R 右側リンク*/
+.footer_right_list{
+    display: flex;
+    flex-direction: column;
+}
+.footer_event_list{
+    height: 180px;
+    font-size: 10px;
+    margin: 0 0 0 70px;
+}
+li {
+    width: fit-content;
+    font-family: 'Zen Kaku Gothic NEW';
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+li a{
+    text-decoration: none;
+    color: #3E3A39;
+}
+
+/*B 下部階層まとめ*/
+.footer_bottom_cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer_icon_logo{
+    display: none;
+}
+.footer_icon{
+    max-width: 40px;
+    margin: 10px;
+}
+
+/*レスポンシブ*/
+.mobile_view{
+    display: none;
+}
+.mobile_none{
+    display: block;
+}
