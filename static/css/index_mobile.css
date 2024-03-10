@@ -1,9 +1,12 @@
+
 .line-blue {
                     text-decoration: underline;
                     border-bottom: solid 3px #7290be;
                     padding-bottom: .2em;
                     border-radius: 5px;
                     font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;    
+                    font-weight: bold;
                   }
 
 .line-sakura {
@@ -12,6 +15,9 @@
                     padding-bottom: .2em;
                     border-radius: 5px;
                     font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+
                   }
 
 .line-green {
@@ -20,6 +26,8 @@
                     padding-bottom: .2em;
                     border-radius: 5px;
                     font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
                   }
 
 .line-orange {
@@ -28,6 +36,8 @@
                     padding-bottom: .2em;
                     border-radius: 5px;
                     font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
                   }
 
 .line-rose {
@@ -36,4 +46,5 @@
                     padding-bottom: .2em;
                     border-radius: 5px;
                     font-size: 18px;
+                    font-weight: bold;
                   }
