@@ -1,0 +1,29 @@
+@media print, screen and (min-width: 1024px){
+    /* header */
+    header{
+    width: 100%;
+    height: 60px;
+    background-color: #efeae9;
+    position: fixed;
+    top: 0;
+    }
+
+    .header-logo{
+        height: 100%;
+    }
+
+    .header-hambuger{
+        width: 40px;
+        height: 32px;
+        position: relative;
+    }
+
+    .hanburger-sen{
+        display: block;
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background: #efeae9;
+    }
+}
