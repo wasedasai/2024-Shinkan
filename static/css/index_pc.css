@@ -1,0 +1,39 @@
+.line-blue {
+                    text-decoration: underline;
+                    border-bottom: solid 3px #7290be;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 30px;
+                  }
+
+.line-sakura {
+                    text-decoration: underline;
+                    border-bottom: solid 3px #efb2a2;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 30px;
+                  }
+
+.line-green {
+                    text-decoration: underline;
+                    border-bottom: solid 3px #8daca9;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 30px;
+                  }
+
+.line-orange {
+                    text-decoration: underline;
+                    border-bottom: solid 3px #e9a767;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 30px;
+                  }
+
+
+.line-rose {
+                    text-decoration: underline;
+                    border-bottom: solid 3px #e06d71;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                  }
