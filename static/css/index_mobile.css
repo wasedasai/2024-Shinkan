@@ -1,4 +1,4 @@
-.line-blue {
+.blocktitle-blue {
                     text-decoration: underline;
                     border-bottom: solid 3px #7290be;
                     padding-bottom: .2em;
@@ -8,7 +8,7 @@
                     font-weight: bold;
                   }
 
-.line-sakura {
+.blocktitle-sakura {
                     text-decoration: underline;
                     border-bottom: solid 3px #efb2a2;
                     padding-bottom: .2em;
@@ -19,7 +19,7 @@
 
                   }
 
-.line-green {
+.blocktitle-green {
                     text-decoration: underline;
                     border-bottom: solid 3px #8daca9;
                     padding-bottom: .2em;
@@ -29,7 +29,7 @@
                     font-weight: bold;
                   }
 
-.line-orange {
+.blocktitle-orange {
                     text-decoration: underline;
                     border-bottom: solid 3px #e9a767;
                     padding-bottom: .2em;
@@ -39,7 +39,7 @@
                     font-weight: bold;
                   }
 
-.line-rose {
+.blocktitle-rose {
                     text-decoration: underline;
                     border-bottom: solid 3px #e06d71;
                     padding-bottom: .2em;
