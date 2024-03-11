@@ -1,9 +1,10 @@
-@media print, screen and (max-width: 1024px){
-    .hero_sp{
+
+@media print, screen and (min-width: 1024px){
+  
+.hero_sp{
         position: relative;
     }
-
-    .hero_pc{
+.hero_pc{
         display: none;
     }
 
@@ -11,7 +12,7 @@
         width: 100%;
     }
 
-    h1{
+ h1{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -25,4 +26,173 @@
         font-weight: bold;
         color: #3e3a39;
     }
+  
+.blocktitle-blue {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #7290be;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;    
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-sakura {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #efb2a2;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+
+                  }
+
+.blocktitle-green {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #8daca9;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-orange {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #e9a767;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-rose {
+                    color: #3e3a39;                
+                    border-bottom: solid 3px #e06d71;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+.footer{
+    width: 100%;
+    margin: 0;
+    background-color: #e7dbd9;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/*T 上部階層まとめ*/
+/*消去*/
+.footer_top{
+    display: none;
+}
+/*消去*/
+hr{
+    width: 150px;
+    border: none;
+    border-bottom: #3E3A39 solid 3px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/*M 中部階層まとめ*/
+.footer_list_cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*L 左側リンク*/
+.footer_left_list{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+}
+h5{
+    width: 120px;
+    font-family: 'Zen Kaku Gothic NEW';
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+h5 a{
+    text-decoration: none;
+    color: #3E3A39;
+}
+
+/*I 内側装飾*/
+/*消去*/
+.footer_logo{
+    display: none;
+}
+.footer_line{
+    content: "";
+    width: 1px;
+    height: 120px;
+    margin-top: 15px;
+    background-color: #3E3A39;
+}
+
+/*R 右側リンク*/
+.footer_right_list{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+/*消去*/
+.footer_event_list{
+    display: none;
+}
+
+/*B 下部階層まとめ*/
+.footer_bottom_cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.footer_icon_logo{
+    max-width: 100px;
+    margin-right: 10vw;
+}
+.footer_icon_cover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer_icon{
+    max-width: 30px;
+    margin: 5px;
+}
+
+/*レスポンシブ*/
+.mobile_view{
+    display: block;
+}
+.mobile_none{
+    display: none;
+}
+  
+  .paragraph{
+    letter-spacing: 0.1px;
+    line-height: 22px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color:#3e3a39;;
+ }
 }
