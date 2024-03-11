@@ -1,0 +1,18 @@
+@media print, screen and (min-width: 1024px){
+   .hero_pc{
+    position:relative;
+   }
+   .hero_01{
+    width:100%;
+   }
+   .hero_pc p{
+    position:absolute;
+    top:50%;
+    left:50%
+    margin：0;
+padding:0;
+font-size: 3vw;
+font-family:"Noto Sans JP";
+color:#3e3a39;
+}
+}
