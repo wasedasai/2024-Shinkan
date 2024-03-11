@@ -1,2 +1,59 @@
-@media print, screen and (min-width: 1024px){
+@media print, screen and (min-width: 1024px){<<<<<<< blocktitle-moeko
+
+.blocktitle-blue {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #7290be;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;    
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-sakura {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #efb2a2;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+
+                  }
+
+.blocktitle-green {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #8daca9;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-orange {
+                    color: #3e3a39;
+                    border-bottom: solid 3px #e9a767;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
+.blocktitle-rose {
+                    color: #3e3a39;                
+                    border-bottom: solid 3px #e06d71;
+                    padding-bottom: .2em;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: inline-block;
+                  }
+
 }
+

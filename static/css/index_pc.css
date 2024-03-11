@@ -1,2 +1,52 @@
-@media print, screen and (min-width: 1024px){
+@media print, screen and (min-width: 1024px){<<<<<<< blocktitle-moeko
+.blocktitle-blue {
+                   color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #7290be;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
+                  }
+
+.blocktitle-sakura {
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #efb2a2;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
+                  }
+
+.blocktitle-green {  
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #8daca9;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
+                  }
+
+.blocktitle-orange {
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #e9a767;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
+                  }
+
+
+.blocktitle-rose {
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #e06d71;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
+                  }
 }
