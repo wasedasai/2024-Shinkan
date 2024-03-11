@@ -2,13 +2,20 @@
    .hero_pc{
     position:relative;
    }
-   .hero_01{
+   .hero_sp{
+    display:none;
+   }
+   .herophoto1{
     width:100%;
+    height:170px;
    }
    .hero_pc p{
     position:absolute;
     top:50%;
     left:50%;
+    -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
     margin :0;
 padding:0;
 font-size: 3vw;

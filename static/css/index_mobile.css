@@ -3,7 +3,10 @@
     .hero_sp{
         position: relative;
 }
-.hero_02{
+.hero_pc{
+    display: none;
+}
+.herophoto2{
     width:100%;
 }
 .hero_sp p{
