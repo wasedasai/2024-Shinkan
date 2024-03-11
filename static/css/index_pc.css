@@ -1,3 +1,4 @@
+@media print, screen and (min-width: 1024px){<<<<<<< blocktitle-moeko
 .blocktitle-blue {
                    color: #3e3a39;
                     font-family: "Noto Sans JP", sans-serif;  
@@ -48,3 +49,4 @@
                     font-size: 30px;
                     display: inline-block;
                   }
+}
