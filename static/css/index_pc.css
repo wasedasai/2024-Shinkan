@@ -160,6 +160,14 @@ li a{
 .mobile_none{
     display: block;
 }
-
+.paragraph{
+    width:100%;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    color:#3e3a39;
 }
-
+}
