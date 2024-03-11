@@ -1,39 +1,50 @@
 .blocktitle-blue {
-                    text-decoration: underline;
-                    border-bottom: solid 3px #7290be;
-                    padding-bottom: .2em;
-                    border-radius: 5px;
+                   color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #7290be;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
                     font-size: 30px;
+                    display: inline-block;
                   }
 
 .blocktitle-sakura {
-                    text-decoration: underline;
-                    border-bottom: solid 3px #efb2a2;
-                    padding-bottom: .2em;
-                    border-radius: 5px;
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #efb2a2;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
                     font-size: 30px;
+                    display: inline-block;
                   }
 
-.blocktitle-green {
-                    text-decoration: underline;
-                    border-bottom: solid 3px #8daca9;
-                    padding-bottom: .2em;
-                    border-radius: 5px;
+.blocktitle-green {  
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #8daca9;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
                     font-size: 30px;
+                    display: inline-block;
                   }
 
 .blocktitle-orange {
-                    text-decoration: underline;
-                    border-bottom: solid 3px #e9a767;
-                    padding-bottom: .2em;
-                    border-radius: 5px;
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #e9a767;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
                     font-size: 30px;
+                    display: inline-block;
                   }
 
 
 .blocktitle-rose {
-                    text-decoration: underline;
-                    border-bottom: solid 3px #e06d71;
-                    padding-bottom: .2em;
-                    border-radius: 5px;
+                    color: #3e3a39;
+                    font-family: "Noto Sans JP", sans-serif;  
+                    border-bottom: solid 5px #e06d71;
+                    padding-bottom: .1em;
+                    border-radius: 2px;
+                    font-size: 30px;
+                    display: inline-block;
                   }
