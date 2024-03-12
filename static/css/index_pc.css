@@ -4,12 +4,10 @@
     .header {
         height: 90px;
         background-color: #efeae9;
-        position: sticky;
-        /* position: fixed; */
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 100;
     }
       
     .header-container {
