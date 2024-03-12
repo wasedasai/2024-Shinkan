@@ -7,11 +7,11 @@
     .header {
         height: 70px;
         background-color: #efeae9;
-        position: fixed;
+        position: sticky;
+        /* position: fixed; */
         top: 0;
         left: 0;
         right: 0;
-
         z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
     }
       
@@ -172,7 +172,7 @@
         width: 100%;
     }
 
-    h1{
+    .hero_sp h1{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -342,7 +342,7 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
+
     .squarelink-blue > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-blue.png);
         transform: scale(0.06); /*花びらのサイズ*/
@@ -422,7 +422,7 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
+
     .squarelink-yellow > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-yellow.png);
         transform: scale(0.06); /*花びらのサイズ*/

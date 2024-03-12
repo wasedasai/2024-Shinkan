@@ -8,11 +8,11 @@
     .header {
         height: 90px;
         background-color: #efeae9;
-        position: fixed;
+        position: sticky;
+        /* position: fixed; */
         top: 0;
         left: 0;
         right: 0;
-        
         z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
     }
       
@@ -28,8 +28,8 @@
     }
       
     .header-logo_pc img{
-        padding-top: 10px;
-        height: 70px;
+        padding-top: 5px;
+        height: 80px;
     }
       
     .header-logo_sp img{
@@ -183,7 +183,7 @@
         width:100%;
     }
  
-    h1{
+    .hero_pc h1{
         position:absolute;
         top:50%;
         left:50%;
@@ -513,7 +513,7 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-
+  
     .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-rose.png);
         transform: scale(0.08); /*花びらのサイズ*/
