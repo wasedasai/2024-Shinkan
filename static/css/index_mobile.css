@@ -7,8 +7,7 @@
     .header {
         height: 70px;
         background-color: #efeae9;
-        position: sticky;
-        /* position: fixed; */
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
