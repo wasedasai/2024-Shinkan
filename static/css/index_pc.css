@@ -46,18 +46,12 @@
     .sectiontitle img{
         width: 58px;
     }
-    
-    .sectiontitle{
-        color:#3e3a39;
-        font-family: "Zen Kaku Gothic NEW";
-        font-weight: bold;
-        position: relative;
-    }
 
-    /* BlockTitle */
+    /* BlockTitle　blocktitleのhtmlは文字の前後に空白つけたままで！ */
     .blocktitle-red{
-        color: #3E3A39;
+        color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #b53240;
         padding-bottom: .1em;
         border-radius: 2px;
@@ -68,6 +62,7 @@
     .blocktitle-blue{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #7290be;
         padding-bottom: .1em;
         border-radius: 2px;
@@ -78,6 +73,7 @@
     .blocktitle-sakura{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #efb2a2;
         padding-bottom: .1em;
         border-radius: 2px;
@@ -88,6 +84,7 @@
     .blocktitle-yellow{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #e9a767;
         padding-bottom: .1em;
         border-radius: 2px;
@@ -98,6 +95,7 @@
     .blocktitle-green{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #8daca9;
         padding-bottom: .1em;
         border-radius: 2px;
@@ -108,11 +106,253 @@
     .blocktitle-rose{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
         border-bottom: solid 5px #e06d71;
         padding-bottom: .1em;
         border-radius: 2px;
         font-size: 30px;
         display: inline-block;
+    }
+
+    /* SquareLink */
+    .squarelink-red a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-red {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #b53240;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-red a::before {
+        content: url(../css/img/hanabira3-red.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-blue a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-blue {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #7290be;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-blue a::before {
+        content: url(../css/img/hanabira3-blue.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-sakura a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-sakura {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #efb2a2;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-sakura a::before {
+        content: url(../css/img/hanabira3-sakura.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-yellow a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-yellow {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e9a767;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-yellow a::before {
+        content: url(../css/img/hanabira3-yellow.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-green a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-green {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #8daca9;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-green a::before {
+        content: url(../css/img/hanabira3-green.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-rose a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-rose {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e06d71;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-rose a::before {
+        content: url(../css/img/hanabira3-rose.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
     }
     
     /* Footer */
