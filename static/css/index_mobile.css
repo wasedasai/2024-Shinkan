@@ -1,4 +1,8 @@
 @media print, screen and (max-width: 1023px){
+    body {
+        margin: 0;/*3/12yaga > hero,footerの横に隙間があったため追加*/
+    }
+
     /* Header */
     .header {
         height: 70px;
@@ -7,6 +11,7 @@
         top: 0;
         left: 0;
         right: 0;
+        z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
     }
       
     .header-container {
@@ -150,6 +155,10 @@
     }
   
     /* Hero */
+    .Hero{
+        margin-top: 70px;
+    }
+
     .hero_sp{
         position: relative;
     }
@@ -293,7 +302,7 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
     
-    .squarelink-red a::before {
+    .squarelink-red > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-red.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -332,8 +341,8 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
-    .squarelink-blue a::before {
+
+    .squarelink-blue > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-blue.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -373,7 +382,7 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
     
-    .squarelink-sakura a::before {
+    .squarelink-sakura > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-sakura.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -412,8 +421,8 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
-    .squarelink-yellow a::before {
+
+    .squarelink-yellow > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-yellow.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -453,7 +462,7 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
     
-    .squarelink-green a::before {
+    .squarelink-green > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-green.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -493,7 +502,7 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
     
-    .squarelink-rose a::before {
+    .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-rose.png);
         transform: scale(0.06); /*花びらのサイズ*/
         display: inline-block;
@@ -546,15 +555,14 @@
         flex-direction: column;
         margin-right: 5vw;
     }
-    h5{
+    .footer_left_list > a,
+    .footer_right_list > a{  /*3/12yaga > 干渉防止のタグ修正*/
         width: 120px;
         font-family: 'Zen Kaku Gothic NEW';
         font-size: 14px;
         font-weight: 700;
         text-align: center;
         margin: 5px 0 5px 0;
-    }
-    h5 a{
         text-decoration: none;
         color: #3E3A39;
     }
