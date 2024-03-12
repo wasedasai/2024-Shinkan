@@ -4,10 +4,12 @@
     .header {
         height: 90px;
         background-color: #efeae9;
-        position: fixed;
+        position: sticky;
+        /* position: fixed; */
         top: 0;
         left: 0;
         right: 0;
+        z-index: 100;
     }
       
     .header-container {
@@ -22,8 +24,8 @@
     }
       
     .header-logo_pc img{
-        padding-top: 10px;
-        height: 70px;
+        padding-top: 5px;
+        height: 80px;
     }
       
     .header-logo_sp img{
@@ -160,7 +162,7 @@
         right: 0;
     }
     
-  /* Hero */
+    /* Hero */
     .hero_pc{
         position:relative;
     }
@@ -173,7 +175,7 @@
         width:100%;
     }
  
-    h1{
+    .hero_pc h1{
         position:absolute;
         top:50%;
         left:50%;
@@ -305,7 +307,7 @@
     }
 
     .squarelink-red a::before {
-        content: url(../css/img/hanabira3-red.png);
+        content: url(../img/hanabira3-red.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -345,7 +347,7 @@
     }
 
     .squarelink-blue a::before {
-        content: url(../css/img/hanabira3-blue.png);
+        content: url(../img/hanabira3-blue.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -385,7 +387,7 @@
     }
 
     .squarelink-sakura a::before {
-        content: url(../css/img/hanabira3-sakura.png);
+        content: url(../img/hanabira3-sakura.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -425,7 +427,7 @@
     }
 
     .squarelink-yellow a::before {
-        content: url(../css/img/hanabira3-yellow.png);
+        content: url(../img/hanabira3-yellow.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -465,7 +467,7 @@
     }
 
     .squarelink-green a::before {
-        content: url(../css/img/hanabira3-green.png);
+        content: url(../img/hanabira3-green.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -505,7 +507,7 @@
     }
 
     .squarelink-rose a::before {
-        content: url(../css/img/hanabira3-rose.png);
+        content: url(../img/hanabira3-rose.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
