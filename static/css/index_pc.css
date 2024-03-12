@@ -1,5 +1,9 @@
 
 @media print, screen and (min-width: 1024px){
+    body {
+        margin: 0;/*3/12yaga > hero,footerの横に隙間があったため追加*/
+    }
+
     /* Header */
     .header {
         height: 90px;
@@ -8,6 +12,8 @@
         top: 0;
         left: 0;
         right: 0;
+        
+        z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
     }
       
     .header-container {
@@ -161,6 +167,10 @@
     }
     
   /* Hero */
+    .Hero{
+        margin-top: 90px;
+    }
+
     .hero_pc{
         position:relative;
     }
@@ -304,8 +314,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-red a::before {
-        content: url(../css/img/hanabira3-red.png);
+    .squarelink-red > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-red.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -344,8 +354,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-blue a::before {
-        content: url(../css/img/hanabira3-blue.png);
+    .squarelink-blue > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-blue.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -384,8 +394,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-sakura a::before {
-        content: url(../css/img/hanabira3-sakura.png);
+    .squarelink-sakura > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-sakura.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -424,8 +434,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-yellow a::before {
-        content: url(../css/img/hanabira3-yellow.png);
+    .squarelink-yellow > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-yellow.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -464,8 +474,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-green a::before {
-        content: url(../css/img/hanabira3-green.png);
+    .squarelink-green > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-green.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -504,8 +514,8 @@
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
 
-    .squarelink-rose a::before {
-        content: url(../css/img/hanabira3-rose.png);
+    .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-rose.png);
         transform: scale(0.08); /*花びらのサイズ*/
         display: inline-block;
         vertical-align: middle;
@@ -537,7 +547,7 @@
         text-align: center;
         margin-bottom: 10px;
     }
-    .footer_top a{
+    .footer_top > a{ /*3/12yaga > 干渉防止のタグ制限「>」*/
         text-decoration: none;
         color: #3E3A39;
     }
@@ -561,15 +571,14 @@
         display: flex;
         flex-direction: column;
     }
-    h5{
+    .footer_left_list > a,
+    .footer_right_list > a{ /*3/12yaga > 干渉防止のタグ修正*/
         width: 300px;
         font-family: 'Zen Kaku Gothic NEW';
         font-size: 20px;
         font-weight: 700;
         text-align: center;
         margin: 15.5px 0 15.5px 0;
-    }
-    h5 a{
         text-decoration: none;
         color: #3E3A39;
     }
@@ -594,14 +603,14 @@
         font-size: 10px;
         margin: 0 0 0 70px;
     }
-    li {
+    .footer_event_list > li { /*3/12yaga > 干渉防止のタグ制限*/
         width: fit-content;
         font-family: 'Zen Kaku Gothic NEW';
         font-size: 13px;
         margin-bottom: 15px;
         font-weight: 700;
     }
-    li a{
+    .footer_event_list > li > a{ /*3/12yaga > 干渉防止のタグ制限*/
         text-decoration: none;
         color: #3E3A39;
     }
