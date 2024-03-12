@@ -1,6 +1,6 @@
 
 @media print, screen and (min-width: 1024px){
-/*     Header */
+    /* Header */
     .header {
         height: 90px;
         background-color: #efeae9;
@@ -8,8 +8,9 @@
         top: 0;
         left: 0;
         right: 0;
-      }
-      .header-container {
+    }
+      
+    .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,20 +19,24 @@
         padding: 0 25px 0 0;
         margin-right: auto;
         margin-left: 0;
-      }
-      .header-logo_pc img{
+    }
+      
+    .header-logo_pc img{
         padding-top: 10px;
         height: 70px;
-      }
-      .header-logo_sp img{
+    }
+      
+    .header-logo_sp img{
         display: none;
-      }
-      input[type="checkbox"] {
+    }
+      
+    input[type="checkbox"] {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-      }
-      .hamburger {
+    }
+      
+    .hamburger {
         display: block;
         width: 50px;
         height: 80px;
@@ -40,10 +45,11 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-      }
-      .hamburger span,
-      .hamburger span::before,
-      .hamburger span::after {
+    }
+      
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
         position: absolute;
         display: block;
         content: "";
@@ -51,25 +57,31 @@
         height: 3px;
         background-color: #b53240;
         transition: all 0.5s;
-      }
-      .hamburger span::before {
+    }
+      
+    .hamburger span::before {
         top: -12px;
-      }
-      .hamburger span::after {
+    }
+      
+    .hamburger span::after {
         bottom: -12px;
-      }
-      input[type="checkbox"]:checked + .hamburger span {
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span {
         background-color: transparent;
-      }
-      input[type="checkbox"]:checked + .hamburger span::before {
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span::before {
         top: 0;
         transform: rotate(45deg);
-      }
-      input[type="checkbox"]:checked + .hamburger span::after {
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span::after {
         bottom: 0;
         transform: rotate(-45deg);
-      }
-      .nav {
+    }
+    
+    .nav {
         position: fixed;
         width: 40vw;
         height: 70vh;
@@ -79,8 +91,9 @@
         list-style: none;
         padding: 50px 0;
         transition: all 0.5s;
-      }
-      .nav-list{
+    }
+      
+    .nav-list{
         font-family: 'Zen Kaku Gothic New';
         font-weight: bold;
         list-style: none;
@@ -92,22 +105,27 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-      }
-      .nav-list::-webkit-scrollbar{
+    }
+    
+    .nav-list::-webkit-scrollbar{
         border-radius: 3px;
         width: 7px;
-      }
-      .nav-list::-webkit-scrollbar-track{
+    }
+      
+    .nav-list::-webkit-scrollbar-track{
         background-color: #efeae9;
-      }
-      .nav-list::-webkit-scrollbar-thumb{
+    }
+      
+    .nav-list::-webkit-scrollbar-thumb{
         background: #b53240;
         border-radius: 3px;
-      }
-      .nav-item{
+    }
+
+    .nav-item{
         padding: 10px 0;
-      }
-      .nav-item a {
+    }
+    
+    .nav-item a {
         display: block;
         color:#b53240;
         font-size: 20px;
@@ -115,11 +133,13 @@
         position: relative;
         display: inline-block;
         text-decoration: none;
-      }
-      .nav-item a:hover {
+    }
+    
+    .nav-item a:hover {
         color: #b53240;
-      }
-      .nav-item a::after {
+    }
+    
+    .nav-item a::after {
         position: absolute;
         bottom: -3px;
         left: 0;
@@ -130,39 +150,42 @@
         transform: scale(0, 1);
         transform-origin: center top;
         transition: transform .3s;
-      }
-      .nav-item a:hover::after {
+    }
+    
+    .nav-item a:hover::after {
         transform: scale(1, 1);
-      }
-      input[type="checkbox"]:checked ~ .nav {
+    }
+    
+    input[type="checkbox"]:checked ~ .nav {
         right: 0;
-      }
+    }
+    
   /* Hero */
     .hero_pc{
-     position:relative;
+        position:relative;
     }
  
     .hero_sp{
-     display:none;
+        display:none;
     }
  
     .herophoto1{
-     width:100%;
+        width:100%;
     }
  
     h1{
-     position:absolute;
-     top:50%;
-     left:50%;
-     -ms-transform: translate(-50%,-50%);
-     -webkit-transform: translate(-50%,-50%);
-     transform: translate(-50%,-50%);
-     margin :0;
-     padding: 0;
-     font-size: 45px;
-     font-family: 'Zen Kaku Gothic New';
-     font-weight: bold;
-     color: #3e3a39;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin :0;
+        padding: 0;
+        font-size: 45px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        color: #3e3a39;
     }
 
     /* SectionTitle */
