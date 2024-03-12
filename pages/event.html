@@ -26,11 +26,694 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/index/js"></script>
+
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-    </header>
+    <div class="hero"><h1>新歓イベント</h1></div>
+
+    <img class="map_sumnail" id="map_sumnail" src="../static/img/waseda_map.png" data-lightbox="photo01">
+    <div class="map_cover" id="map_cover">
+        <div class="pin_parent">
+            <canvas class="map_image" id="map_image" width="1920px" height="1440px"></canvas>
+            <a href="#ev1"><img src="src/mappin.png" id="mappin1" class="mappin"></img></a>
+            <a href="#ev2"><img src="src/mappin.png" id="mappin2" class="mappin"></img></a>
+        </div>
+        <div class="close_button"></div>
+    </div>
+    <a class="calender_button" href="#calender">カレンダーはこちら</a>
+
+    <div class="bt_cover_a">
+        <div class="bt_cover_a1"><a class="bt_event" href="#ev1">イベント<br>0001</a></div>
+        <div class="bt_cover_a2"><a class="bt_event" href="#ev2">イベント<br>0002</a></div>
+        <div class="bt_cover_a3"><a class="bt_event" href="#ev3">イベント<br>0003</a></div>
+    </div>
+    <div class="bt_cover_b">
+        <div class="bt_cover_b1"><a class="bt_event" href="#ev4">イベント<br>0004</a></div>
+        <div class="bt_cover_b2"><a class="bt_event" href="#ev5">イベント<br>0005</a></div>
+        <div class="bt_cover_b3"><a class="bt_event" href="#ev6">イベント<br>0006</a></div>
+    </div>
+
+    <div class="ev_cover" id="ev1">
+        <img class="ev_background_flower" src="src/flower_trans001.png"></img>
+        <div class="ev_left">
+            <h>運スタツアーズ</h>
+            <img src="src/waseda_map.png" style: height="200px;"></img>
+            <p>ただの説明会ではありません！<br>運営スタッフについての基本的な情報から日頃の活動内容、早稲田祭当日の様子や運営スタッフの大学生活の実態まで詳しく知ることができます。<br>スペシャルゲストの登場もお楽しみに！</p>
+        </div>
+        <div class="ev_right">
+            <div class="ev_r_left">
+                <h>日程</h>
+                <p>4/5(水) 15:05~16:45<br>4/9(日) 10:40~12:20<br>4/11(火) 15:05~16:45</p>
+            </div>
+            <div class="ev_r_right">
+                <h>申し込み期限</h>
+                <p>4/5(水) 15:05~16:45<br>4/9(日) 10:40~12:20<br>4/11(火) 15:05~16:45</p>
+                <h>場所</h>
+                <p>戸山キャンパス 学生会館</p>
+            </div>
+        </div>
+    </div>
+    <div class="ev_cover" id="ev2"></div>
+    <div class="ev_cover" id="ev3"></div>
+    <div class="ev_cover" id="ev4"></div>
+    <div class="ev_cover" id="ev5"></div>
+    <div class="ev_cover" id="ev6"></div>
+
+    <section id="calender">
+        <!--<div class="balloon1"><p><h6>対面説明会</h6> 申し込み期間<br>ここをクリック↓↓↓↓</p></div>
+        <div class="balloon bl1"><div class="bl1_under"></div><p><h4>対面説明会</h4> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>-->
+
+        <!-- <img class="calender" src="src/calendar.png"> -->
+        <table class="calender_table">
+            <tr><th class="sunday">日曜</th><th>月曜</th><th>火曜</th><th>水曜</th><th>木曜</th><th>金曜</th><th class="saturday">土曜</th></tr>
+            <tr class="days onevent"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="saturday">6</td></tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days1">対面説明会</div><div class="balloon bl1"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl1_under under"></div></a></td>
+                    <td><a href="#ev1"><div class="eventdays days1 rightsolid">　</div></a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days2">対面説明会</div><div class="balloon bl2"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl2_under under"></div></a></td>
+                    <td><a href="#ev2"><div class="eventdays days2 rightsolid">　</div></a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days3">対面説明会</div><div class="balloon bl3"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl3_under under"></div></a></td>
+                    <td><a href="#ev3"><div class="eventdays days3 rightsolid">　</div></a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days4">対面説明会</div><div class="balloon b41"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl4_under under"></div></a></td>
+                    <td><a href="#ev4"><div class="eventdays days4 rightsolid">　</div></a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days5">対面説明会</div><div class="balloon bl5"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl5_under under"></div></a></td>
+                    <td><a href="#ev5"><div class="eventdays days5 rightsolid">　</div></a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="5"><a href="#ev1"><div class="eventdays days">対面説明会</div><div class="balloon bl6"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl6_under under"></div></a></td>
+                    <td><a href="#ev6"><div class="eventdays days6 rightsolid">　</div></a></td>
+                </tr>
+            <tr class="days onevent"><td class="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="saturday">13</td></tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev1"><div class="eventdays days1 leftsolid">新歓イベント0001</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td><div class="limitheight">・特別日程</div></td>
+                    <td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev2"><div class="eventdays days2 leftsolid">新歓イベント0002</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev3"><div class="eventdays days3 leftsolid">新歓イベント0003</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev4"><div class="eventdays days4 leftsolid">新歓イベント0004</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev5"><div class="eventdays days5 leftsolid">新歓イベント0005</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="3"><a href="#ev6"><div class="eventdays days6 leftsolid">新歓イベント0006</div></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            <tr class="days offevent"><td class="sunday">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td class="saturday">20</td></tr>
+            <tr class="days offevent"><td class="sunday">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="saturday">27</td></tr>
+            <tr class="days offevent"><td class="sunday">28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="calender_example">
+            <div class="cal_ex_flex">
+                <div class="eventdays days1"></div>
+                <p>対面説明会</p>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days2"></div>
+                <p>対面説明会</p>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days3"></div>
+                <p>対面説明会</p>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days4"></div>
+                <p>対面説明会</p>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days5"></div>
+                <p>対面説明会</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script>
+    var msg = "";
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+
+        textAlign(CENTER);
+        textSize(30);
+        noStroke();
+
+        // set options to prevent default behaviors for swipe, pinch, etc
+        var options = {
+            preventDefault: true
+        };
+
+        // document.body registers gestures anywhere on the page
+        var hammer = new Hammer(document.body, options);
+        hammer.get('swipe').set({
+            direction: Hammer.DIRECTION_ALL
+        });
+
+        hammer.on("swipe", swiped);
+    }
+
+    function draw() {
+        background(250, 10, 100);
+        text(msg, width / 2, height / 2);
+    }
+
+    function swiped(event) {
+        console.log(event);
+        if (event.direction == 4) {
+            msg = "you swiped right";
+        } else if (event.direction == 8) {
+            msg = "you swiped up";
+        } else if (event.direction == 16) {
+            msg = "you swiped down";
+        } else if (event.direction == 2) {
+            msg = "you swiped left";
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////
+    //　拡大縮小
     
+    let s, sEnd;
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+
+        sEnd = 1;
+
+        const hammer = new Hammer(document.body, {
+            preventDefault: true,
+        });
+
+        hammer.get("pinch").set({ enable: true });
+        hammer.on("pinch", onPinch);
+    }
+
+    function onPinch(event) {
+        if (event.eventType === Hammer.INPUT_END) {
+            sEnd = s;
+        } else {
+            s = sEnd * event.scale;
+
+            if (s < 0.5) {
+            s = 0.5;
+            } else if (s > 3) {
+            s = 3;
+            }
+        }
+    }
+
+    function draw() {
+        background(220);
+
+        translate(width / 2, height / 2);
+        scale(s);
+
+        rect(-50, -50, 100);
+        line(-0.3 * width, 0, 0.3 * width, 0);
+    }
+    </script>
+
+
+    <script>
+        /////////////////////////////////////////////////////////////////
+        //　カレンダーポップアップ
+        var int = 0;
+        const eventNumber = 5;
+        //　ウィンドウ
+        const scWidth = window.innerWidth;
+        //　ポップアップ
+        const balloon = document.getElementsByClassName('balloon');
+        //　ポップアップ下矢印
+        const underarrow = document.getElementsByClassName('under');
+        //　コンテンツ座標
+        var targetElement = document.getElementsByClassName('eventdays');
+
+        //マウス移動時
+        
+
+        document.onmousemove = function(e) {
+            for(int = 0; int < eventNumber; ++int){
+                var blWidth = balloon[int].clientWidth;
+                var blposX = balloon[int].getBoundingClientRect().left;
+                var clientRect = targetElement[int].getBoundingClientRect();
+                var px = window.pageXOffset + clientRect.left;
+
+                underarrow[int].style.left = (e.pageX - blposX - 17) + "px";
+
+                if (0.5*blWidth >= e.pageX) {
+                    balloon[int].style.left = -px + "px";
+                } else if (scWidth - e.pageX <= 0.5*blWidth) {
+                    balloon[int].style.left = (scWidth - px - blWidth) + "px";
+                } else {
+                    balloon[int].style.left = (e.pageX - px - 0.5*blWidth) + "px";
+                }
+
+                console.log(int);
+                console.log(balloon[int]);
+            }
+        }
+
+        //マウス離脱時
+        document.onmouseout = function(e) {
+            for(int = 0; int < eventNumber; ++int){
+                balloon[int ].style.left = ``;
+                underarrow[int].style.left =  ``;
+            }
+        };
+    </script>
+
+
+    <script>
+        /////////////////////////////////////////////////////////////////
+        //　スムーススクロール
+        const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+        scorrllLinks.forEach((scorrllLink) => {
+        scorrllLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            const hrefLink = scorrllLink.getAttribute("href");
+            const targetContent = document.getElementById(hrefLink.replace("#", ""));
+            const rectTop = targetContent.getBoundingClientRect().top;
+            const positionY = window.pageYOffset;
+            const viewheight = window.outerHeight;
+            const target = rectTop + positionY - 0.06*viewheight;
+            window.scrollTo({
+            top: target,
+            behavior: "smooth",
+            });
+        });
+        });
+    </script>
+
+
+    <style>
+        .event_hero{
+            display: block;
+            width: 100vw;
+            min-height: 30px;;
+            aspect-ratio: 20;
+            background-color: beige;
+        }
+
+
+        /*マップ*/
+        .map_sumnail{
+            display: block;
+            position: relative;
+            width: 60%;
+            max-width: 600px;
+            cursor: pointer;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+        }
+
+        .map_cover{
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background-color:rgba(0,0,0,0.5);
+        }
+        .display{
+            display: flex;
+            justify-content: center;
+        }
+
+        .map_image{
+            display: none;
+            overflow: hidden;
+            border-radius: 1vh;
+            top: 7vh;
+            width: 95vw;
+            max-width: 1000px;
+            height: fit-content;
+        }
+        .zoomed {
+            display: block;
+        }
+
+        .pin_parent{
+            position: relative;
+            top: 7vh;
+            width: fit-content;
+            height: fit-content;
+        }
+        .mappin{
+            display: inline-block;
+            width: 30px;
+            height: 50px;
+            position: absolute;
+            z-index: 3;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 80%;
+        }
+        .mappin:hover{
+            opacity: 100%;
+        }
+        .over{
+            display: none;
+        }
+
+        .close_button{
+            content: "";
+            position: absolute;
+            display: inline-block;
+            top: 10%;
+            right: 5vw;
+            width: 30px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #bbbbbb;
+            vertical-align: middle;
+            z-index: 1;
+        }
+        .close_button::after {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 5px;
+            width: 20px;
+            height: 4px;
+            background: #333;
+            transform: rotate(-45deg);
+            z-index: 2;
+        }
+        .close_button::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 5px;
+            width: 20px;
+            height: 4px;
+            background: #333;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+
+        .calender_button{
+            display: block;
+            text-align: center;
+        }
+
+
+        /*ボタン*/
+        .bt_cover_a,
+        .bt_cover_b{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 60vw;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .bt_cover_a1,
+        .bt_cover_a2,
+        .bt_cover_a3,
+        .bt_cover_b1,
+        .bt_cover_b2,
+        .bt_cover_b3{
+            display: flex;
+            flex-direction: row;
+            flex-basis:30%;
+        }
+        .bt_event{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: aqua;
+            text-align: center;
+            align-items: center;
+            font-size: 30%;
+        }
+
+
+        /*イベント詳細*/
+        .ev_cover{
+            width: 60vw;
+            max-width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 10vh;
+            border-radius: 1vh;
+            background-color:blanchedalmond;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+        .ev_left{
+            flex-basis: 40%;
+            z-index: 2;
+        }
+        .ev_right{
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: row;
+            z-index: 2;
+        }
+        .ev_right h{
+            text-decoration: underline;
+        }
+        .ev_r_left{
+            flex-basis: 50%;
+        }
+        .ev_r_right{
+            flex-basis: 50%;
+        }
+        .ev_background_flower{
+            z-index: 1;
+            position: absolute;
+            top: -50px;
+            left: -100px;
+            overflow: hidden;
+        }
+
+
+        /*カレンダー*/
+        .calender{
+            display: block;
+            margin:
+            0 auto;
+        }
+
+        .calender_table{
+            margin: 0 auto;
+
+            /*reset*/
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .onevent{
+            height: 25px;
+            border-top: 1px solid #333;
+        }
+        .offevent{
+            height: 85px;
+            border-top: 1px solid #333;
+        }
+
+        .evnetdays_row{
+            border: none;
+        }
+
+        .calender_table tr th{
+            width: 100px;
+            text-align: center;
+            border-bottom: 2px double #333;
+            font-weight: bold;
+        }
+        .calender_table tr td{
+            position: relative;/*↑ポップアップ表示用*/
+            width: 100px;
+            text-align: center;
+            vertical-align: top;
+            font-weight: bold;
+        }
+        .days td{
+            padding-top: 5px;
+        }
+
+        .sunday{
+            color: red;
+        }
+        .saturday{
+            color: blue;
+        }
+
+        .eventdays{
+            pointer-events: auto;/* hover有効化 */
+            cursor: pointer;
+            text-decoration: none;
+            width: 98%;
+            height: 10px;
+            border-radius: 5px;
+            border-color: #333;
+            border: 1px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 9px;
+        }
+        .days1{
+            background-color: rgb(255, 150, 225);
+        }
+        .days2{
+            background-color: rgb(213, 155, 255);
+        }
+        .days3{
+            background-color: rgb(152, 180, 255);
+        }
+        .days4{
+            background-color: rgb(183, 255, 176);
+        }
+        .days5{
+            background-color: rgb(254, 255, 166);
+        }
+        .days6{
+            background-color: rgb(255, 182, 182);
+        }
+
+        .limitheight{
+            font-size: 9px;
+            font-weight: bold;
+            height: 10px;
+        }
+
+        .leftsolid{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .rightsolid{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+
+        /*カレンダー　ポップアップ*/
+        .balloon {
+            pointer-events: none;/* hover無効化 */
+
+            position: absolute;
+            display: block;
+            visibility: hidden;
+            top: -90px;
+            left: 0px;
+            margin: 1.5em 0;
+            padding: 7px 10px;
+            width: max-content;
+            color: #3e3a39;
+            font-size: 16px;
+            background: #efeae9;
+            border-radius: 5px;
+            z-index: 10;
+            border: 1px solid #3e3a39;
+        }
+        .under {
+            pointer-events: none;/* hover無効化 */
+
+            position: absolute;
+            display: block;
+            visibility: hidden;
+            top: -14px;
+            height: 15px;
+            width: 30px;
+            background: #efeae9;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            z-index: 10;
+            border: 1px solid #3e3a39;
+        }
+        .balloon p {
+            margin: 0;
+            padding: 0;
+        }
+        h6{
+            display: inline;
+            color: white;
+            font-family: "Noto Sans JP";
+            background-color: blue;
+        }
+
+
+        /*カレンダー　ポップアップ 表示システム*/
+        .days1:hover ~.bl1,
+        .days1:hover ~.bl1_under,
+        .days2:hover ~.bl2,
+        .days2:hover ~.bl2_under,
+        .days3:hover ~.bl3,
+        .days3:hover ~.bl3_under,
+        .days4:hover ~.bl4,
+        .days4:hover ~.bl4_under,
+        .days5:hover ~.bl5,
+        .days5:hover ~.bl5_under,
+        .days6:hover ~.bl6,
+        .days6:hover ~.bl6_under{
+            visibility: visible;
+        }
+
+
+        /* カレンダー 凡例 */
+        .cal_ex_flex{
+            display: flex;
+            flex-direction: row;
+        }
+        .cal_ex_flex .eventdays{
+            width: 200px;
+        }
+
+    </style>
 </body>
 </html>
