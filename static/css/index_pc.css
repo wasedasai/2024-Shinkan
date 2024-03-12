@@ -546,8 +546,6 @@
         display: block;
         text-align: center;
         margin-bottom: 10px;
-    }
-    .footer_top > a{ /*3/12yaga > 干渉防止のタグ制限「>」*/
         text-decoration: none;
         color: #3E3A39;
     }
