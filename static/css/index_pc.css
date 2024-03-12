@@ -1,199 +1,241 @@
 @media print, screen and (min-width: 1024px){
-   .hero_pc{
-    position:relative;
-   }
+    /* Hero */
+    .hero_pc{
+     position:relative;
+    }
+ 
+    .hero_sp{
+     display:none;
+    }
+ 
+    .herophoto1{
+     width:100%;
+    }
+ 
+    h1{
+     position:absolute;
+     top:50%;
+     left:50%;
+     -ms-transform: translate(-50%,-50%);
+     -webkit-transform: translate(-50%,-50%);
+     transform: translate(-50%,-50%);
+     margin :0;
+     padding: 0;
+     font-size: 45px;
+     font-family: 'Zen Kaku Gothic New';
+     font-weight: bold;
+     color: #3e3a39;
+    }
 
-   .hero_sp{
-    display:none;
-   }
+    /* SectionTitle */
+    .sectiontitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .sectiontitle h2{
+        color: #3e3a39;
+        font-size: 40px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        padding: 0 0 0 5px;
+        margin: 0;
+    }
+    
+    .sectiontitle img{
+        width: 58px;
+    }
+    
+    .sectiontitle{
+        color:#3e3a39;
+        font-family: "Zen Kaku Gothic NEW";
+        font-weight: bold;
+        position: relative;
+    }
 
-   .herophoto1{
-    width:100%;
-   }
+    /* BlockTitle */
+    .blocktitle-red{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #b53240;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-   h1{
-    position:absolute;
-    top:50%;
-    left:50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    margin :0;
-    padding: 0;
-    font-size: 45px;
-    font-family: 'Zen Kaku Gothic New';
-    font-weight: bold;
-    color: #3e3a39;
-     
- .blocktitle-blue {
-                   color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #7290be;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .blocktitle-blue{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #7290be;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-.blocktitle-sakura {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #efb2a2;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .blocktitle-sakura{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #efb2a2;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-.blocktitle-green {  
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #8daca9;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .blocktitle-yellow{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #e9a767;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-.blocktitle-orange {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #e9a767;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .blocktitle-green{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #8daca9;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
+    .blocktitle-rose{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        border-bottom: solid 5px #e06d71;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
+    
+    /* Footer */
+    .footer{
+        width: 100%;
+        background-color: #e7dbd9;
+        padding-top: 90px;
+        padding-bottom: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    /*T 上部階層まとめ*/
+    .footer_top{
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .footer_top a{
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    hr{
+        width: 150px;
+        border: none;
+        border-bottom: #3E3A39 solid 3px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+    
+    /*M 中部階層まとめ*/
+    .footer_list_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /*L 左側リンク*/
+    .footer_left_list{
+        display: flex;
+        flex-direction: column;
+    }
+    h5{
+        width: 300px;
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 15.5px 0 15.5px 0;
+    }
+    h5 a{
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    
+    /*I 内側装飾*/
+    .footer_logo{
+        max-width: 360px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .footer_line{
+        display: none;
+    }
+    
+    /*R 右側リンク*/
+    .footer_right_list{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_event_list{
+        height: 180px;
+        font-size: 10px;
+        margin: 0 0 0 70px;
+    }
+    li {
+        width: fit-content;
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 13px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    li a{
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    
+    /*B 下部階層まとめ*/
+    .footer_bottom_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .footer_icon_logo{
+        display: none;
+    }
+    .footer_icon{
+        max-width: 40px;
+        margin: 10px;
+    }
+    
+    /*レスポンシブ*/
+    .mobile_view{
+        display: none;
+    }
+    .mobile_none{
+        display: block;
+    }
+    .paragraph{
+        width:100%;
+        letter-spacing: 0.1px;
+        line-height: 26px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 8px;
+        color:#3e3a39;
+    }
 
-.blocktitle-rose {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #e06d71;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
-.footer{
-    width: 100%;
-    background-color: #e7dbd9;
-    padding-top: 90px;
-    padding-bottom: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-/*T 上部階層まとめ*/
-.footer_top{
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 20px;
-    font-weight: 700;
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.footer_top a{
-    text-decoration: none;
-    color: #3E3A39;
-}
-hr{
-    width: 150px;
-    border: none;
-    border-bottom: #3E3A39 solid 3px;
-    margin: 0 auto;
-    margin-bottom: 35px;
-}
-
-/*M 中部階層まとめ*/
-.footer_list_cover{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/*L 左側リンク*/
-.footer_left_list{
-    display: flex;
-    flex-direction: column;
-}
-h5{
-    width: 300px;
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    margin: 15.5px 0 15.5px 0;
-}
-h5 a{
-    text-decoration: none;
-    color: #3E3A39;
-}
-
-/*I 内側装飾*/
-.footer_logo{
-    max-width: 360px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.footer_line{
-    display: none;
-}
-
-/*R 右側リンク*/
-.footer_right_list{
-    display: flex;
-    flex-direction: column;
-}
-.footer_event_list{
-    height: 180px;
-    font-size: 10px;
-    margin: 0 0 0 70px;
-}
-li {
-    width: fit-content;
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 13px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-li a{
-    text-decoration: none;
-    color: #3E3A39;
-}
-
-/*B 下部階層まとめ*/
-.footer_bottom_cover{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-}
-.footer_icon_logo{
-    display: none;
-}
-.footer_icon{
-    max-width: 40px;
-    margin: 10px;
-}
-
-/*レスポンシブ*/
-.mobile_view{
-    display: none;
-}
-.mobile_none{
-    display: block;
-}
-.paragraph{
-    width:100%;
-    letter-spacing: 0.1px;
-    line-height: 26px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 8px;
-    color:#3e3a39;
-}
-}
+ }
