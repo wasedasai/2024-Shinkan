@@ -16,6 +16,10 @@
     margin: 0;
 }
 
+.sectiontitle-sakura-demo img{
+    width: 58px;
+}
+
 .sectiontitle-sakura{
     color:#3e3a39;
     font-family: "Zen Kaku Gothic NEW";

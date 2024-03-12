@@ -1,6 +1,24 @@
 @media print,screen and (max-width:1024px){
     
     .spacer {height: 50px;}
+
+    .sectiontitle-sakura-demo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .demo{
+        font-size: 18px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        padding: 0 0 0 5px;
+        margin: 0;
+    }
+
+    .sectiontitle-sakura-demo img{
+        width: 26px;
+    }
     
     .sectiontitle-sakura{
         font-size:18px;
@@ -16,7 +34,6 @@
         text-align: center;
         position:absolute;
         left: 140px;
-
     }
     
     .sectiontitle-sakura h2:before{
