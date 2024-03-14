@@ -1,42 +1,638 @@
-@media print, screen and (max-width: 1024px){
+@media print, screen and (max-width: 1023px){
+    body {
+        margin: 0;/*3/12yaga > hero,footerの横に隙間があったため追加*/
+    }
 
-/*squarelink　赤*/
-.squarelinkred a {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    position: relative;
+    /* Header */
+    .header {
+        height: 70px;
+        background-color: #efeae9;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
+    }
+      
+    .header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+        color: #b53240;
+        padding: 0 25px 0 0;
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .header-logo_pc img{
+        display: none;
+        position: absolute;
+    }
+
+    .header-logo_sp img{
+        position: absolute;
+        top: -5px;
+        left: 0;
+        height: 80px;
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    
+    .hamburger {
+        display: block;
+        width: 50px;
+        height: 70px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #b53240;
+        transition: all 0.5s;
+    }
+
+    .hamburger span::before {
+        top: -12px;
+    }
+
+    .hamburger span::after {
+        bottom: -12px;
+    }
+
+    input[type="checkbox"]:checked + .hamburger span {
+        background-color: transparent;
+    }
+
+    input[type="checkbox"]:checked + .hamburger span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked + .hamburger span::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    .nav {
+        position: fixed;
+        width: 60vw;
+        height: 70vh;
+        top: 69px;
+        right: -120%;
+        background-color: #efeae9;
+        list-style: none;
+        padding: 50px 0;
+        transition: all 0.5s;
+    }
+
+    .nav-list{
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        list-style: none;
+        overflow-y: scroll;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-item{
+        padding: 10px 0;
+    }
+
+    .nav-item a {
+        display: block;
+        color:#b53240;
+        font-size: 20px;
+        padding: 0px 0 5px 0px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .nav-item a:hover {
+        color: #b53240;
+    }
+
+    .nav-item a::after {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #b53240;
+        transform: scale(0, 1);
+        transform-origin: center top;
+        transition: transform .3s;
+    }
+    
+    .nav-item a:hover::after {
+        transform: scale(1, 1);
+    }
+
+    input[type="checkbox"]:checked ~ .nav {
+        right: 0;
+    }
+  
+    /* Hero */
+    .Hero{
+        margin-top: 70px;
+    }
+
+    .hero_sp{
+        position: relative;
+    }
+
+    .hero_pc{
+        display: none;
+    }
+
+    .herophoto2{
+        width: 100%;
+    }
+
+    .hero_sp h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        color: #3e3a39;
+    }
+    
+    /* SectionTitle */
+    .sectiontitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .sectiontitle h2{
+        color: #3e3a39;
+        font-size: 18px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        padding: 0 0 0 5px;
+        margin: 0;
+    }
+
+    .sectiontitle img{
+        width: 26px;
+    }
+
+    /* BlockTitle */
+    .blocktitle-red{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #b53240;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .blocktitle-blue{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #7290be;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .blocktitle-sakura{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #efb2a2;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .blocktitle-yellow{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #e9a767;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .blocktitle-green{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #8daca9;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .blocktitle-rose{
+        color: #3E3A39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 3px #e06d71;
+        padding-bottom: .2em;
+        border-radius: 2px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    /* SquareLink */
+    .squarelink-red > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .btn-red {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #b53240;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-red > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-red.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    .squarelink-blue > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .btn-blue {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #7290be;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-blue > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-blue.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    .squarelink-sakura > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .btn-sakura {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #efb2a2;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+    
+    .squarelink-sakura > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-sakura.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    .squarelink-yellow > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+    
+    .btn-yellow {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e9a767;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-yellow > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-yellow.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    .squarelink-green > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+    
+    .btn-green {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #8daca9;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+    
+    .squarelink-green > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-green.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    .squarelink-rose > a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        background-color: #ffffff;
+    }
+    
+    .btn-rose {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0.5rem 1.7rem 0.5rem 3.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e06d71;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 52x;
+        min-width: 234px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-rose.png);
+        transform: scale(0.06); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 0px; 
+        height: 0px;
+        position: absolute;
+        left: 3px; /*花びらの位置*/
+        top: 2px;
+    }
+
+    /* Footer */
+
+    .footer{
+        width: 100%;
+        margin: 0;
+        background-color: #e7dbd9;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /*T 上部階層まとめ*/
+    /*消去*/
+    .footer_top{
+        display: none;
+    }
+    /*消去*/
+    hr{
+        width: 150px;
+        border: none;
+        border-bottom: #3E3A39 solid 3px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    /*M 中部階層まとめ*/
+    .footer_list_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /*L 左側リンク*/
+    .footer_left_list{
+        display: flex;
+        flex-direction: column;
+        margin-right: 5vw;
+    }
+    .footer_left_list > a,
+    .footer_right_list > a{  /*3/12yaga > 干渉防止のタグ修正*/
+        width: 120px;
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        margin: 5px 0 5px 0;
+        text-decoration: none;
+        color: #3E3A39;
+    }
+
+    /*I 内側装飾*/
+    /*消去*/
+    .footer_logo{
+        display: none;
+    }
+    .footer_line{
+        content: "";
+        width: 1px;
+        height: 120px;
+        margin-top: 15px;
+        background-color: #3E3A39;
+    }
+
+    /*R 右側リンク*/
+    .footer_right_list{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    /*消去*/
+    .footer_event_list{
+        display: none;
+    }
+
+    /*B 下部階層まとめ*/
+    .footer_bottom_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .footer_icon_logo{
+        max-width: 100px;
+        margin-right: 10vw;
+    }
+    .footer_icon_cover{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer_icon{
+        max-width: 30px;
+        margin: 5px;
+    }
+
+    /*レスポンシブ*/
+    .mobile_view{
+        display: block;
+    }
+    .mobile_none{
+        display: none;
+    }
+    
+    /* Paragraph */
+    .paragraph{
+        letter-spacing: 0.1px;
+        line-height: 22px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 8px;
+        color:#3e3a39;;
+    }
 }
 
-.btn-red {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0.5rem 1.7rem 0.5rem 3.5rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-    text-align: center;
-    text-decoration: none;
-    border: 4px solid #b53240;
-    border-radius: 90px;
-    color: #3e3a39;
-    box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
-    height: 52x;
-    min-width: 234px; /*ここでwidthの最小値を決める*/
-    display: inline-block;
-    line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
-}
-
-a::before {
-    content: url(../image/red.png);
-    transform: scale(0.06); /*花びらのサイズ*/
-    display: inline-block;
-    vertical-align: middle;
-    width: 0px; 
-    height: 0px;
-    position: absolute;
-    left: 3px; /*花びらの位置*/
-    top: 2px;
-}
-}

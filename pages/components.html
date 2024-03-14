@@ -10,9 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" media="(min-width: 1024px)" href="../static/css/index_pc.css">
-<link rel="stylesheet" media="(max-width: 1024px)" href="../static/css/index_mobile.css">
+<link rel="stylesheet" media="(max-width: 1023px)" href="../static/css/index_mobile.css">
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
 <link rel="canocical" href="https://wasedasai.github.io/2024-Shinkan/">
-
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <meta name="description" content="早稲田祭運営スタッフ(運スタ)2024年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
       <meta name="keywords" content="早稲田祭,早稲田祭運営スタッフ,運スタ,早稲田,運スタ新歓,運スタ2024,早稲田祭2024運営スタッフ,運スタ2024新歓">
@@ -25,23 +25,175 @@
       <!-- <meta name="twitter:card"> -->
       <!-- <meta name="twitter:site"> -->
 
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="static/js/index/js"></script>
     </head>
 
-  <body>
-    <header></header>
-    <div class="hero"></div>
-    <div class="sectiontitle"></div>
-    <div class="blocktitle"></div>
-    <div class="suquarelink"></div>
 
-    <div class="squarelinkred">
-      <a href="" class="btn-red">squarelink</a>
-    </div>
+  <body>
+
+    <header class="header">
+      <div class="header-container">
+        <div class="header-logo_pc">
+          <a href="index.html"><img src="../static/img/header-logo_pc.png"></a>
+        </div>
+        <div class="header-logo_sp">
+          <a href="index.html"><img src="../static/img/header-logo_sp.png"></a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="hamburger">
+          <span></span>
+        </label>
+        <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Top</a></li>
+          <li class="nav-item"><a href="aboutfes.html">早稲田祭とは</a></li>
+          <li class="nav-item"><a href="aboutstaff.html">運営スタッフとは</a></li>
+          <li class="nav-item"><a href="schedule.html">運スタの1年</a></li>
+          <li class="nav-item"><a href="introduce.html">局紹介</a></li>
+          <li class="nav-item"><a href="staffreal.html">運スタのリアル</a></li>
+          <li class="nav-item"><a href="photogallery.html">運スタ写真館</a></li>
+          <li class="nav-item"><a href="event.html">新歓イベント</a></li>
+          <li class="nav-item"><a href="howto.html">入会方法</a></li>
+          <li class="nav-item"><a href="question.html">よくある質問</a></li>
+        </ul>
+        </nav>
+      </div>
+    </header>
     
-    <div class="footer"></div>
+    <div class="Hero">
+      <div class="hero_pc">
+        <img src="../static/img/hero_01.png"class="herophoto1">
+        <h1>hero</h1>
+      </div>
+      <div class="hero_sp">
+        <img src="../static/img/hero_02.png"class="herophoto2">
+        <h1>hero</h1>
+      </div>
+    </div>
+
+    <div class="SectionTitle">
+      <!-- sectiontitle-red -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-red.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-red.png">
+      </div>
+
+      <!-- sectiontitle-blue -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-blue.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-blue.png">
+      </div>
+
+      <!-- sectiontitle-sakura -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-sakura.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-sakura.png">
+      </div>
+
+      <!-- sectiontitle-yellow -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-yellow.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-yellow.png">
+      </div>
+
+      <!-- sectiontitle-green -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-green.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-green.png">
+      </div>
+
+      <!-- sectiontitle-rose -->
+      <div class="sectiontitle">
+        <img src="../static/img/hanabira3-rose.png">
+        <h2>サンプル</h2>
+        <img src="../static/img/hanabira3-rose.png">
+      </div></div>
+
+    <div class="BlockTitle"> <!-- blocktitleのhtmlは文字の前後に空白つけたままで！ -->
+      <h3 class="blocktitle-red">　blocktitle サンプル　</h3>
+      <h3 class="blocktitle-blue">　blocktitle サンプル　</h3>
+      <h3 class="blocktitle-sakura">　blocktitle サンプル　</h3>
+      <h3 class="blocktitle-yellow">　blocktitle サンプル　</h3>
+      <h3 class="blocktitle-green">　blocktitle サンプル　</h3>
+      <h3 class="blocktitle-rose">　blocktitle サンプル　</h3>
+    </div>
+
+    <div class="SquareLink">
+      <h4 class="squarelink-red">
+        <a href="" class="btn-red">squarelink</a>
+      </h4>
+      <h4 class="squarelink-blue">
+        <a href="" class="btn-blue">squarelink</a>
+      </h4>
+      <h4 class="squarelink-sakura">
+        <a href="" class="btn-sakura">squarelink</a>
+      </h4>
+      <h4 class="squarelink-yellow">
+        <a href="" class="btn-yellow">squarelink</a>
+      </h4>
+      <h4 class="squarelink-green">
+        <a href="" class="btn-green">squarelink</a>
+      </h4>
+      <h4 class="squarelink-rose">
+        <a href="" class="btn-rose">squarelink</a>
+      </h4>
+    </div>
+
+    <div class="footer">
+        <a class="footer_top" href="../index.html">TOP</a>
+        <hr class="mobile_none">
+
+        <div class="footer_list_cover">
+            <div class="footer_left_list">
+                <a class="mobile_view" href="../index.html">TOP</a>
+                <a href="../pages/aboutfes.html">早稲田祭とは</a>
+                <a href="../pages/aboutstaff.html">運営スタッフとは</a>
+                <a href="../pages/schedule.html">運スタの1年</a>
+                <a href="../pages/introduce.html">局紹介</a>
+                <a class="mobile_none" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_none" href="../pages/howto.html">入会方法</a>
+            </div>
+
+            <img class="footer_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_line"></div>
+
+            <div class="footer_right_list">
+                <a class="mobile_view" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_view" href="../pages/howto.html">入会方法</a>
+                <a href="../pages/event.html">新歓イベント</a>
+                <ul class="footer_event_list">
+                    <li><a href="../pages/event.html#sec1">新歓イベント0001</a></li>
+                    <li><a href="../pages/event.html#sec2">新歓イベント0002</a></li>
+                    <li><a href="../pages/event.html#sec3">新歓イベント0003</a></li>
+                    <li><a href="../pages/event.html#sec4">新歓イベント0004</a></li>
+                    <li><a href="../pages/event.html#sec5">新歓イベント0005</a></li>
+                </ul>
+                <a href="../pages/photogallery.html">運スタ写真館</a>
+                <a href="../pages/question.html">よくある質問</a>
+            </div>
+        </div>
+
+        <div class="footer_bottom_cover">
+            <img class="footer_icon_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_icon_cover">
+                <a href="https://www.instagram.com/wasedasai_new/" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_insta.png" class="footer_icon" alt="Instagramのリンク"></img></a>
+                <a href="https://twitter.com/wasedasai_new" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_X.png" class="footer_icon" alt="Xのリンク"></img></a>
+            </div>
+        </div>
+    </div>
     <div class="container"></div>
-    <div class="paragraph"></div>
-  </body>
+
+    <div class="paragraph">
+        私がウスウスと眼を覚ました時、こうした蜜蜂の唸るような音は、まだ、その弾力の深い余韻を、私の耳の穴の中にハッキリと引き残していた。
+        それをジッと聞いているうちに……今は真夜中だな……と直覚した。そうしてどこか近くでボンボン時計が鳴っているんだな……と思い思い、又もウトウトしているうちに、
+        その蜜蜂のうなりのような余韻は、いつとなく次々に消え薄れて行って、そこいら中がヒッソリと静まり返ってしまった。
+    </div>
+    </body>
+</html>
+
