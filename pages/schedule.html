@@ -73,14 +73,14 @@
         <li>
           <div class="sukejuru-month no-sen"><span>5～7月</span></div>
           <dl class="sukejuru">
-            <dt><h3 class="blocktitle-green">　てらこや　</h3></dt>
+            <dt class="js-sukejuru"><h3 class="blocktitle-green">　てらこや　</h3></dt>
             <dd class="sukejuru-info">入会してすぐは不安だらけのはず。そんなみなさんに運スタに必要な知識を知ってもらうために「てらこや」という活動があります。少人数で週に1回集まるので同期や先輩と仲良くなり、不安なんてすぐに吹っ飛びます！</dd>
           </dl>
         </li>
         <li>
           <div class="sukejuru-month"><span>5月</span></div>
           <dl class="sukejuru">
-            <dt><h3 class="blocktitle-green">　新規歓迎レクリエーション　</h3></dt>
+            <dt><h3 class="blocktitle-green">新規歓迎<br class="sukejuru-kaigyou">レクリエーション　</h3></dt>
             <dd class="sukejuru-info">1年目のみなさんが運スタに加わってすぐに、1年目から3年目まで参加するレクリエーションがあります。約650人が在籍する運スタならではの規模感も感じられます。目一杯楽しみましょう！</dd>
           </dl>
         </li>
@@ -101,14 +101,14 @@
         <li>
           <div class="sukejuru-month"><span>6月</span></div>
           <dl class="sukejuru">
-            <dt><h3 class="blocktitle-green">　早慶戦観戦レクリエーション　</h3></dt>
+            <dt><h3 class="blocktitle-green">早慶戦観戦<br class="sukejuru-kaigyou">レクリエーション　</h3></dt>
             <dd class="sukejuru-info">運スタ全体のレクリエーションとして、東京六大学野球の「春の早慶戦」を見に行きます。まだ知り合ったばかりの友達でも、一緒に早稲田大学を応援すれば仲良くなれること間違いなしです！</dd>
           </dl>
         </li>
         <li>
           <div class="sukejuru-month"><span>5〜8月</span></div>
           <dl class="sukejuru">
-            <dt><h3 class="blocktitle-green">　オープンキャンパスプロジェクト　</h3></dt>
+            <dt><h3 class="blocktitle-green">オープンキャンパス<br class="sukejuru-kaigyou">プロジェクト　</h3></dt>
             <dd class="sukejuru-info">オープンキャンパスプロジェクトは、早稲田大学のオープンキャンパスに来場した中学生や高校生へ早稲田大学の魅力を伝えるために、1年目が中心となって活動する※超局プロジェクトです。活動を通して、局やチームの垣根を越えた運スタの友達がたくさんできます！</dd>
           </dl>
         </li>
@@ -214,6 +214,13 @@
     width: 100%;
   }
 
+
+  @media print , screen and (min-width: 515px){
+    .sukejuru-kaigyou{
+      display: none;
+    }
+  }
+
   @media print, screen and (max-width:1023px){
     .sukejuru-container{
       margin: 60px 15px 0 15px;
@@ -221,6 +228,30 @@
     .sukejuru-container > li{
       align-items: flex-start;
       margin: 40px 0;
+    }
+    .sukejuru{
+      padding: 0 20px;
+    }
+    .sukejuru > dt{
+      cursor: pointer;
+      position: relative;
+      transition-duration: all .5s ease;
+    }
+    .sukejuru > dt:after{
+      position: absolute;
+      display: block;
+      content: '';
+      right: 10px;
+      bottom: 25%;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #3e3a39;
+      border-right: 2px solid #3e3a39;
+      transform: rotate(135deg);
+      transition: all .3s ease-in-out;
+    }
+    .sukejuru > dt.close:after{
+      transform: rotate(135deg);
     }
     .sukejuru-info{
       font-size: 16px;
@@ -233,12 +264,13 @@
       height: 120px;
     }
     .sukejuru-month:not(.no-sen):before{
-      width: 5px;
-      height: 500%;
-      transform: translate(1030%, -50%);
+    display: none;
     }
     /* 3/13　スマホだけアコーディオンにするのくそだるいんじゃない？ */
   } 
 </style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--自作のJS-->
+<script src="../static/js/schedule.js"></script>
 </body>
 </html>
