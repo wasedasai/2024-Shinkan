@@ -29,283 +29,439 @@
 
     <link rel="stylesheet" href="css/lightbox.min.css">
     <script src="js/lightbox-plus-jquery.min.js"></script>
+
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <div class="hero"><h1>新歓イベント</h1></div>
+    <!-- header component -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo_pc">
+                <a href="index.html"><img src="../static/img/header-logo_pc.png"></a>
+            </div>
+            <div class="header-logo_sp">
+                <a href="index.html"><img src="../static/img/header-logo_sp.png"></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="hamburger">
+                <span></span>
+            </label>
+            <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Top</a></li>
+                <li class="nav-item"><a href="aboutfes.html">早稲田祭とは</a></li>
+                <li class="nav-item"><a href="aboutstaff.html">運営スタッフとは</a></li>
+                <li class="nav-item"><a href="schedule.html">運スタの1年</a></li>
+                <li class="nav-item"><a href="introduce.html">局紹介</a></li>
+                <li class="nav-item"><a href="staffreal.html">運スタのリアル</a></li>
+                <li class="nav-item"><a href="photogallery.html">運スタ写真館</a></li>
+                <li class="nav-item"><a href="event.html">新歓イベント</a></li>
+                <li class="nav-item"><a href="howto.html">入会方法</a></li>
+                <li class="nav-item"><a href="question.html">よくある質問</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- hero component -->
+    <div class="Hero">
+        <div class="hero_pc">
+            <img src="../static/img/hero_01.png"class="herophoto1">
+            <h1>新歓イベント</h1>
+        </div>
+        <div class="hero_sp">
+            <img src="../static/img/hero_02.png"class="herophoto2">
+            <h1>新歓イベント</h1>
+        </div>
+    </div>
+
+    <!-- map -->
     <img class="map_sumnail" id="map_sumnail" src="../static/img/waseda_map.png" data-lightbox="photo01">
     <div class="map_cover" id="map_cover">
         <div class="pin_parent">
             <canvas class="map_image" id="map_image" width="1920px" height="1440px"></canvas>
-            <a href="#ev1"><img src="src/mappin.png" id="mappin1" class="mappin"></img></a>
-            <a href="#ev2"><img src="src/mappin.png" id="mappin2" class="mappin"></img></a>
+            <a href="#sec1"><img src="src/mappin.png" id="mappin1" class="mappin"></img></a>
+            <a href="#sec2"><img src="src/mappin.png" id="mappin2" class="mappin"></img></a>
         </div>
         <div class="close_button"></div>
     </div>
-    <a class="calender_button" href="#calender">カレンダーはこちら</a>
 
+    <!-- calender button -->
+    <h4 class="squarelink-red">
+        <a href="#calender" class="btn-red">カレンダーはこちら</a>
+    </h4>
+
+    <!-- events button -->
     <div class="bt_cover_a">
-        <div class="bt_cover_a1"><a class="bt_event" href="#ev1">イベント<br>0001</a></div>
-        <div class="bt_cover_a2"><a class="bt_event" href="#ev2">イベント<br>0002</a></div>
-        <div class="bt_cover_a3"><a class="bt_event" href="#ev3">イベント<br>0003</a></div>
+        <div class="bt_cover_a1"><a class="bt_event" href="#sec1" onclick="click01();">イベント<br>0001</a></div>
+        <div class="bt_cover_a2"><a class="bt_event" href="#sec2" onclick="click02();">イベント<br>0002</a></div>
+        <div class="bt_cover_a3"><a class="bt_event" href="#sec3" onclick="click03();">イベント<br>0003</a></div>
     </div>
     <div class="bt_cover_b">
-        <div class="bt_cover_b1"><a class="bt_event" href="#ev4">イベント<br>0004</a></div>
-        <div class="bt_cover_b2"><a class="bt_event" href="#ev5">イベント<br>0005</a></div>
-        <div class="bt_cover_b3"><a class="bt_event" href="#ev6">イベント<br>0006</a></div>
+        <div class="bt_cover_b1"><a class="bt_event" href="#sec4" onclick="click04();">イベント<br>0004</a></div>
+        <div class="bt_cover_b2"><a class="bt_event" href="#sec5" onclick="click05();">イベント<br>0005</a></div>
+        <div class="bt_cover_b3"><a class="bt_event" href="#sec6" onclick="click06();">イベント<br>0006</a></div>
     </div>
 
-    <div class="ev_cover" id="ev1">
-        <img class="ev_background_flower" src="src/flower_trans001.png"></img>
-        <div class="ev_left">
-            <h>運スタツアーズ</h>
-            <img src="src/waseda_map.png" style: height="200px;"></img>
-            <p>ただの説明会ではありません！<br>運営スタッフについての基本的な情報から日頃の活動内容、早稲田祭当日の様子や運営スタッフの大学生活の実態まで詳しく知ることができます。<br>スペシャルゲストの登場もお楽しみに！</p>
-        </div>
-        <div class="ev_right">
-            <div class="ev_r_left">
-                <h>日程</h>
-                <p>4/5(水) 15:05~16:45<br>4/9(日) 10:40~12:20<br>4/11(火) 15:05~16:45</p>
+    <!-- event explain -->
+    <div class="swiper ev_cover_continer">
+        <div class="swiper-wrapper ev_cover_wrapper">
+            <div class="ev_cover swiper-slide" id="sec1">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+                <div class="ev_left">
+                    <h class="ev_block">対面説明会</h><hr class="evtitle_hr evh1">
+                    <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                    <div class="paragraph">運スタに関する基本的な情報から活動の様子、運スタの大学生活の実態まで、運スタのことならなんでも知れる！ 運スタに入るか迷ったらまず説明会に来てみよう！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_left">
+                        <div class="ev_r_date">
+                            <h>日程</h><hr class="ev_hr">
+                            <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                        </div>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期限</h><hr class="ev_hr">
+                            <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>戸山キャンパス 学生会館</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="ev_r_right">
-                <h>申し込み期限</h>
-                <p>4/5(水) 15:05~16:45<br>4/9(日) 10:40~12:20<br>4/11(火) 15:05~16:45</p>
-                <h>場所</h>
-                <p>戸山キャンパス 学生会館</p>
+
+            <div class="ev_cover swiper-slide" id="sec2">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+                <div class="ev_left">
+                    <h class="ev_block">運スタ王</h><hr class="evtitle_hr evh2">
+                    <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                    <div class="paragraph">みんなで一緒にクイズを解くことで、運スタや早稲田祭に詳しくなれます！ 「運スタのことをあまり知らない……」というあなたも大歓迎！ クイズをしながら、楽しく運スタの全てを知りましょう！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_left">
+                        <div class="ev_r_date">
+                            <h>日程</h><hr class="ev_hr">
+                            <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                        </div>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期限</h><hr class="ev_hr">
+                            <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>戸山キャンパス 学生会館</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ev_cover swiper-slide" id="sec3">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+                <div class="ev_left">
+                    <h class="ev_block">もしも運スタになったらツアーズ</h><hr class="evtitle_hr evh3">
+                    <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                    <div class="paragraph">早稲田キャンパス・戸山キャンパスやその周辺地域を回りながら、早稲田祭当日や日々の運スタの活動、早大生の日常など、何でも気軽におしゃべりしましょう！ 友人と一緒に参加することも可能！ 早稲田祭のプロフェッショナルたちがみなさんを祭の世界へお連れします！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_left">
+                        <div class="ev_r_date">
+                            <h>日程</h><hr class="ev_hr">
+                            <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                        </div>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期限</h><hr class="ev_hr">
+                            <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>戸山キャンパス 学生会館</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ev_cover swiper-slide" id="sec4">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+                <div class="ev_left">
+                    <h class="ev_block">ワセダの知らない世界</h><hr class="evtitle_hr evh4">
+                    <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                    <div class="paragraph">「学部別トーク」で同じ学部の新入生や先輩と交流しよう！ 運スタへの疑問から大学生活の不安まで、全て解決できること間違いなし！「運スタかるた」では、楽しみながら運スタの活動を知ることもできます！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_left">
+                        <div class="ev_r_date">
+                            <h>日程</h><hr class="ev_hr">
+                            <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                        </div>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期限</h><hr class="ev_hr">
+                            <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>戸山キャンパス 学生会館</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ev_cover swiper-slide" id="sec5">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+                <div class="ev_left">
+                    <h class="ev_block">運スタゆるトーク</h><hr class="evtitle_hr evh5">
+                    <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                    <div class="paragraph">早稲田祭や運スタの写真・映像を見ながら、楽しくお話しましょう～！ 担当の運スタと話すことで、運スタについて広く知ることができます。オンライン開催なので、気軽にお家からでも参加できます！ 友人と一緒に参加することも可能です！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_left">
+                        <div class="ev_r_date">
+                            <h>日程</h><hr class="ev_hr">
+                            <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                        </div>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期限</h><hr class="ev_hr">
+                            <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>戸山キャンパス 学生会館</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ev_cover swiper-slide" id="sec6">
+            <img class="ev_background_flower" src="../static/img/hana3-haikei.png"></img>
+            <div class="ev_left">
+                <h class="ev_block">運スタ相談所</h><hr class="evtitle_hr evh6">
+                <img class="ev_exp_photo" src="../static/img/waseda_map.png"></img>
+                <div class="paragraph">「運スタ面白そうだけど、対面の新歓には行けない……」「他の人がいる場では聞きづらい悩みや相談をしたい…… 」 という方におすすめ！ オンラインの企画なので気軽に参加でき、担当の運スタと1対1で、周りを気にせずじっくりお話できます。
+                </div>
+            </div>
+            <div class="ev_right">
+                <div class="ev_r_left">
+                    <div class="ev_r_date">
+                        <h>日程</h><hr class="ev_hr">
+                        <p><span class="ev_emphasis">4/5</span>(水) 15:05~16:45<br><span class="ev_emphasis">4/9</span>(<span class="ev_sunday">日</span>) 10:40~12:20<br><span class="ev_emphasis">4/11</span>(火) 15:05~16:45</p>
+                    </div>
+                </div>
+                <div class="ev_r_right">
+                    <div class="ev_r_dead">
+                        <h>申し込み期限</h><hr class="ev_hr">
+                        <p>全日程:<span class="ev_emphasis">4/3</span>(月) 23:59迄</p>
+                    </div>
+                    <div class="ev_r_place">
+                        <h>場所</h><hr class="ev_hr">
+                        <p>戸山キャンパス 学生会館</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-    <div class="ev_cover" id="ev2"></div>
-    <div class="ev_cover" id="ev3"></div>
-    <div class="ev_cover" id="ev4"></div>
-    <div class="ev_cover" id="ev5"></div>
-    <div class="ev_cover" id="ev6"></div>
+    
 
     <section id="calender">
-        <!--<div class="balloon1"><p><h6>対面説明会</h6> 申し込み期間<br>ここをクリック↓↓↓↓</p></div>
-        <div class="balloon bl1"><div class="bl1_under"></div><p><h4>対面説明会</h4> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>-->
+        <div class="sectiontitle">
+            <img src="../static/img/hanabira3-red.png">
+            <h2>申し込みの日程</h2>
+            <img src="../static/img/hanabira3-red.png">
+        </div>
 
-        <!-- <img class="calender" src="src/calendar.png"> -->
         <table class="calender_table">
             <tr><th class="sunday">日曜</th><th>月曜</th><th>火曜</th><th>水曜</th><th>木曜</th><th>金曜</th><th class="saturday">土曜</th></tr>
-            <tr class="days onevent"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="saturday">6</td></tr>
+            <tr class="days onevent"><td class="sunday">3/24</td><td>3/25</td><td>3/26</td><td>3/27</td><td>3/28</td><td>3/29</td><td class="saturday">3/30</td></tr>
                 <tr class="evnetdays_row">
-                    <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days1">対面説明会</div><div class="balloon bl1"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl1_under under"></div></a></td>
-                    <td><a href="#ev1"><div class="eventdays days1 rightsolid">　</div></a></td>
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec1" onclick="click01();"><div class="eventdays days1 rightsolid">対面説明会</div>
+                        <div class="balloon bl1"><p><span class="bl_emphasis ble1">対面説明会</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec2" onclick="click02();"><div class="eventdays days2 rightsolid">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec3" onclick="click03();"><div class="eventdays days3 rightsolid">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec4" onclick="click04();"><div class="eventdays days4 rightsolid">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p></p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec5" onclick="click05();"><div class="eventdays days5 rightsolid">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="7" style:height="10px";></td>
+                </tr>
+            <tr class="days onevent"><td class="sunday">3/31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td class="saturday">6</td></tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec1" onclick="click01();"><div class="eventdays days1 leftsolid">対面説明会</div>
+                        <div class="balloon bl1"><p><span class="bl_emphasis ble1">対面説明会</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec1" onclick="click01();"><div class="eventdays days1">対面説明会</div>
+                        <div class="balloon bl1"><p><span class="bl_emphasis ble1">対面説明会</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec2" onclick="click02();"><div class="eventdays days2 leftsolid">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec2" onclick="click02();"><div class="eventdays days2">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec3" onclick="click03();"><div class="eventdays days3 leftsolid">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec3" onclick="click03();"><div class="eventdays days3">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec4" onclick="click04();"><div class="eventdays days4 leftsolid">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec4" onclick="click04();"><div class="eventdays days4">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec5" onclick="click05();"><div class="eventdays days5 leftsolid">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec5" onclick="click05();"><div class="eventdays days5">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
                 </tr>
                 <tr class="evnetdays_row">
                     <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days2">対面説明会</div><div class="balloon bl2"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl2_under under"></div></a></td>
-                    <td><a href="#ev2"><div class="eventdays days2 rightsolid">　</div></a></td>
+                    <td colspan="6"><a href="#sec6" onclick="click06();"><div class="eventdays days6">運スタ相談所</div>
+                        <div class="balloon bl6"><p><span class="bl_emphasis ble6">運スタ相談所</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
                 </tr>
-                <tr class="evnetdays_row">
-                    <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days3">対面説明会</div><div class="balloon bl3"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl3_under under"></div></a></td>
-                    <td><a href="#ev3"><div class="eventdays days3 rightsolid">　</div></a></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days4">対面説明会</div><div class="balloon b41"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl4_under under"></div></a></td>
-                    <td><a href="#ev4"><div class="eventdays days4 rightsolid">　</div></a></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days5">対面説明会</div><div class="balloon bl5"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl5_under under"></div></a></td>
-                    <td><a href="#ev5"><div class="eventdays days5 rightsolid">　</div></a></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td></td>
-                    <td colspan="5"><a href="#ev1"><div class="eventdays days">対面説明会</div><div class="balloon bl6"><p><h6>対面説明会</h6> 申し込み期間 4/1~4/5<br>ここをクリック↓↓↓↓</p></div><div class="bl6_under under"></div></a></td>
-                    <td><a href="#ev6"><div class="eventdays days6 rightsolid">　</div></a></td>
-                </tr>
-            <tr class="days onevent"><td class="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="saturday">13</td></tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev1"><div class="eventdays days1 leftsolid">新歓イベント0001</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td><div class="limitheight">・特別日程</div></td>
-                    <td></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev2"><div class="eventdays days2 leftsolid">新歓イベント0002</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev3"><div class="eventdays days3 leftsolid">新歓イベント0003</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev4"><div class="eventdays days4 leftsolid">新歓イベント0004</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev5"><div class="eventdays days5 leftsolid">新歓イベント0005</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="evnetdays_row">
-                    <td colspan="3"><a href="#ev6"><div class="eventdays days6 leftsolid">新歓イベント0006</div></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <tr class="days offevent"><td class="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="saturday">13</td></tr>
             <tr class="days offevent"><td class="sunday">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td class="saturday">20</td></tr>
-            <tr class="days offevent"><td class="sunday">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="saturday">27</td></tr>
-            <tr class="days offevent"><td class="sunday">28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
         </table>
 
         <div class="calender_example">
             <div class="cal_ex_flex">
                 <div class="eventdays days1"></div>
-                <p>対面説明会</p>
+                <h>対面説明会</h>
             </div>
             <div class="cal_ex_flex">
                 <div class="eventdays days2"></div>
-                <p>対面説明会</p>
+                <h>対面説明会</h>
             </div>
             <div class="cal_ex_flex">
                 <div class="eventdays days3"></div>
-                <p>対面説明会</p>
+                <h>対面説明会</h>
             </div>
             <div class="cal_ex_flex">
                 <div class="eventdays days4"></div>
-                <p>対面説明会</p>
+                <h>対面説明会</h>
             </div>
             <div class="cal_ex_flex">
                 <div class="eventdays days5"></div>
-                <p>対面説明会</p>
+                <h>対面説明会</h>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer component -->
+    <div class="footer">
+        <a class="footer_top" href="../index.html">TOP</a>
+        <hr class="mobile_none">
+
+        <div class="footer_list_cover">
+            <div class="footer_left_list">
+                <a class="mobile_view" href="../index.html">TOP</a>
+                <a href="../pages/aboutfes.html">早稲田祭とは</a>
+                <a href="../pages/aboutstaff.html">運営スタッフとは</a>
+                <a href="../pages/schedule.html">運スタの1年</a>
+                <a href="../pages/introduce.html">局紹介</a>
+                <a class="mobile_none" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_none" href="../pages/howto.html">入会方法</a>
+            </div>
+
+            <img class="footer_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_line"></div>
+
+            <div class="footer_right_list">
+                <a class="mobile_view" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_view" href="../pages/howto.html">入会方法</a>
+                <a href="../pages/event.html">新歓イベント</a>
+                <ul class="footer_event_list">
+                    <li><a href="../pages/event.html#sec1">対面説明会</a></li>
+                    <li><a href="../pages/event.html#sec2">運スタ王</a></li>
+                    <li><a href="../pages/event.html#sec3">もしも運スタになったらツアーズ</a></li>
+                    <li><a href="../pages/event.html#sec4">ワセダの知らない世界</a></li>
+                    <li><a href="../pages/event.html#sec5">運スタゆるトーク</a></li>
+                    <li><a href="../pages/event.html#sec6">運スタ相談所</a></li>
+                </ul>
+                <a href="../pages/photogallery.html">運スタ写真館</a>
+                <a href="../pages/question.html">よくある質問</a>
             </div>
         </div>
 
-    </section>
+        <div class="footer_bottom_cover">
+            <img class="footer_icon_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_icon_cover">
+                <a href="https://www.instagram.com/wasedasai_new/" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_insta.png" class="footer_icon" alt="Instagramのリンク"></img></a>
+                <a href="https://twitter.com/wasedasai_new" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_X.png" class="footer_icon" alt="Xのリンク"></img></a>
+            </div>
+        </div>
+    </div>
 
 
-
+    <!-- calender popup script -->
     <script>
-    var msg = "";
-
-    function setup() {
-        createCanvas(windowWidth, windowHeight);
-
-        textAlign(CENTER);
-        textSize(30);
-        noStroke();
-
-        // set options to prevent default behaviors for swipe, pinch, etc
-        var options = {
-            preventDefault: true
-        };
-
-        // document.body registers gestures anywhere on the page
-        var hammer = new Hammer(document.body, options);
-        hammer.get('swipe').set({
-            direction: Hammer.DIRECTION_ALL
-        });
-
-        hammer.on("swipe", swiped);
-    }
-
-    function draw() {
-        background(250, 10, 100);
-        text(msg, width / 2, height / 2);
-    }
-
-    function swiped(event) {
-        console.log(event);
-        if (event.direction == 4) {
-            msg = "you swiped right";
-        } else if (event.direction == 8) {
-            msg = "you swiped up";
-        } else if (event.direction == 16) {
-            msg = "you swiped down";
-        } else if (event.direction == 2) {
-            msg = "you swiped left";
-        }
-    }
-
-    /////////////////////////////////////////////////////////////////
-    //　拡大縮小
-    
-    let s, sEnd;
-
-    function setup() {
-        createCanvas(windowWidth, windowHeight);
-
-        sEnd = 1;
-
-        const hammer = new Hammer(document.body, {
-            preventDefault: true,
-        });
-
-        hammer.get("pinch").set({ enable: true });
-        hammer.on("pinch", onPinch);
-    }
-
-    function onPinch(event) {
-        if (event.eventType === Hammer.INPUT_END) {
-            sEnd = s;
-        } else {
-            s = sEnd * event.scale;
-
-            if (s < 0.5) {
-            s = 0.5;
-            } else if (s > 3) {
-            s = 3;
-            }
-        }
-    }
-
-    function draw() {
-        background(220);
-
-        translate(width / 2, height / 2);
-        scale(s);
-
-        rect(-50, -50, 100);
-        line(-0.3 * width, 0, 0.3 * width, 0);
-    }
-    </script>
-
-
-    <script>
-        /////////////////////////////////////////////////////////////////
-        //　カレンダーポップアップ
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         var int = 0;
-        const eventNumber = 5;
+        const eventNumber = 16;
         //　ウィンドウ
         const scWidth = window.innerWidth;
         //　ポップアップ
         const balloon = document.getElementsByClassName('balloon');
-        //　ポップアップ下矢印
-        const underarrow = document.getElementsByClassName('under');
         //　コンテンツ座標
         var targetElement = document.getElementsByClassName('eventdays');
 
         //マウス移動時
-        
-
         document.onmousemove = function(e) {
             for(int = 0; int < eventNumber; ++int){
                 var blWidth = balloon[int].clientWidth;
                 var blposX = balloon[int].getBoundingClientRect().left;
                 var clientRect = targetElement[int].getBoundingClientRect();
                 var px = window.pageXOffset + clientRect.left;
-
-                underarrow[int].style.left = (e.pageX - blposX - 17) + "px";
 
                 if (0.5*blWidth >= e.pageX) {
                     balloon[int].style.left = -px + "px";
@@ -314,9 +470,6 @@
                 } else {
                     balloon[int].style.left = (e.pageX - px - 0.5*blWidth) + "px";
                 }
-
-                console.log(int);
-                console.log(balloon[int]);
             }
         }
 
@@ -324,14 +477,13 @@
         document.onmouseout = function(e) {
             for(int = 0; int < eventNumber; ++int){
                 balloon[int ].style.left = ``;
-                underarrow[int].style.left =  ``;
             }
         };
     </script>
 
-
+    <!-- smooth scroll script -->
     <script>
-        /////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //　スムーススクロール
         const scorrllLinks = document.querySelectorAll('a[href^="#"]');
         scorrllLinks.forEach((scorrllLink) => {
@@ -342,7 +494,7 @@
             const rectTop = targetContent.getBoundingClientRect().top;
             const positionY = window.pageYOffset;
             const viewheight = window.outerHeight;
-            const target = rectTop + positionY - 0.06*viewheight;
+            const target = rectTop + positionY - 0.1*viewheight;
             window.scrollTo({
             top: target,
             behavior: "smooth",
@@ -351,16 +503,60 @@
         });
     </script>
 
+    <!-- horizontal scroll script -->
+    <script>
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        var windowWidth = $(window).width();
+        var windowSm = 1023;
+        if (windowWidth <= windowSm) {
+            const mySwiper = new Swiper (' .swiper ', {
+                loop: true, //最後に達したら先頭に戻る
+                slidesPerView: '1', //何枚表示するか
+                speed: 700, // スライドアニメーションのスピード（ミリ秒）
+                centeredSlides : true,
 
-    <style>
-        .event_hero{
-            display: block;
-            width: 100vw;
-            min-height: 30px;;
-            aspect-ratio: 20;
-            background-color: beige;
+                // 前後スライドボタンを表示
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                pagination: { //ページネーション表示の設定
+                    el: '.swiper-pagination', //ページネーション要素のクラス名
+                    clickable: true, //クリック可能にするか
+                    type: 'bullets', //ページネーションの種類
+                },
+            } );
+            
+            function click01() {
+                mySwiper.slideTo(1);
+            }
+            function click02() {
+                mySwiper.slideTo(2);
+            }
+            function click03() {
+                mySwiper.slideTo(3);
+            }
+            function click04() {
+                mySwiper.slideTo(4);
+            }
+            function click05() {
+                mySwiper.slideTo(5);
+            }
+            function click06() {
+                mySwiper.slideTo(6);
+            }
+        } else {
+            //横幅1024px超のとき（タブレット、PC）に行う処理を書く
         }
 
+    </script>
+
+
+    <style>
+        body{
+            background-color: #efeae9;
+        }
 
         /*マップ*/
         .map_sumnail{
@@ -468,6 +664,14 @@
         }
 
 
+        /*カレンダーボタン*/
+        .btn-red{
+            display: block;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+
         /*ボタン*/
         .bt_cover_a,
         .bt_cover_b{
@@ -503,47 +707,200 @@
 
 
         /*イベント詳細*/
+        .ev_cover_wrapper{
+            display: flex;
+            flex-direction: column;
+        }
         .ev_cover{
-            width: 60vw;
-            max-width: 800px;
-            height: 500px;
+            width: 90vw;
+            max-width: 1000px;
             margin: 0 auto;
-            margin-top: 10vh;
+            margin-top: 4vh;
             border-radius: 1vh;
-            background-color:blanchedalmond;
+            background-color:rgb(255, 255, 255);
             display: flex;
             flex-direction: row;
             position: relative;
+            overflow: hidden;
         }
         .ev_left{
-            flex-basis: 40%;
+            flex-basis: 50%;
             z-index: 2;
+            padding: 3% 5% 3% 5%;
         }
+        .ev_block{
+            margin: 0 auto;
+            text-align: center;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .evtitle_hr{
+            width: 40vw;
+            max-width: 500px;
+            border: none;
+            border-bottom: solid 4px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            position: absolute;
+            left: -30px;
+        }
+        .evh1{
+            color: #7290be;
+        }
+        .evh2{
+            color: #efb2a2;
+        }
+        .evh3{
+            color: #e9a767;
+        }
+        .evh4{
+            color: #8daca9;
+        }
+        .evh5{
+            color: #e06d71;
+        }
+        .evh6{
+            color: #7290be;
+        }
+
+        .ev_exp_photo{
+            width: 100%;
+            display: block;
+            margin: 10px auto 10px 0;
+        }
+
         .ev_right{
-            flex-basis: 60%;
+            flex-basis: 50%;
             display: flex;
             flex-direction: row;
             z-index: 2;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 3% 1.5% 3% 1.5%;
         }
-        .ev_right h{
-            text-decoration: underline;
-        }
-        .ev_r_left{
-            flex-basis: 50%;
-        }
+        .ev_r_left,
         .ev_r_right{
             flex-basis: 50%;
+            flex-basis: 50%;
+        }
+        .ev_r_date > h,
+        .ev_r_dead > h,
+        .ev_r_place > h{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 26px;
+            color: #3e3a39;
+            margin-top: 10vh;
+        }
+        .ev_r_date > p,
+        .ev_r_dead > p,
+        .ev_r_place > p{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #3e3a39;
+            margin-bottom: 5vh;
+        }
+        .ev_emphasis{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: #3e3a39;
+        }
+        .ev_sunday{
+            color: #e06d71;
+        }
+        .ev_saturday{
+            color: #7290be;
+        }
+        .ev_hr{
+            width: 90%;
+            border: none;
+            border-bottom: #3E3A39 solid 2px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
         }
         .ev_background_flower{
-            z-index: 1;
+            z-index: 0;
             position: absolute;
-            top: -50px;
-            left: -100px;
-            overflow: hidden;
+            top: -150px;
+            left: -220px;
+            transform: scale(120%);
+        }
+        @media screen and (max-width: 1023px) {
+            .ev_cover_wrapper{
+                display: flex;
+                flex-direction: row;/* exchanging point */
+            }
+            .ev_cover_continer{
+                background-color: white;/* exchanging point */
+            }
+            .ev_cover{
+                width: 90vw;
+                max-width: 1000px;
+                margin: 0 auto;
+                margin-top: 0vh;/* exchanging point */
+                border-radius: 0vh;/* exchanging point */
+                background-color:rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+            }
+            .evtitle_hr{
+                width: 70vw;
+                max-width: 600px;
+                border: none;
+                border-bottom: solid 4px;
+                margin-left: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+
+                position: absolute;
+                left: -30px;
+            }
+            .ev_right{
+                flex-basis: 50%;
+                display: flex;
+                flex-direction: row;/* exchanging point */
+                z-index: 2;
+                width: 90%;/* exchanging point */
+                max-width: 400px;/* exchanging point */
+                margin: 0 auto;
+                padding: 3% 1.5% 3% 1.5%;
+            }
+            .ev_r_date > h,
+            .ev_r_dead > h,
+            .ev_r_place > h{
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 700;
+                font-size: 18px;/* exchanging point */
+                color: #3e3a39;
+                margin-top: 10vh;
+            }
+            .ev_r_date > p,
+            .ev_r_dead > p,
+            .ev_r_place > p{
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 700;
+                font-size: 12px;/* exchanging point */
+                color: #3e3a39;
+                margin-bottom: 5vh;
+            }
+            .ev_emphasis{
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 700;
+                font-size: 22px;/* exchanging point */
+                color: #3e3a39;
+            }
         }
 
 
-        /*カレンダー*/
+        /* カレンダー */
         .calender{
             display: block;
             margin:
@@ -583,9 +940,13 @@
             text-align: center;
             vertical-align: top;
             font-weight: bold;
+            padding: 0;
+        }
+        .calender_table tr td > a{
+            text-decoration: none;
         }
         .days td{
-            padding-top: 5px;
+            padding-top: 1px;
         }
 
         .sunday{
@@ -599,32 +960,32 @@
             pointer-events: auto;/* hover有効化 */
             cursor: pointer;
             text-decoration: none;
+            color: #3e3a39;
             width: 98%;
             height: 10px;
             border-radius: 5px;
-            border-color: #333;
-            border: 1px;
             margin: 0 auto;
             text-align: center;
-            font-size: 9px;
+            vertical-align: middle;
+            font-size: 8px;
         }
         .days1{
-            background-color: rgb(255, 150, 225);
+            background-color: #7290be;
         }
         .days2{
-            background-color: rgb(213, 155, 255);
+            background-color: #efb2a2;
         }
         .days3{
-            background-color: rgb(152, 180, 255);
+            background-color: #e9a767;
         }
         .days4{
-            background-color: rgb(183, 255, 176);
+            background-color: #8daca9;
         }
         .days5{
-            background-color: rgb(254, 255, 166);
+            background-color: #e06d71;
         }
         .days6{
-            background-color: rgb(255, 182, 182);
+            background-color: #7290be;
         }
 
         .limitheight{
@@ -650,7 +1011,7 @@
             position: absolute;
             display: block;
             visibility: hidden;
-            top: -90px;
+            top: -113px;
             left: 0px;
             margin: 1.5em 0;
             padding: 7px 10px;
@@ -662,48 +1023,43 @@
             z-index: 10;
             border: 1px solid #3e3a39;
         }
-        .under {
-            pointer-events: none;/* hover無効化 */
-
-            position: absolute;
-            display: block;
-            visibility: hidden;
-            top: -14px;
-            height: 15px;
-            width: 30px;
-            background: #efeae9;
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-            z-index: 10;
-            border: 1px solid #3e3a39;
-        }
         .balloon p {
             margin: 0;
             padding: 0;
         }
-        h6{
+        .bl_emphasis{
             display: inline;
-            color: white;
+            color: #3E3A39;
             font-family: "Noto Sans JP";
-            background-color: blue;
         }
-
+        .ble1{
+            background-color: #7290be;
+        }
+        .ble2{
+            background-color: #efb2a2;
+        }
+        .ble3{
+            background-color: #e9a767;
+        }
+        .ble4{
+            background-color: #8daca9;
+        }
+        .ble5{
+            background-color: #e06d71;
+        }
+        .ble6{
+            background-color: #7290be;
+        }
 
         /*カレンダー　ポップアップ 表示システム*/
         .days1:hover ~.bl1,
-        .days1:hover ~.bl1_under,
         .days2:hover ~.bl2,
-        .days2:hover ~.bl2_under,
         .days3:hover ~.bl3,
-        .days3:hover ~.bl3_under,
         .days4:hover ~.bl4,
-        .days4:hover ~.bl4_under,
         .days5:hover ~.bl5,
-        .days5:hover ~.bl5_under,
-        .days6:hover ~.bl6,
-        .days6:hover ~.bl6_under{
+        .days6:hover ~.bl6{
             visibility: visible;
         }
-
 
         /* カレンダー 凡例 */
         .cal_ex_flex{
@@ -712,6 +1068,17 @@
         }
         .cal_ex_flex .eventdays{
             width: 200px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .bl1,
+            .bl2,
+            .bl3,
+            .bl4,
+            .bl5,
+            .bl6{
+                display: none;
+            }
         }
 
     </style>

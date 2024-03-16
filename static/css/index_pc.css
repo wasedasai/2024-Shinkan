@@ -1,173 +1,648 @@
+
 @media print, screen and (min-width: 1024px){
- .blocktitle-blue {
-                   color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #7290be;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    body {
+        margin: 0;/*3/12yaga > hero,footerの横に隙間があったため追加*/
+    }
 
-.blocktitle-sakura {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #efb2a2;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    /* Header */
+    .header {
+        height: 90px;
+        background-color: #efeae9;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;/*3/12yaga > headerを前に持ってくる*/
+    }
+      
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+        color: #b53240;
+        padding: 0 25px 0 0;
+        margin-right: auto;
+        margin-left: 0;
+    }
+      
+    .header-logo_pc img{
+        padding-top: 5px;
+        height: 80px;
+    }
+      
+    .header-logo_sp img{
+        display: none;
+    }
+      
+    input[type="checkbox"] {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+      
+    .hamburger {
+        display: block;
+        width: 50px;
+        height: 80px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+      
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #b53240;
+        transition: all 0.5s;
+    }
+      
+    .hamburger span::before {
+        top: -12px;
+    }
+      
+    .hamburger span::after {
+        bottom: -12px;
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span {
+        background-color: transparent;
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+      
+    input[type="checkbox"]:checked + .hamburger span::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+    
+    .nav {
+        position: fixed;
+        width: 40vw;
+        height: 80%;
+        top: 79px;
+        right: -120%;
+        background-color: #efeae9;
+        list-style: none;
+        padding: 50px 0;
+        transition: all 0.5s;
+    }
+      
+    .nav-list{
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        list-style: none;
+        overflow-y: scroll;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nav-list::-webkit-scrollbar{
+        border-radius: 3px;
+        width: 7px;
+    }
+      
+    .nav-list::-webkit-scrollbar-track{
+        background-color: #efeae9;
+    }
+      
+    .nav-list::-webkit-scrollbar-thumb{
+        background: #b53240;
+        border-radius: 3px;
+    }
 
-.blocktitle-green {  
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #8daca9;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .nav-item{
+        padding: 10px 0;
+    }
+    
+    .nav-item a {
+        display: block;
+        color:#b53240;
+        font-size: 20px;
+        padding: 0px 0 5px 0px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .nav-item a:hover {
+        color: #b53240;
+    }
+    
+    .nav-item a::after {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #b53240;
+        transform: scale(0, 1);
+        transform-origin: center top;
+        transition: transform .3s;
+    }
+    
+    .nav-item a:hover::after {
+        transform: scale(1, 1);
+    }
+    
+    input[type="checkbox"]:checked ~ .nav {
+        right: 0;
+    }
+    
+  /* Hero */
+    .Hero{
+        margin-top: 90px;
+    }
 
-.blocktitle-orange {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #e9a767;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
+    .hero_pc{
+        position:relative;
+    }
+ 
+    .hero_sp{
+        display:none;
+    }
+ 
+    .herophoto1{
+        width:100%;
+    }
+ 
+    .hero_pc h1{
+        position:absolute;
+        top:50%;
+        left:50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        margin :0;
+        padding: 0;
+        font-size: 45px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        color: #3e3a39;
+    }
 
+    /* SectionTitle */
+    .sectiontitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .sectiontitle h2{
+        color: #3e3a39;
+        font-size: 40px;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        padding: 0 0 0 5px;
+        margin: 0;
+    }
+    
+    .sectiontitle img{
+        width: 58px;
+    }
 
-.blocktitle-rose {
-                    color: #3e3a39;
-                    font-family: "Noto Sans JP", sans-serif;  
-                    border-bottom: solid 5px #e06d71;
-                    padding-bottom: .1em;
-                    border-radius: 2px;
-                    font-size: 30px;
-                    display: inline-block;
-                  }
-.footer{
-    width: 100%;
-    background-color: #e7dbd9;
-    padding-top: 90px;
-    padding-bottom: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
+    /* BlockTitle　blocktitleのhtmlは文字の前後に空白つけたままで！ */
+    .blocktitle-red{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #b53240;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*T 上部階層まとめ*/
-.footer_top{
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 20px;
-    font-weight: 700;
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.footer_top a{
-    text-decoration: none;
-    color: #3E3A39;
-}
-hr{
-    width: 150px;
-    border: none;
-    border-bottom: #3E3A39 solid 3px;
-    margin: 0 auto;
-    margin-bottom: 35px;
-}
+    .blocktitle-blue{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #7290be;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*M 中部階層まとめ*/
-.footer_list_cover{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+    .blocktitle-sakura{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #efb2a2;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*L 左側リンク*/
-.footer_left_list{
-    display: flex;
-    flex-direction: column;
-}
-h5{
-    width: 300px;
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    margin: 15.5px 0 15.5px 0;
-}
-h5 a{
-    text-decoration: none;
-    color: #3E3A39;
-}
+    .blocktitle-yellow{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #e9a767;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*I 内側装飾*/
-.footer_logo{
-    max-width: 360px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.footer_line{
-    display: none;
-}
+    .blocktitle-green{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #8daca9;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*R 右側リンク*/
-.footer_right_list{
-    display: flex;
-    flex-direction: column;
-}
-.footer_event_list{
-    height: 180px;
-    font-size: 10px;
-    margin: 0 0 0 70px;
-}
-li {
-    width: fit-content;
-    font-family: 'Zen Kaku Gothic NEW';
-    font-size: 13px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-li a{
-    text-decoration: none;
-    color: #3E3A39;
-}
+    .blocktitle-rose{
+        color: #3e3a39;
+        font-family: 'Zen Kaku Gothic New';
+        font-weight: bold;
+        border-bottom: solid 5px #e06d71;
+        padding-bottom: .1em;
+        border-radius: 2px;
+        font-size: 30px;
+        display: inline-block;
+    }
 
-/*B 下部階層まとめ*/
-.footer_bottom_cover{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-}
-.footer_icon_logo{
-    display: none;
-}
-.footer_icon{
-    max-width: 40px;
-    margin: 10px;
-}
+    /* SquareLink */
+    .squarelink-red a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
 
-/*レスポンシブ*/
-.mobile_view{
-    display: none;
-}
-.mobile_none{
-    display: block;
-}
-.paragraph{
-    width:100%;
-    letter-spacing: 0.1px;
-    line-height: 26px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 8px;
-    color:#3e3a39;
-}
-}
+    .btn-red {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #b53240;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-red > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-red.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-blue a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-blue {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #7290be;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-blue > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-blue.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-sakura a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-sakura {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #efb2a2;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-sakura > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-sakura.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-yellow a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-yellow {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e9a767;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-yellow > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-yellow.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-green a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-green {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #8daca9;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+
+    .squarelink-green > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-green.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+
+    .squarelink-rose a {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .btn-rose {
+        font-family: 'Zen Kaku Gothic New';
+        font-size: 24px;
+        font-weight: bold;
+        padding: 1rem 2.5rem 1rem 4.5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        border: 4px solid #e06d71;
+        border-radius: 90px;
+        color: #3e3a39;
+        box-shadow: 0px 5px 5px 1px rgba(000,0,0,0.3);
+        height: 64px;
+        min-width: 312px; /*ここでwidthの最小値を決める*/
+        display: inline-block;
+        line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
+    }
+  
+    .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
+        content: url(../img/hanabira3-rose.png);
+        transform: scale(0.08); /*花びらのサイズ*/
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -42px; /*花びらの位置*/
+        top: -43px;
+    }
+    
+    /* Footer */
+    .footer{
+        width: 100%;
+        background-color: #e7dbd9;
+        padding-top: 90px;
+        padding-bottom: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    /*T 上部階層まとめ*/
+    .footer_top{
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    hr{
+        width: 150px;
+        border: none;
+        border-bottom: #3E3A39 solid 3px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+    
+    /*M 中部階層まとめ*/
+    .footer_list_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /*L 左側リンク*/
+    .footer_left_list{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_left_list > a,
+    .footer_right_list > a{ /*3/12yaga > 干渉防止のタグ修正*/
+        width: 300px;
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 15.5px 0 15.5px 0;
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    
+    /*I 内側装飾*/
+    .footer_logo{
+        max-width: 360px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .footer_line{
+        display: none;
+    }
+    
+    /*R 右側リンク*/
+    .footer_right_list{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_event_list{
+        height: 180px;
+        font-size: 10px;
+        margin: 0 0 0 70px;
+    }
+    .footer_event_list > li { /*3/12yaga > 干渉防止のタグ制限*/
+        width: fit-content;
+        font-family: 'Zen Kaku Gothic NEW';
+        font-size: 13px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    .footer_event_list > li > a{ /*3/12yaga > 干渉防止のタグ制限*/
+        text-decoration: none;
+        color: #3E3A39;
+    }
+    
+    /*B 下部階層まとめ*/
+    .footer_bottom_cover{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .footer_icon_logo{
+        display: none;
+    }
+    .footer_icon{
+        max-width: 40px;
+        margin: 10px;
+    }
+    
+    /*レスポンシブ*/
+    .mobile_view{
+        display: none;
+    }
+    .mobile_none{
+        display: block;
+    }
+    .paragraph{
+        width:100%;
+        letter-spacing: 0.1px;
+        line-height: 26px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 8px;
+        color:#3e3a39;
+    }
+
+ }
