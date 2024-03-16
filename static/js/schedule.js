@@ -10,7 +10,7 @@
 //       });
 // }
 
-if(window.matchMedia("(max-width:1023px)").matches){
+// if(window.matchMedia("(max-width:1023px)").matches){
 $('.blocktitle-green').on('click', function() {
   var findElm = $(this).next(".sukejuru-info");
   $(findElm).slideToggle();
@@ -20,5 +20,5 @@ $('.blocktitle-green').on('click', function() {
   }else{
     $(this).addClass('close');
   }
-});}
+});
 
