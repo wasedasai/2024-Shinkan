@@ -85,9 +85,9 @@
       <img src="./static/img/hanabira3-rose.png">
     </div>
     <div class="top-aboutfes">
-      <img src="">
+      <img src="./static/img/top-aboutfes.jpeg" class="top-hajimeniphoto">
       <div class="hajimeni-info">
-        <h3 class="blocktitle-rose">　早稲田祭とは　</h3>
+        <h3 class="blocktitle-rose hajimeni-bt">　早稲田祭とは　</h3>
         <div class="hajimeni-bun">年に一度、早稲田大学 早稲田キャンパス・戸山キャンパス・周辺地域を舞台に開催される早稲田文化の祭典、それが「早稲田祭」です。日本最大級の学園祭である早稲田祭については、こちらからご覧ください。
         </div>
         <h4 class="squarelink-rose">
@@ -96,9 +96,9 @@
       </div>
     </div>
     <div class="top-aboutstaff">
-      <img src="">
+      <img src="./static/img/top-aboutstaff.jpeg" class="top-hajimeniphoto">
       <div class="hajimeni-info">
-        <h3 class="blocktitle-rose">　運営スタッフとは　</h3>
+        <h3 class="blocktitle-rose hajimeni-bt">　運営スタッフとは　</h3>
         <div class="hajimeni-bun"> 早稲田祭2024の開催、そして成功に向けて日々活動しているのが私たち「早稲田祭2024運営スタッフ」です。活動日時や活動内容についてはこちらからご覧ください。
         </div>
         <h4 class="squarelink-rose">
@@ -268,6 +268,18 @@ body{
   background-color: #b53240;
 }
 /* はじめに */
+.top-hajimeniphoto{
+  width: 450px;
+  height: 300px;
+}
+.top-aboutfes{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.top-aboutstaff{
+  display: flex;
+  flex-direction: row;
+}
 .hajimeni-bun{
   font-family: 'Noto Sans JP, sans-serif';
   font-weight: normal;
@@ -297,6 +309,25 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 1023px){
+  /* はじめに */
+  .top-aboutfes{
+    flex-direction: column-reverse;
+  }
+  .top-aboutstaff{
+    flex-direction: column-reverse;
+  }
+  .top-hajimeniphoto{
+    order: 2;
+  }
+  .hajimeni-bt{
+    order: 1;
+  }
+  .moreinfo-btn{
+    width: 100%;
+  }
 }
 </style>
 </body>
