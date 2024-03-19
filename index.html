@@ -29,7 +29,6 @@
  </head>
 
 <body class="topbody">
-  <!-- <h1>Coming Soon...</h1> -->
   <!-- Header -->
   <header class="header">
     <div class="header-container">
@@ -85,6 +84,7 @@
       <img src="./static/img/hanabira3-rose.png">
     </div>
     <div class="top-aboutfes">
+      <h3 class="blocktitle-rose hajimeni-bt-sp">　早稲田祭とは　</h3>
       <img src="./static/img/top-aboutfes.jpeg" class="top-hajimeniphoto">
       <div class="hajimeni-info">
         <h3 class="blocktitle-rose hajimeni-bt">　早稲田祭とは　</h3>
@@ -96,6 +96,7 @@
       </div>
     </div>
     <div class="top-aboutstaff">
+      <h3 class="blocktitle-rose hajimeni-bt-sp">　運営スタッフとは　</h3>
       <img src="./static/img/top-aboutstaff.jpeg" class="top-hajimeniphoto">
       <div class="hajimeni-info">
         <h3 class="blocktitle-rose hajimeni-bt">　運営スタッフとは　</h3>
@@ -216,6 +217,7 @@ body{
   width: 100%;
   height: 90%;
 }
+
 /* NEWS */
 .news{
   margin: 0 auto;
@@ -223,6 +225,7 @@ body{
   border: solid #b53240 1px;
   width: 60%;
   height: 250px;
+  margin-top: 100px;
 }
 .news > p{
   height: 30px;
@@ -268,22 +271,45 @@ body{
   background-color: #b53240;
 }
 /* はじめに */
+.hajimeni-container{
+  margin-top: 100px;
+}
+.hajimeni-container > .sectiontitle{
+  margin-bottom: 20px;
+}
 .top-hajimeniphoto{
   width: 450px;
   height: 300px;
 }
+.hajimeni-bt-sp{
+  display: none;
+}
 .top-aboutfes{
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
 }
 .top-aboutstaff{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+.hajimeni-info{
+  text-align: center;
+  width: 450px;
+}
+.hajimeni-info > .squarelink-rose{
+  text-align: right;
 }
 .hajimeni-bun{
   font-family: 'Noto Sans JP, sans-serif';
   font-weight: normal;
   font-size: 20px;
+  text-align: left;
+  margin: 10px 0;
 }
 /* 新入生歓迎～！ */
 .welcome-container{
@@ -295,9 +321,14 @@ body{
   width: 80%;
   margin: 0 auto;
   padding: 6%;
+  margin-top: 100px;
+}
+.welcome-container > .sectiontitle{
+  margin-bottom: 20px;
 }
 .welcome-container > .squarelink-green{
   text-align: center;
+  padding-bottom: 100px;
 }
 .enter-unsuta{
   display: flex;
@@ -305,6 +336,12 @@ body{
   justify-content: space-around;
 }
 /* もっと詳しく */
+.moreinfo-container{
+  margin: 100px 0 120px 0;
+}
+.moreinfo-container > .sectiontitle{
+  margin-bottom: 20px;
+}
 .moreinfo-btn{
   display: flex;
   flex-direction: row;
@@ -312,17 +349,63 @@ body{
 }
 
 @media screen and (max-width: 1023px){
+  /* スライドショー */
+  .slideshow > img{
+    aspect-ratio: 16/9;
+  }
+  /* NEWS */
+  .news{
+    width: 80%;
+    height: 180px;
+    margin-top: 40px;
+  }
+  .news > p{
+    font-size: 16px;
+  }
+  .news > p::before{
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+  }
   /* はじめに */
-  .top-aboutfes{
-    flex-direction: column-reverse;
+  .hajimeni-container{
+    margin-top: 40px;
   }
-  .top-aboutstaff{
-    flex-direction: column-reverse;
+  .top-aboutfes , .top-aboutstaff{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
+  .top-hajimeniphoto{
+    width: 70%;
+    height: auto;
+  }
+  .hajimeni-bt{
+    display: none;
+  }
+  .hajimeni-bt-sp{
+    display: block;
+    width: auto;
+  }
+  .hajimeni-info{
+    width: 70%;
+    margin-top: 20px;
+  }
+  .hajimeni-info > .squarelink-rose{
+    text-align: center;
+  }
+  .hajimeni-bun{
+    font-size: 16px;
+  }
+  /* 新入生歓迎～！ */
   .welcome-container{
     width: 100%;
+    margin-top: 40px;
     padding: 0;
     border-radius: 0px;
+  }
+  .welcome-container > .squarelink-green{
+  padding-bottom: 40px;
   }
   .enter-unsuta{
     flex-direction: column;
@@ -330,9 +413,13 @@ body{
   .enter-unsuta > h4{
     text-align: center;
   }
+  /* もっと詳しく */
   .moreinfo-container{
     width: 100%;
-    background-color: #e7dbd9
+    background-color: #e7dbd9;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin: 0;
   }
   .moreinfo-btn{
     flex-direction: column;
