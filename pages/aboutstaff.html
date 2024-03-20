@@ -125,19 +125,23 @@
 
 <div class="hurekkusu">
 <div class="shozokuninnzu">
+    <div class="kasaneru1">
 <h3 class="blocktitle-sakura">　所属人数　</h3>
 <div class="shozokubun">
+    <img src="../static\img\hana3-haikei.png" class="haiiro" >
 <div class="paragraph">
     例年約<span class="roppyaku">650</span>人が所属しています！
-</div></div></div>
+</div></div></div></div>
 
 <div class="katudoubi">
 <h3 class="blocktitle-green">　活動日　</h3>
 <div class="katudoubibun">
+    <div class="kasaneru2">
+        <img src="../static\img\hana3-haikei.png"  class="haiiro">
 <div class="paragraph">基本的に毎週<span class="roppyaku">
     月</span>、<span class="roppyaku">木</span>曜日の<span class="roppyaku">6</span>限～<br/>
     （総務局は水曜日、財務局は金曜日の6限）</div>
-</div></div>
+</div></div></div>
 </div>
 
 <div class="happi">
@@ -219,49 +223,22 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </body>
 </html>
 
 
+
+  
+
+
+
 <style>
+
+
+@media screen and (min-width:1024px){
+
 .samatasan{
 width: 100%;
 height: 40%;
@@ -302,7 +279,7 @@ margin-bottom:10%;
 }
 
 .roppyaku{
-font-size: 40px;
+    font-size: 35px;
 font-weight: bold;
 }
 
@@ -324,16 +301,22 @@ color:#b53240;
 }
 
 .shozokuninnzu{
+
     margin-top:3%;
-    width:50%
+    width:40%;
+    margin-left:5%;
 }
 
 .katudoubi{
-    margin-top: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-top:3%;
     width: 40%;
-    height:40%
+}
+
+img.haiiro {
+width:90%;
+
+
 }
 
 .happi{
@@ -363,5 +346,192 @@ padding-bottom: 10%;
     margin-right:5%;
 }
 
+.kasaneru1 {
+  position: relative;/*親要素にrelative*/
+
+}
+.kasaneru2 {
+  position: relative;/*親要素にrelative*/
+
+}
+
+
+
+}
+.kasaneru1 .paragraph{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top:60%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:#3e3a39;
+  font-size: 20px;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+}
+
+.kasaneru2 .paragraph{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top:50%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:#3e3a39;
+  font-size: 20px;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+}
+
+
+
+
+@media screen and (max-width:1024px){
+
+ .samatasan{
+        width: 100%;
+        height: 40%;
+}
+
+.samatakun{
+        background-color: #efeae9;
+        text-align: center;
+        padding-bottom: 3%;
+}
+
+
+.ichiban{
+        margin-top: 3%;
+        margin-bottom:10%;
+}
+
+
+
+.katudounaiyou{
+        margin-top: 10%;
+        background-color: #fff;
+}
+
+.katudoubun{
+        width:60%;
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right:5%;
+}
+
+.katudoubibun{
+    text-align: center;
+}
+
+.hurekkusu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roppyaku{
+        font-size: 40px;
+        font-weight: bold;
+}
+
+.enji{
+        font-size: 35px;
+        font-weight: 500;
+        color:#b53240;
+}
+
+.hurekkusu2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+}
+
+.shozokubun{
+        text-align: center;
+}
+
+.shozokuninnzu{
+        margin-top:3%;
+        width:50%
+}
+
+.katudoubi{
+        margin-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 40%;
+        height:40%
+}
+
+.happi{
+    margin-top: 10%;
+}
+
+.poto{
+    margin-top :3%;
+    width:50%
+}
+
+.happibun{
+        width: 40%;
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right:5%;
+}
+
+.reku{
+        margin-top: 10%;
+        padding-bottom: 10%;
+}
+.rekubun{
+        width: 40%;
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-right:5%;
+    }
+
+
+.kasaneru1 {
+  position: relative;/*親要素にrelative*/
+
+}
+.kasaneru2 {
+  position: relative;/*親要素にrelative*/
+
+}
+
+
+
+}
+.kasaneru1 .paragraph{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top:60%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:#3e3a39;
+  font-size: 20px;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+}
+
+.kasaneru2 .paragraph{
+  position: absolute;/*重ねたい子要素にabsolute*/
+  top:50%;
+  left: 50%;
+ -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color:#3e3a39;
+  font-size: 20px;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+}
+
+
 
 </style>
+
