@@ -28,7 +28,85 @@
       <meta name="google-site-verification" content="2fJMsIUYmUbtlIKtSKvqyEc_5SPC1UQNd_HWuT-hSkw" />
   </head>
 <body class="topbody">
-  <h1>Coming Soon...</h1>
+  <div class="comingsoon-container">
+    <div class="comingsoon">
+      <div class="sukosiomatiyo">Coming soon……</div>
+      <img src="./static/img/hanawaku-red.png" class="comingsoon-syasin2">
+    </div>
+    <div class="sukosiomatiyo-jp">公開されるまでお待ちください！</div>
+  </div>
+  <style>
+    body{
+      background-color: #efeae9;
+      color: #3e3a39;
+    }
+    .comingsoon-container{
+      margin-top: 200px;
+      margin-bottom: 110px;
+      padding: 140px 0;
+    }
+    .comingsoon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      position: relative;
+    }
+    .sukosiomatiyo{
+      font-family: 'Zen Kaku Gothic New';
+      font-weight: bold;
+      font-size: 80px;
+      z-index: 1000;
+    }
+    .comingsoon::before{
+      content: '';
+      background-image: url(./static/img/maruhana-haikei.png);
+      background-size: contain;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin-left: 460px;
+      margin-bottom: 20px;
+    }
+    .comingsoon-syasin2{
+      width: 100px;
+      z-index: 99;
+      margin: 30px 0 0 30px;
+    }
+    .sukosiomatiyo-jp{
+      font-family: 'Noto Sans JP , sans-serif';
+      font-weight: normal;
+      font-size: 40px;
+      text-align: center;
+    }
+    @media screen and (max-width:1023px){
+      .comingsoon-container{
+        margin-top: 160px;
+        margin-bottom: 90px;
+      }
+      .comingsoon{
+        height: 100px;
+      }
+      .sukosiomatiyo{
+        font-size: 24px;
+      }
+      .comingsoon::before{
+        width: 60px;
+        height: 60px;
+        margin-left: 140px;
+        margin-bottom: 10px;
+      }
+      .comingsoon-syasin2{
+        width: 28px;
+        height: 28px;
+        margin: 10px 0 0 0;
+      }
+      .sukosiomatiyo-jp{
+        font-size: 16px;
+      }
+    }
+
+</style>
 </body>
  </html>
    
