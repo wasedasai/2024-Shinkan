@@ -24,6 +24,7 @@
     <!-- <meta name="twitter:card"> -->
     <!-- <meta name="twitter:site"> -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/index/js"></script>
 </head>
@@ -69,11 +70,56 @@
           <h1>運スタとは</h1>
         </div>
       </div>
+    
+<div class="for-sp">
+ <div class="samatakun-sp">
+<img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan-sp">
 
- <div class="samatakun">
-<img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan">
+<div class="ichiban-sp">
 
-<div class="ichiban">
+
+    <div id="wrap">
+ 
+        <div class="txt-show">
+            はじめまして。
+            早稲田祭2024運営スタッフ 代表の佐俣竣介です。<br/><br/>
+            
+            みなさんは大学生活でやりたいこと、見つけましたか。<br/></div>
+         
+        <div class="txt-hide">
+            大学生って本当に自由です。<br/>
+            勉強も、バイトも、恋愛も、サークル活動も、なんだってできます。<br/>
+            こんなにも自由で恵まれた時期は、人生でもうないかもしれない、とすら思っています。<br/>
+            そんな大学生という時間を、あなたは何に捧げますか。<br/>
+            早稲田祭は、早大生を中心としたたくさんの人々が情熱を注ぐ、日本最大級の学園祭です。<br/>
+            私たち早稲田祭2024運営スタッフは、新規メンバーを含めて約650人で活動を行います。<br/>
+            そんな運営スタッフには、多種多様な仲間たちがいます。<br/>
+            友達をつくりたくてサークルに入った人、勉強やバイトにも全力投球な人、大学生活で他にもやりたいことがある人。<br/>
+            その一つひとつが、尊重されるべきものであると私は思います。<br/>
+            しかしただ一つ、代表として断言できます。<br/>
+            それはどこの誰よりも運営スタッフ一人ひとりが、早稲田祭への情熱を強く持っている、ということです。<br/>
+            たった2日間の早稲田祭のために、1年をかけて約650人のメンバーが活動する。<br/>
+            信じられないような話ですが、早稲田祭というものを愛し、全力で向き合う、運営スタッフの仲間たちが私は大好きです。<br/><br/>
+            
+            あなたも一緒に、祭を創りませんか。<br/>
+            あなたの中にも、自分ですらまだ気づいていない、祭に向かう情熱がきっとあるはず。<br/>
+            あなたに秘められたその鼓動が、早稲田祭2024を奏でる原動力になります。<br/><br/>
+            
+            早稲田祭2024運営スタッフで、みなさんのことをお待ちしております。<br/>
+            早稲田祭2024運営スタッフ 代表 佐俣竣介 
+        </div>
+         
+        <button class="more"></button>
+        
+        </div></div></div></div>
+   
+          
+ <div class="for-pc">
+  <div class="samatakun-pc">
+    <img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan-pc">
+    
+    <div class="ichiban-pc">
+
 <div class="paragraph">
     はじめまして。
     早稲田祭2024運営スタッフ 代表の佐俣竣介です。<br/><br/>
@@ -100,7 +146,7 @@
     早稲田祭2024運営スタッフで、みなさんのことをお待ちしております。<br/>
     早稲田祭2024運営スタッフ 代表 佐俣竣介
       
-</div></div></div>
+</div></div></div></div>
 
 <div class="katudounaiyou">
 <!-- sectiontitle-yellow -->
@@ -237,20 +283,42 @@
 <style>
 
 
+
+@media only screen and (max-width : 1024px)
+{
+  .for-pc { display:none; }
+  .samatakun-pc{display:none; }
+  .samatakun-pc{display:none; }
+  .ichiban-pc{display:none; }
+  
+  .for-sp { display:block; } 
+  .samatakun-sp{display:block; }
+  .ichiban-sp{display:block; }
+  .samatasan-sp{display:block; }
+
+
+  
+}
+
+
+
+
 @media screen and (min-width:1024px){
 
-.samatasan{
+
+
+   .samatasan-pc{
 width: 100%;
 height: 40%;
 }
-.samatakun{
+ .samatakun-pc{
 background-color: #efeae9;
 text-align: center;
 padding-bottom: 3%;
 }
 
 
-.ichiban{
+ .ichiban-pc{
 margin-top: 3%;
 margin-bottom:10%;
 }
@@ -389,22 +457,49 @@ padding-bottom: 10%;
 
 @media screen and (max-width:1024px){
 
- .samatasan{
+  .for-sp  .txt-hide{
+display: none;
+}
+
+.for-sp  button.more {
+width: 120px;
+margin: 20px auto;
+display: block;
+color: #fff;
+padding:10px 15px;
+border: none;
+outline: 0;
+transition: .5s;
+-erbkit-transition: .5s;
+}
+ 
+.for-sp  button.more::after {
+content: "もっと見る";
+transition: .2s;
+-erbkit-transition: .2s;
+}
+
+.for-sp button.more.on-click::after{
+content: "閉じる";
+}
+
+
+ .samatasan-sp{
         width: 100%;
         height: 40%;
 }
 
-.samatakun{
+.samatakun-sp{
         background-color: #efeae9;
         text-align: center;
         padding-bottom: 3%;
 }
 
 
-.ichiban{
+.ichiban-sp{
         margin-top: 3%;
         margin-bottom:10%;
-}
+} 
 
 
 
@@ -546,4 +641,17 @@ width:120%;
 
 
 </style>
+
+
+<script>
+  if (window.matchMedia('(max-width: 1024px)').matches) {
+    $(function(){
+  $(".more").on("click", function() {
+    $(this).toggleClass("on-click");
+    $(".txt-hide").slideToggle(1000);
+  });
+}); 
+} else if (window.matchMedia('(min-width:1024px)').matches) {
+}
+ </script>
 
