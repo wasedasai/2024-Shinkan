@@ -73,34 +73,47 @@
 
     <div class="howto-btn">
         <h4 class="squarelink-red">
-            <a href="" class="btn-red">入会申し込みフォームはこちら</a>
+            <a href="https://forms.gle/pt17rKHyGtqBeuMbA" class="btn-red">入会申し込みフォームはこちら</a>
         </h4>
         <h4 class="squarelink-red">
-            <a href="" class="btn-red">募集要項はこちら</a>
+            <a href="https://drive.google.com/file/d/1XoKrwUmT4wT5kPo0q_GksQtB6P870O4M/views" class="btn-red">募集要項はこちら</a>
         </h4>
     </div>
 
     <div class="howto-container">
         <div class="howto-info">
             <h3 class="blocktitle-red">　募集期間　</h3>
-            <div class="howto-bun"></div>
+            <div class="howto-bun">4月17日(水) 12:00〜4月20日(土) 23:59</div>
         </div>
         <div class="howto-info">
             <h3 class="blocktitle-red">　募集枠　</h3>
-            <div class="howto-bun">通常枠とクリエイター枠（グラフィックデザイン・映像・Webコーディングなどの制作経験がある方が応募可能）の2枠に分かれています。詳しくは<a href="comingsoon.html">募集要項</a>をご覧ください。</div>
-        </div>
-        <div class="howto-info">
-            <h3 class="blocktitle-red">　入会申し込みフォーム　</h3>
             <div class="howto-bun">
-                入会申し込みフォームの提出にあたって、以下の情報を記入していただく必要があります。必ず募集期間内にご提出ください。</br>
-                <li>個人プロフィール</li>
-                <li>志望理由</li>
-                <li>自己アピール</li>
+                <li>①通常枠</li>
+                <li>②クリエイター枠</li>
+                <li>詳しくは、こちらの<a href="https://drive.google.com/file/d/1XoKrwUmT4wT5kPo0q_GksQtB6P870O4M/view">募集要項</a>をご覧ください。</li>
             </div>
         </div>
         <div class="howto-info">
-            <h3 class="blocktitle-red">　メンバー選考　</h3>
-            <div class="howto-bun">入会申し込みフォームにて提出をしていただいた内容に基づいて、メンバー選考を行います。入会の可否は、フォームを提出していただいた方全員のメールアドレス宛にyyyy/mm/dd(d)までにご連絡いたします。</div>
+            <h3 class="blocktitle-red">　入会申し込みフォームについて　</h3>
+            <div class="howto-bun">
+                早稲田祭2024運営スタッフ入会申し込みフォームの提出にあたって、以下の情報を記入していただく必要があります。必ず募集期間内にご記入の上、ご提出ください。</br>
+                <li>・個人プロフィール</li>
+                <li>・志望理由</li>
+                <li>・自己アピール</li>
+                <li>・その他情報</li>
+                <li>※クリエイター枠は別途、提出物がございます。</li>
+            </div>
+        </div>
+        <div class="howto-info">
+            <h3 class="blocktitle-red">　メンバー選考について　</h3>
+            <div class="howto-bun">定員を上回った場合、選考を行います。</br>選考結果は入会の可否にかかわらず、全員にメールで送信いたします。</div>
+        </div>
+        <div class="howto-info">
+            <h3 class="blocktitle-red">　注意事項　</h3>
+            <div class="howto-bun">
+                <li>・ご不明点は shinkan@wasedasai.net までお問い合わせください。</li>
+                <li>・入会申し込みフォームに記入したメールアドレスは必ず運営スタッフからのメール（shinkimember@wasedasai.net）を受け取れる状態にしておいてください。</li>
+            </div>
         </div>
     </div>
 
@@ -153,19 +166,32 @@
     }
     .howto-btn{
         text-align: center;
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .howto-container{
         text-align: left;
         font-family: 'Noto Sans JP, sans-serif';
         color: #3e3a39;
         font-size: 20px;
-        margin: 100px 120px;
+        margin: 60px 120px 100px 120px;
     }
-    .howto-bun > a{
+    .howto-bun > li > a{
         text-decoration: none;
         color: #b53240;
         font-weight: bold;
+    }
+    .howto-bun > li{
+        list-style: none;
+        margin: 5px 0;
+    }
+    @media screen and (max-width: 1023px){
+        .howto-btn{
+            margin-top: 50px;
+        }
+        .howto-container{
+            font-size: 16px;
+            margin: 30px 40px 50px 40px;
+        }
     }
 </style>
 </body>
