@@ -71,15 +71,18 @@
         </div>
       </div>
     
+
+ <div class="samatakun">
+
+<img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan">
+
+
+
+
 <div class="for-sp">
- <div class="samatakun-sp">
-<img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan-sp">
-
 <div class="ichiban-sp">
-
-
     <div id="wrap">
- 
+        <div class="paragraph">
         <div class="txt-show">
             はじめまして。
             早稲田祭2024運営スタッフ 代表の佐俣竣介です。<br/><br/>
@@ -107,19 +110,15 @@
             
             早稲田祭2024運営スタッフで、みなさんのことをお待ちしております。<br/>
             早稲田祭2024運営スタッフ 代表 佐俣竣介 
-        </div>
+        </div></div>
          
         <button class="more"></button>
         
-        </div></div></div></div>
+        </div></div></div>
    
           
  <div class="for-pc">
-  <div class="samatakun-pc">
-    <img src="../static\img\UD_運営スタッフとは_代表 (1).jpg" class="samatasan-pc">
-    
     <div class="ichiban-pc">
-
 <div class="paragraph">
     はじめまして。
     早稲田祭2024運営スタッフ 代表の佐俣竣介です。<br/><br/>
@@ -146,7 +145,8 @@
     早稲田祭2024運営スタッフで、みなさんのことをお待ちしております。<br/>
     早稲田祭2024運営スタッフ 代表 佐俣竣介
       
-</div></div></div></div>
+</div></div></div>
+ </div>
 
 <div class="katudounaiyou">
 <!-- sectiontitle-yellow -->
@@ -156,7 +156,7 @@
     <img src="../static/img/hanabira3-yellow.png">
   </div>
 
-  <div class="hurekkusu">
+  <div class="hurekkusu1">
 <img src="../static\img\U_運営スタッフとは_活動内容.JPG" class="poto">
 <div class="katudoubun">
 <div class="paragraph">
@@ -169,7 +169,7 @@
 </div></div>
 
 
-<div class="hurekkusu">
+<div class="hurekkusu2">
 <div class="shozokuninnzu">
     <div class="kasaneru1">
 <h3 class="blocktitle-sakura">　所属人数　</h3>
@@ -197,7 +197,7 @@
     <h2>はっぴ</h2>
     <img src="../static/img/hanabira3-rose.png">
   </div>
-<div class="hurekkusu2">
+<div class="hurekkusu3">
   <img src="../static\img\運営スタッフとは_はっぴ.jpg" class="poto">
 <div class="happibun">
   <div class="paragraph">
@@ -218,7 +218,7 @@
     <h2>レクリエーション</h2>
     <img src="../static/img/hanabira3-blue.png">
   </div>
-  <div class="hurekkusu">
+  <div class="hurekkusu1">
   <img src="../static\img\UD_運営スタッフとは_レクリエーション.JPG" class="poto">
   <div class="rekubun">
   <div class="paragraph">
@@ -287,15 +287,11 @@
 @media only screen and (max-width : 1024px)
 {
   .for-pc { display:none; }
-  .samatakun-pc{display:none; }
-  .samatakun-pc{display:none; }
   .ichiban-pc{display:none; }
   
   .for-sp { display:block; } 
-  .samatakun-sp{display:block; }
   .ichiban-sp{display:block; }
-  .samatasan-sp{display:block; }
-
+ 
 
   
 }
@@ -306,12 +302,17 @@
 @media screen and (min-width:1024px){
 
 
+.txt-hide{display:none;}
+.txt-show{display:none;}
+.wrap{display:none;}
+.more{display:none;}
 
-   .samatasan-pc{
+
+ .samatasan{
 width: 100%;
 height: 40%;
 }
- .samatakun-pc{
+ .samatakun{
 background-color: #efeae9;
 text-align: center;
 padding-bottom: 3%;
@@ -341,7 +342,7 @@ margin-bottom:10%;
     text-align: center;
 }
 
-.hurekkusu{
+.hurekkusu1{
     display: flex;
     align-items: center;
 }
@@ -357,13 +358,18 @@ font-weight: 500;
 color:#b53240;
 }
 
-.hurekkusu2{
+.hurekkusu3{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 
 }
 
+.hurekkusu2{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
 .shozokubun{
     text-align: center;
 }
@@ -457,20 +463,40 @@ padding-bottom: 10%;
 
 @media screen and (max-width:1024px){
 
-  .for-sp  .txt-hide{
+
+  #wrap > .paragraph{
+    margin:0 50px;
+  }
+ .txt-show{display:block;}
+.txt-hide{
 display: none;
 }
 
 .for-sp  button.more {
+  font-family: 'Noto Sans JP';
+  font-weight: bolder;
+  position: relative;
 width: 120px;
 margin: 20px auto;
 display: block;
-color: #fff;
-padding:10px 15px;
+background-color: #efeae9;
+color:#3e3a39;
+padding:10px 15px 0 15px;
 border: none;
 outline: 0;
 transition: .5s;
 -erbkit-transition: .5s;
+}
+
+button.more ::before {
+  content: '';
+  width: 110px;
+  height: 4px;
+  display: inline-block;
+  background-color: #337ab7;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 55px)
 }
  
 .for-sp  button.more::after {
@@ -484,15 +510,15 @@ content: "閉じる";
 }
 
 
- .samatasan-sp{
+ .samatasan{
         width: 100%;
         height: 40%;
 }
 
-.samatakun-sp{
+.samatakun{
         background-color: #efeae9;
         text-align: center;
-        padding-bottom: 3%;
+        padding-bottom: 2px;
 }
 
 
@@ -504,6 +530,7 @@ content: "閉じる";
 
 
 .katudounaiyou{
+     
         margin-top: 10%;
         background-color: #fff;
 }
@@ -519,9 +546,9 @@ content: "閉じる";
     text-align: center;
 }
 
-.hurekkusu{
+.hurekkusu1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -538,9 +565,18 @@ content: "閉じる";
 
 .hurekkusu2{
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+
+}
+
+.hurekkusu3{
+
+  display: flex;
         flex-direction: column;
         align-items: center;
-
 }
 
 .shozokubun .paragraph{
@@ -551,16 +587,15 @@ content: "閉じる";
 
 
 .shozokuninnzu{
-    margin-left: 2%;
+   
         margin-top:3%;
         width:40%
 }
 
 .katudoubi{
         margin-top: 3%;
-        margin-left: 5%;
-        margin-right: 10%;
         width: 40%;
+        margin-right: 50px;
         
 }
 .katudoubi .paragraph{
@@ -574,11 +609,11 @@ content: "閉じる";
 
 .poto{
     margin-top :3%;
-    width:50%
+    width:70%
 }
 
 .happibun{
-        width: 40%;
+        width: 60%;
         margin-top: 3%;
         margin-left: 5%;
         margin-right:5%;
@@ -589,7 +624,7 @@ content: "閉じる";
         padding-bottom: 10%;
 }
 .rekubun{
-        width: 40%;
+        width: 60%;
         margin-top: 3%;
         margin-left: 5%;
         margin-right:5%;
