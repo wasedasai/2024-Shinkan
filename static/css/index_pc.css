@@ -129,7 +129,9 @@
     .nav-item{
         padding: 10px 0;
     }
-    
+    .nav-item > br{
+        display: none;
+    }
     .nav-item a {
         display: block;
         color:#b53240;
