@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="(min-width: 1024px)" href="../static/css/index_pc.css">
     <link rel="stylesheet" media="(max-width: 1024px)" href="../static/css/index_mobile.css">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
     <link rel="canocical" href="https://wasedasai.github.io/2024-Shinkan/">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="早稲田祭運営スタッフ(運スタ)2024年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
@@ -58,8 +59,12 @@
         </div>
       </header>
 
-      <div class="comingsoon">
-        <div class="sukosiomatiyo">Coming soon……</div>
+      <div class="comingsoon-container">
+        <div class="comingsoon">
+          <div class="sukosiomatiyo">Coming soon……</div>
+          <img src="../static/img/hanawaku-red.png" class="comingsoon-syasin2">
+        </div>
+        <div class="sukosiomatiyo-jp">公開されるまでお待ちください！</div>
       </div>
       
       <div class="footer">
@@ -104,40 +109,73 @@
         </div>
     </div>
 <style>
+    body{
+      background-color: #efeae9;
+    }
+    .comingsoon-container{
+      margin-top: 200px;
+      margin-bottom: 110px;
+      padding: 140px 0;
+    }
     .comingsoon{
-        margin-top: 90px;
-        padding-bottom: 140px;
-        font-family: 'Zen Kaku Gothic New';
-        font-weight: bold;
-        font-size: 80px;
-        background-color: #efeae9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      position: relative;
     }
-    .sukosiomatiyo::before{
-        content: '';
-        display: inline-block;
-        width: 203px;
-        height: 203px;
-        position: absolute;
-        top: -40px;
-        right: 80px;
-        background-image: url(../static/img/maruhana-haikei.png);
-        background-size: contain;
+    .sukosiomatiyo{
+      font-family: 'Zen Kaku Gothic New';
+      font-weight: bold;
+      font-size: 80px;
+      z-index: 1000;
     }
-
-    .sukosiomatiyo::after{
-        content: '';
-        display: inline-block;
-        width: 90px;
-        height: 90px;
-        position: absolute;
-        bottom: 620px;
-        right: 58px;
-        background-image: url(../static/img/hanawaku-red.png);
-        background-size: contain;
+    .comingsoon::before{
+      content: '';
+      background-image: url(../static/img/maruhana-haikei.png);
+      background-size: contain;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin-left: 460px;
+      margin-bottom: 20px;
+    }
+    .comingsoon-syasin2{
+      width: 100px;
+      z-index: 99;
+      margin: 30px 0 0 30px;
+    }
+    .sukosiomatiyo-jp{
+      font-family: 'Noto Sans JP , sans-serif';
+      font-weight: normal;
+      font-size: 40px;
+      text-align: center;
+    }
+    @media screen and (max-width:1023px){
+      .comingsoon-container{
+        margin-top: 160px;
+        margin-bottom: 90px;
+      }
+      .comingsoon{
+        height: 100px;
+      }
+      .sukosiomatiyo{
+        font-size: 24px;
+      }
+      .comingsoon::before{
+        width: 60px;
+        height: 60px;
+        margin-left: 140px;
+        margin-bottom: 10px;
+      }
+      .comingsoon-syasin2{
+        width: 28px;
+        height: 28px;
+        margin: 10px 0 0 0;
+      }
+      .sukosiomatiyo-jp{
+        font-size: 16px;
+      }
     }
 
 </style>
