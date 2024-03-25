@@ -115,16 +115,6 @@
     .nav-item{
         padding: 10px 0;
     }
-    .nav-item-small{
-        padding: 10px 0;
-        font-size: 16px;
-        display: block;
-        color:#b53240;
-        padding: 0px 0 5px 0px;
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-    }
     .nav-item a {
         display: block;
         color:#b53240;
@@ -137,7 +127,7 @@
     .nav-item-small a {
         display: block;
         color:#b53240;
-        font-size: 20px;
+        font-size: 16px;
         padding: 0px 0 5px 0px;
         position: relative;
         display: inline-block;
