@@ -589,6 +589,10 @@
         display: flex;
         flex-direction: column;
         margin-left: 5vw;
+        word-break: keep-all;
+    }
+    .spdelete{
+        display: none;
     }
     /*消去*/
     .footer_event_list{
