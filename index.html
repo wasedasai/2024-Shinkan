@@ -77,14 +77,7 @@
     </div>
     
     <div class="top_slide_animation_gorigoripush"></div>
-    <!--
-    <video class="top_slidecover" muted autoplay>
-        <source src="./static/img/web_animation.mov" type="video/quicktime" />
-        <source src="./static/img/web_animation_2.webm" type="video/webm" />
-    </video>
-    <img class="top_slidecover" src="./static/img/web_animation_yagami.gif">
-    -->
-
+    <div class="top_slide_animation_alter"></div>
     <img class="top_overlogo" src="./static/img/logotypeV_trans.png"></img>
     <a class="top_underarrow" href="#news"></a>
     <a class="top_underarrow2" href="#news"></a>
@@ -126,9 +119,13 @@
         </h4>
     </div>
 </div>
+<div class="custom-shape-divider-bottom">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
 </div>
-
-<section class="waveback">
+</div>
+    
 <!-- 新入生歓迎～！ -->
 <div class="welcome-container">
     <div class="sectiontitle">
@@ -173,7 +170,6 @@
         </h4>
     </div>
 </div>
-</section>
 
 <!-- Footer -->
 <div class="footer">
@@ -231,13 +227,13 @@ body{
 }
 /* スライドショー */
 .slideshow{
-  margin-top: 90px;
-  overflow: hidden;
-  position: relative;
+    margin-top: 90px;
+    overflow: hidden;
+    position: relative;
 }
 .top_slide{
-  width: 100%;
-  height: 90%;
+    width: 100%;
+    height: 90%;
 }
 .top_slidecover{
     position: absolute;
@@ -302,18 +298,15 @@ body{
     top: 0;
     margin: auto auto 15% auto;
     z-index: 10;
-
     content: "";
-    width: 400px;
-    height: 400px;
+    width: 40%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     opacity: 0;
     background-color: white;
 
-    animation: fadeInOut 3s linear alternate,zoomUp1 1s ease-in alternate;
-    animation: zoomUp2 1s, linear alternate;
-    animation: zoomUp3 1s, ease-in alternate;
-    animation-delay:0s, 0s, 1s, 2s;
+    animation: fadeInOut 2s ease-in alternate,zoomUp 2s ease-in alternate;
+    animation-delay:0s, 0s;
 }
 .top_slide_animation_gorigoripush::before{
     content: '';
@@ -336,34 +329,27 @@ body{
     0% {
         opacity: 0;
     }
-    25% {
-        opacity: 0.6;
+    20% {
+        opacity: 0.8;
     }
-    75% {
-        opacity: 0.7;
+    80% {
+        opacity: 0.8;
     }
     100% {
         opacity: 0;
     }
 }
-@keyframes zoomUp1 {
+@keyframes zoomUp {
     0% {
         transform: scale(0%);
-    }100% {
-        transform: scale(90%);
     }
-}
-@keyframes zoomUp2 {
-    0% {
-        transform: scale(90%);
-    }100% {
+    20% {
+        transform: scale(80%);
+    }
+    80% {
         transform: scale(100%);
     }
-}
-@keyframes zoomUp3 {
-    0% {
-        transform: scale(100%);
-    }100% {
+    100% {
         transform: scale(200%);
     }
 }
@@ -462,6 +448,9 @@ body{
     text-align: left;
     margin: 10px 0;
 }
+.custom-shape-divider-bottom{
+    display: none;
+}
 
 /* 新入生歓迎～！ */
 .welcome-container{
@@ -540,6 +529,12 @@ body{
     /* はじめに */
     .hajimeni-container{
         margin-top: 40px;
+        position: relative;
+        background-image: url(./static/img/maruhana-haikei.png),url(./static/img/hanawaku-haikei.png),url(./static/img/hanawaku-haikei.png),url(./static/img/maruhana-haikei.png);
+        background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+        background-position: 97% 78%,5% 83%,92% 92%,10% 100%;
+        background-size: 20%,15%,30%,40%;
+        padding-bottom: 150px;
     }
     .top-aboutfes , .top-aboutstaff{
         flex-direction: column;
@@ -567,12 +562,35 @@ body{
     .hajimeni-bun{
         font-size: 16px;
     }
+
+    /* 境界 */
+    .custom-shape-divider-bottom {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .custom-shape-divider-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(142% + 1.3px);
+        height: 66px;
+    }
+    .custom-shape-divider-bottom .shape-fill {
+        fill: #e7dbd9;
+    }
+
     /* 新入生歓迎～！ */
     .welcome-container{
         width: 100%;
-        margin-top: 40px;
+        margin-top: 0px;
         padding: 0;
         border-radius: 0px;
+        padding-top: 30px;
     }
     .welcome-container > .squarelink-green{
         padding-bottom: 40px;
@@ -596,6 +614,17 @@ body{
     }
     .moreinfo-btn > h4{
         text-align: center;
+    }
+}
+@media print, screen and (min-width:600px) and (max-width:1023px){
+    .hajimeni-container{
+        margin-top: 40px;
+        position: relative;
+        background-image: url(./static/img/maruhana-haikei.png),url(./static/img/hanawaku-haikei.png),url(./static/img/hanawaku-haikei.png),url(./static/img/maruhana-haikei.png);
+        background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+        background-position: 97% 78%,5% 83%,92% 92%,10% 100%;
+        background-size: 120px,90px,180px,240px;
+        padding-bottom: 150px;
     }
 }
 
