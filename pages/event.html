@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="(min-width: 1024px)" href="../static/css/index_pc.css">
     <link rel="stylesheet" media="(max-width: 1024px)" href="../static/css/index_mobile.css">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
     <link rel="canocical" href="https://wasedasai.github.io/2024-Shinkan/">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="早稲田祭運営スタッフ(運スタ)2024年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
@@ -23,14 +24,1397 @@
     <!-- <meta property="og;image" content=""> -->
     <!-- <meta name="twitter:card"> -->
     <!-- <meta name="twitter:site"> -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/index/js"></script>
+    <!-- lightbox 
+    <link rel="stylesheet" href="../static/css/lightbox.min.css">
+    <script src="../static/dist/lightbox-plus-jquery.min.js"></script>
+    -->
+    <!-- PhotoSwipe -->
+    <link rel="stylesheet" href="../static/dist/photoswipe.css">
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" media="screen and (max-width:1023px)"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper.min.css" media="screen and (max-width:1023px)"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <!-- header component -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo_pc">
+                <a href="../index.html"><img src="../static/img/header-logo_pc.png"></a>
+            </div>
+            <div class="header-logo_sp">
+                <a href="../index.html"><img src="../static/img/header-logo_sp.png"></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="hamburger">
+                <span></span>
+            </label>
+            <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html">Top</a></li>
+                <li class="nav-item"><a href="aboutfes.html">早稲田祭とは</a></li>
+                <li class="nav-item"><a href="aboutstaff.html">運営スタッフとは</a></li>
+                <li class="nav-item"><a href="schedule.html">運スタの1年</a></li>
+                <li class="nav-item"><a href="introduce.html">局紹介</a></li>
+                <li class="nav-item"><a href="staffreal.html">運スタのリアル</a></li>
+                <li class="nav-item"><a href="photogallery.html">運スタ写真館</a></li>
+                <li class="nav-item"><a href="event.html">新歓イベント</a></li>
+                <li class="nav-item"><a href="howto.html">入会方法</a></li>
+                <li class="nav-item"><a href="question.html">よくある質問・お問い合わせ</a></li>
+            </ul>
+            </nav>
+        </div>
     </header>
-    
+
+    <!-- hero component -->
+    <div class="Hero">
+        <div class="hero_pc">
+            <img src="../static/img/hero_01.png"class="herophoto1">
+            <h1>新歓イベント</h1>
+        </div>
+        <div class="hero_sp">
+            <img src="../static/img/hero_02.png"class="herophoto2">
+            <h1>新歓イベント</h1>
+        </div>
+    </div>
+
+    <!-- map (lightbox ver)
+    <div class="map_cover">
+        <a class="map_zoomed" href="../static/img/event_map.jpg" data-lightbox="lightbox" data-title="早稲田大学 キャンパスマップ">
+            <img class="map_sumnail" src="../static/img/event_map.jpg" alt="マップ">
+            <div class="map_zoomable_pc">クリックして拡大</div>
+            <div class="map_zoomable_sp">タップして拡大</div>
+        </a>
+    </div>
+    -->
+    <div class="map_cover" id="js-gallery">
+        <a class="map_zoomed" href="../static/img/event_map.jpg" data-pswp-width="6034" data-pswp-height="4500" target="_blank">
+            <img class="map_sumnail" src="../static/img/event_map.jpg" alt="マップ" />
+            <div class="map_zoomable_pc">クリックで拡大</div>
+            <div class="map_zoomable_sp">タップで拡大</div>
+        </a>
+    </div>
+
+    <!-- calender button -->
+    <h4 class="squarelink-red">
+        <a href="#calender" class="btn-red">カレンダーはこちら</a>
+    </h4>
+
+    <!-- events button -->
+    <div class="bt_cover_a">
+        <a href="#sec1"><img class="bt_cover_a1" src="../static/img/evbutton_01.jpg" alt="対面説明会"></a>
+        <a href="#sec2"><img class="bt_cover_a2" src="../static/img/evbutton_02.jpg" alt="運スタ王"></a>
+        <a href="#sec3"><img class="bt_cover_a3" src="../static/img/evbutton_03.jpg" alt="もしも運スタになったらツアーズ"></a>
+    </div>
+    <div class="bt_cover_b">
+        <a href="#sec4"><img class="bt_cover_b1" src="../static/img/evbutton_04.jpg" alt="ワセダの知らない世界"></a>
+        <a href="#sec5"><img class="bt_cover_b2" src="../static/img/evbutton_05.jpg" alt="運スタゆるトーク"></a>
+        <a href="#sec6"><img class="bt_cover_b3" src="../static/img/evbutton_06.jpg" alt="運スタ相談所"></a>
+    </div>
+    <div class="bt_cover_spa">
+        <a href="#sec1" onclick="click01()"><img class="bt_cover_a1a" src="../static/img/evbutton_01.jpg" alt="もしも運スタになったらツアーズ"></a>
+        <a href="#sec2" onclick="click02()"><img class="bt_cover_a2a" src="../static/img/evbutton_02.jpg" alt="ワセダの知らない世界"></a>
+    </div>
+    <div class="bt_cover_spm">
+        <a href="#sec3" onclick="click03()"><img class="bt_cover_m1a" src="../static/img/evbutton_03.jpg" alt="もしも運スタになったらツアーズ"></a>
+        <a href="#sec4" onclick="click04()"><img class="bt_cover_m2a" src="../static/img/evbutton_04.jpg" alt="ワセダの知らない世界"></a>
+    </div>
+    <div class="bt_cover_spb">
+        <a href="#sec5" onclick="click05()"><img class="bt_cover_b1a" src="../static/img/evbutton_05.jpg" alt="もしも運スタになったらツアーズ"></a>
+        <a href="#sec6" onclick="click06()"><img class="bt_cover_b2a" src="../static/img/evbutton_06.jpg" alt="ワセダの知らない世界"></a>
+    </div>
+
+    <!-- event explain -->
+    <div class="sectiontitle" id="ev_title">
+        <img src="../static/img/hanabira3-red.png">
+        <h2>新歓イベント</h2>
+        <img src="../static/img/hanabira3-red.png">
+    </div>
+    <div class="swiper ev_cover_container">
+        <div class="grid-wrapper is-target">
+            <div id="gridContainer" class="grid-container"></div>
+            <div class="swipe-able-container">
+                <figure class="swipe-able-item">
+                    <div class="swipe-able-icon"><< スワイプ >></div>
+                    <figcaption class="swipe-able-text">移動できます</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="swiper-wrapper ev_cover_wrapper">
+            <div class="swiper-slide ev_cover" id="sec1">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+                <div class="ev_left">
+                    <h class="ev_block">対面説明会</h><hr class="evtitle_hr evh1">
+                    <!--<img class="ev_exp_photo" src="/">-->
+                    <div class="paragraph">運スタに関する基本的な情報から活動の様子、運スタの大学生活の実態まで、運スタのことをなんでも知ることができます！ 運スタに入るか迷っているなら、まず説明会に来てみてください！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_upper">
+                        <div class="ev_r_left">
+                            <h>日程</h><hr class="ev_hr">
+                            <p>
+                                <span class="ev_minititle">一次募集</span><br> 
+                                <span class="ev_emphasis">4/5</span>(金) 10:40~12:20<br>
+                                <span class="eve_end"><span class="ev_emphasis">4/7</span>(<span class="ev_sunday">日</span>) 10:40~12:20</span><br>
+                                <span class="ev_minititle">二次募集</span><br> 
+                                <span class="ev_emphasis">4/11</span>(木) 17:00~18:40<br>
+                                <span class="ev_emphasis">4/14</span>(<span class="ev_sunday">日</span>) 10:40~12:20・13:10~14:50
+                            </p>
+                        </div>
+                        <div class="ev_r_right">
+                            <div class="ev_r_dead">
+                                <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">全日程：</span>
+                                    3/28(木) 12:00～<span class="ev_emphasis">4/3</span>(水) 23:59
+                                </p>
+                            </div>
+                            <div class="ev_r_place">
+                                <h>場所</h><hr class="ev_hr">
+                                <p>戸山キャンパス 学生会館</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="squarelink-rose">
+                        <a href="#" class="btn-rose">お申し込みはこちらから！</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="swiper-slide ev_cover" id="sec2">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+                <div class="ev_left">
+                    <h class="ev_block">運スタ王</h><hr class="evtitle_hr evh2">
+                    <!--<img class="ev_exp_photo" src="/">-->
+                    <div class="paragraph">みんなでクイズを解くことで、運スタや早稲田祭に詳しくなれます！ 運スタのことをあまり知らない……というあなたも大歓迎です！ クイズをしながら、楽しく運スタについて知っていきましょう！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_upper">
+                        <div class="ev_r_left">
+                            <h>日程</h><hr class="ev_hr">
+                            <p> 
+                                <span class="ev_minititle">一次募集</span><br>
+                                <span class="ev_emphasis">4/5</span>(金) 13:10~14:50<br>
+                                <span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 15:05~16:45<br>
+                                <span class="eve_end"><span class="ev_emphasis">4/9</span>(火) 13:10~14:50</span><br>
+                                <span class="ev_minititle">二次募集</span><br>
+                                <span class="ev_emphasis">4/10</span>(水) 13:10~14:50<br>
+                                <span class="ev_emphasis">4/14</span>(<span class="ev_sunday">日</span>) 17:00~18:40<br>
+                                <span class="ev_emphasis">4/16</span>(火) 10:40~12:20<br>
+                                <span class="ev_emphasis">4/17</span>(水) 10:40~12:20
+                            </p>
+                        </div>
+                        <div class="ev_r_right">
+                            <div class="ev_r_dead">
+                                <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">一次募集：</span>
+                                    3/27(水) 12:00〜<span class="ev_emphasis eve_end">3/31</span>(<span class="ev_sunday">日)</span> 23:59<br>
+                                    <span class="ev_minititle">二次募集：</span>
+                                    4/1(月) 20:00〜<span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 23:59
+                                </p>
+                            </div>
+                            <div class="ev_r_place">
+                                <h>場所</h><hr class="ev_hr">
+                                <p>戸山キャンパス 学生会館</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="squarelink-blue">
+                        <a href="#" class="btn-blue">お申し込みはこちらから！</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="swiper-slide ev_cover" id="sec3">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+                <div class="ev_left">
+                    <h class="ev_block">もしも運スタになったらツアーズ</h><hr class="evtitle_hr evh3">
+                    <!--<img class="ev_exp_photo" src="/">-->
+                    <div class="paragraph">早稲田キャンパスや戸山キャンパス、その周辺地域を巡りながら、早稲田祭や運スタの活動、大学生活など、何でも気軽にお話しましょう！ 友人と一緒に参加することも可能です！ 早稲田祭のプロフェッショナルがみなさんを祭の世界へお連れします！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_upper">
+                        <div class="ev_r_left">
+                            <h>日程</h><hr class="ev_hr">
+                            <p>
+                                <span class="ev_minititle">一次募集</span><br>
+                                <span class="ev_emphasis">4/5</span>(金) 15:05~16:45<br>
+                                <span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 13:10~14:50<br>
+                                <span class="eve_end"><span class="ev_emphasis">4/8</span>(月) 13:10~14:50</span><br>
+                                <span class="ev_minititle">二次募集</span><br>
+                                <span class="ev_emphasis">4/11</span>(木) 15:05~16:45<br>
+                                <span class="ev_emphasis">4/12</span>(金) 13:10~14:50<br>
+                                <span class="ev_emphasis">4/13</span>(<span class="ev_saturday">土</span>) 10:40~12:20<br>
+                                <span class="ev_emphasis">4/15</span>(月) 13:10~14:50
+                            </p>
+                        </div>
+                        <div class="ev_r_right">
+                            <div class="ev_r_dead">
+                                <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">一次募集：</span>
+                                    3/27(水) 12:00〜<span class="ev_emphasis eve_end">3/31</span>(<span class="ev_sunday">日)</span> 23:59<br>
+                                    <span class="ev_minititle">二次募集：</span>
+                                    4/1(月) 20:00〜<span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 23:59
+                                </p>
+                            </div>
+                            <div class="ev_r_place">
+                                <h>場所</h><hr class="ev_hr">
+                                <p>早稲田キャンパス・戸山キャンパス・周辺地域</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="squarelink-sakura">
+                        <a href="#" class="btn-sakura">お申し込みはこちらから！</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="swiper-slide ev_cover" id="sec4">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+                <div class="ev_left">
+                    <h class="ev_block">ワセダの知らない世界</h><hr class="evtitle_hr evh4">
+                    <!--<img class="ev_exp_photo" src="/">-->
+                    <div class="paragraph">「学部別トーク」で同じ学部の新入生や先輩と交流しましょう！ 運スタに関する疑問から大学生活の不安まで、全て解決できること間違いなしです！ 「運スタかるた」では、楽しみながら運スタの活動を知ることもできます！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_upper">
+                        <div class="ev_r_left">
+                            <h>日程</h><hr class="ev_hr">
+                            <p>
+                                <span class="ev_minititle">一次募集</span><br>
+                                <span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 18:55~20:35<br>
+                                <span class="eve_end"><span class="ev_emphasis">4/7</span>(<span class="ev_sunday">日</span>) 13:10~14:50</span><br>
+                                <span class="ev_minititle">二次募集</span><br>
+                                <span class="ev_emphasis">4/12</span>(金) 10:40~12:20<br>
+                                <span class="ev_emphasis">4/14</span>(<span class="ev_sunday">日</span>) 18:55~20:35<br>
+                                <span class="ev_emphasis">4/15</span>(月) 10:40~12:20<br>
+                                <span class="ev_emphasis">4/18</span>(木) 10:40~12:20
+                            </p>
+                        </div>
+                        <div class="ev_r_right">
+                            <div class="ev_r_dead">
+                                <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">一次募集：</span>
+                                    3/27(水) 12:00〜<span class="ev_emphasis eve_end">3/31</span>(<span class="ev_sunday">日)</span> 23:59<br>
+                                    <span class="ev_minititle">二次募集：</span>
+                                    4/1(月) 20:00〜<span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 23:59
+                                </p>
+                            </div>
+                            <div class="ev_r_place">
+                                <h>場所</h><hr class="ev_hr">
+                                <p>戸山キャンパス 学生会館</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="squarelink-yellow">
+                        <a href="#" class="btn-yellow">お申し込みはこちらから！</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="swiper-slide ev_cover" id="sec5">
+                <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+                <div class="ev_left">
+                    <h class="ev_block">運スタゆるトーク</h><hr class="evtitle_hr evh5">
+                    <!--<img class="ev_exp_photo" src="/">-->
+                    <div class="paragraph">早稲田祭や運スタの写真、映像を見ながら、楽しくお話しましょう！ 担当の運スタと話すことで、運スタについて広く知ることができます。オンライン開催なので、お気軽に参加してください！ 友人と一緒に参加することも可能です！</div>
+                </div>
+                <div class="ev_right">
+                    <div class="ev_r_upper">
+                        <div class="ev_r_left">
+                            <h>日程</h><hr class="ev_hr">
+                            <p>
+                                <span class="ev_minititle">一次募集</span><br>
+                                <span class="ev_emphasis">4/7</span>(<span class="ev_sunday">日</span>) 18:00~19:00・20:00~21:00<br>
+                                <span class="eve_end"><span class="ev_emphasis">4/9</span>(火) 18:00~19:00・20:00~21:00</span><br>
+                                <span class="ev_minititle">二次募集</span><br>
+                                <span class="ev_emphasis">4/16</span>(火) 18:00~19:00・20:00~21:00<br>
+                                <span class="ev_emphasis">4/17</span>(水) 18:00~19:00・20:00~21:00
+                            </p>
+                        </div>
+                        <div class="ev_r_right">
+                            <div class="ev_r_dead">
+                                <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">一次募集：</span>
+                                    3/27(水) 12:00〜<span class="ev_emphasis eve_end">3/31</span>(<span class="ev_sunday">日)</span> 23:59<br>
+                                    <span class="ev_minititle">二次募集：</span>
+                                    4/1(月) 20:00〜<span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 23:59
+                                </p>
+                            </div>
+                            <div class="ev_r_place">
+                                <h>場所</h><hr class="ev_hr">
+                                <p>Google Meet（オンライン開催）</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="squarelink-green">
+                        <a href="#" class="btn-green">お申し込みはこちらから！</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="swiper-slide ev_cover" id="sec6">
+            <img class="ev_background_flower" src="../static/img/hana3-haikei.png">
+            <div class="ev_left">
+                <h class="ev_block">運スタ相談所</h><hr class="evtitle_hr evh6">
+                <!--<img class="ev_exp_photo" src="/">-->
+                <div class="paragraph">「面白そうだけど、対面の新歓には行けない……」「他の人がいる場では聞きづらい悩みを相談したい」という方におすすめ！ オンラインの企画なので気軽に参加でき、担当の運スタと1対1で、周りを気にせずじっくりお話できます。</div>
+            </div>
+            <div class="ev_right">
+                <div class="ev_r_upper">
+                    <div class="ev_r_left">
+                        <h>日程</h><hr class="ev_hr">
+                        <p>
+                            <span class="ev_minititle">二次募集のみ</span><br>
+                            <span class="ev_emphasis">4/11</span>(木) 21:00~22:00<br>
+                            <span class="ev_emphasis">4/12</span>(金) 17:00~18:00・18:00~19:00・19:00~20:00・20:00~21:00<br>
+                            <span class="ev_emphasis">4/18</span>(木) 21:00~22:00<br>
+                            <span class="ev_emphasis">4/19</span>(金) 17:00~18:00・18:00~19:00・19:00~20:00・20:00~21:00<br>
+                            <span class="ev_emphasis">4/20</span>(<span class="ev_saturday">土</span>) 17:00~18:00・18:00~19:00・19:00~20:00・20:00~21:00
+                        </p>
+                    </div>
+                    <div class="ev_r_right">
+                        <div class="ev_r_dead">
+                            <h>申し込み期間</h><hr class="ev_hr">
+                                <p>
+                                    <span class="ev_minititle">二次募集のみ</span>
+                                    4/1(月) 20:00〜<span class="ev_emphasis">4/6</span>(<span class="ev_saturday">土</span>) 23:59<br>
+                                </p>
+                        </div>
+                        <div class="ev_r_place">
+                            <h>場所</h><hr class="ev_hr">
+                            <p>Google Meet（オンライン開催）</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="squarelink-blue">
+                    <a href="#" class="btn-blue">お申し込みはこちらから！</a>
+                </h4>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="sectiontitle" id="cal_title">
+        <img src="../static/img/hanabira3-red.png">
+        <h2>申し込みの日程</h2>
+        <img src="../static/img/hanabira3-red.png">
+    </div>
+
+    <section class="calender">
+        <div class="cal_month">4月</div>
+        <table class="calender_table">
+            <tr><th id="sunday">日曜</th><th>月曜</th><th>火曜</th><th>水曜</th><th>木曜</th><th>金曜</th><th id="saturday">土曜</th></tr>
+            <tr class="days onevent"><td id="sunday">3/24</td><td>3/25</td><td>3/26</td><td>3/27</td><td>3/28</td><td>3/29</td><td id="saturday">3/30</td></tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td><td></td>
+                    <td colspan="3"><a href="#sec1" onclick="click01();"><div class="eventdays days1 rightsolid">対面説明会</div>
+                        <div class="balloon bl1"><p><span class="bl_emphasis ble1">対面説明会</span><br> 申し込み期間 3/28(木)12:00～4/3(水)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec2" onclick="click02();"><div class="eventdays days2 rightsolid">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec3" onclick="click03();"><div class="eventdays days3 rightsolid">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec4" onclick="click04();"><div class="eventdays days4 rightsolid">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td>
+                    <td colspan="4"><a href="#sec5" onclick="click05();"><div class="eventdays days5 rightsolid">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            <tr class="days onevent"><td id="sunday">3/31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td id="saturday">6</td></tr>
+                <tr class="evnetdays_row">
+                    <td colspan="4"><a href="#sec1" onclick="click01();"><div class="eventdays days1 leftsolid">対面説明会</div>
+                        <div class="balloon bl1"><p><span class="bl_emphasis ble1">対面説明会</span><br> 申し込み期間 3/28(木)12:00～4/3(水)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td></td><td></td><td></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec2" onclick="click02();"><div class="eventdays days2 leftsolid">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec2" onclick="click02();"><div class="eventdays days2">運スタ王</div>
+                        <div class="balloon bl2"><p><span class="bl_emphasis ble2">運スタ王</span><br> 申し込み期間 4/1(月) 20:00〜4/6(土) 23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec3" onclick="click03();"><div class="eventdays days3 leftsolid">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec3" onclick="click03();"><div class="eventdays days3">もしも運スタになったらツアーズ</div>
+                        <div class="balloon bl3"><p><span class="bl_emphasis ble3">もしも運スタになったらツアーズ</span><br> 申し込み期間 4/1(月) 20:00〜4/6(土) 23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec4" onclick="click04();"><div class="eventdays days4 leftsolid">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec4" onclick="click04();"><div class="eventdays days4">ワセダの知らない世界</div>
+                        <div class="balloon bl4"><p><span class="bl_emphasis ble4">ワセダの知らない世界</span><br> 申し込み期間 4/1(月) 20:00〜4/6(土) 23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td colspan="1"><a href="#sec5" onclick="click05();"><div class="eventdays days5 leftsolid">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 3/27(水)12:00〜3/31(日)23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                    <td colspan="6"><a href="#sec5" onclick="click05();"><div class="eventdays days5">運スタゆるトーク</div>
+                        <div class="balloon bl5"><p><span class="bl_emphasis ble5">運スタゆるトーク</span><br> 申し込み期間 4/1(月) 20:00〜4/6(土) 23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+                <tr class="evnetdays_row">
+                    <td></td>
+                    <td colspan="6"><a href="#sec6" onclick="click06();"><div class="eventdays days6">運スタ相談所</div>
+                        <div class="balloon bl6"><p><span class="bl_emphasis ble6">運スタ相談所</span><br> 申し込み期間 4/1(月) 20:00〜4/6(土) 23:59<br>ここをクリック↓↓↓↓</p></div>
+                    </a></td>
+                </tr>
+            <tr class="days offevent"><td id="sunday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td id="saturday">13</td></tr>
+            <tr class="days offevent"><td id="sunday">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td id="saturday">20</td></tr>
+        </table>
+
+        <div class="calender_example">
+            <div class="cal_ex_flex">
+                <div class="eventdays days1"></div>
+                <h>対面説明会</h>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days2"></div>
+                <h>運スタ王</h>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days3"></div>
+                <h>もしも運スタになったらツアーズ</h>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days4"></div>
+                <h>ワセダの知らない世界</h>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days5"></div>
+                <h>運スタゆるトーク</h>
+            </div>
+            <div class="cal_ex_flex">
+                <div class="eventdays days6"></div>
+                <h>運スタ相談所</h>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer component -->
+    <div class="footer">
+        <a class="footer_top" href="../index.html">TOP</a>
+        <hr class="mobile_none">
+
+        <div class="footer_list_cover">
+            <div class="footer_left_list">
+                <a class="mobile_view" href="../index.html">TOP</a>
+                <a href="../pages/aboutfes.html">早稲田祭とは</a>
+                <a href="../pages/aboutstaff.html">運営スタッフとは</a>
+                <a href="../pages/schedule.html">運スタの1年</a>
+                <a href="../pages/introduce.html">局紹介</a>
+                <a class="mobile_none" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_none" href="../pages/howto.html">入会方法</a>
+            </div>
+
+            <img class="footer_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_line"></div>
+
+            <div class="footer_right_list">
+                <a class="mobile_view" href="../pages/staffreal.html">運スタのリアル</a>
+                <a class="mobile_view" href="../pages/howto.html">入会方法</a>
+                <a href="../pages/event.html">新歓イベント</a>
+                <ul class="footer_event_list">
+                    <li><a href="../pages/event.html#sec1">対面説明会</a></li>
+                    <li><a href="../pages/event.html#sec2">運スタ王</a></li>
+                    <li><a href="../pages/event.html#sec3">もしも運スタになったらツアーズ</a></li>
+                    <li><a href="../pages/event.html#sec4">ワセダの知らない世界</a></li>
+                    <li><a href="../pages/event.html#sec5">運スタゆるトーク</a></li>
+                    <li><a href="../pages/event.html#sec6">運スタ相談所</a></li>
+                </ul>
+                <a href="../pages/photogallery.html">運スタ写真館</a>
+                <a href="../pages/question.html">よくある質問・お問い合わせ</a>
+            </div>
+        </div>
+
+        <div class="footer_bottom_cover">
+            <img class="footer_icon_logo" src="../static/img/logotypeV_trans.png"></img>
+            <div class="footer_icon_cover">
+                <a href="https://www.instagram.com/wasedasai_new/" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_insta.png" class="footer_icon" alt="Instagramのリンク"></img></a>
+                <a href="https://twitter.com/wasedasai_new" target="_blank" rel="noopener noreferrer"><img src="../static/img/icon_X.png" class="footer_icon" alt="Xのリンク"></img></a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body{
+            background-color: #efeae9;
+        }
+
+        /* マップ */
+        .map_cover{
+            display: flex;
+            justify-content: center;
+        }
+        .map_cover > a{
+            text-decoration: none;
+            color: #3E3A39;
+        }
+        .map_zoomed{
+            display: inline-block;
+            position: relative;
+        }
+        .map_sumnail{
+            width: 90vw;
+            max-width: 600px;
+            border-radius: 1em;
+            border: 1px solid #b53240;
+            margin-top: 20px;
+        }
+        .map_zoomable_pc{
+            position: absolute;
+            right: 2%;
+            bottom: 2%;
+            content: "";
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 4px solid #b53240;
+            padding: 16px 0;
+            text-align: center;
+            text-decoration: none;
+            color: #3E3A39;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .map_zoomable_sp{
+            display: none;
+        }
+        @media screen and (max-width: 1023px) {
+            .map_zoomable_pc{
+                display: none;
+            }
+            .map_zoomable_sp{
+                display: block;
+                position: absolute;
+                right: 2%;
+                bottom: 2%;
+                content: "";
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                border: 2px solid #b53240;
+                padding: 9px 0;
+                text-align: center;
+                color: #3E3A39;
+                font-family: "Zen Kaku Gothic New", sans-serif;
+                font-weight: 700;
+                font-size: 10px;
+            }
+        }
+
+        /* カレンダーボタン */
+        .squarelink-red{
+            text-align: center;
+        }
+        .btn-red{
+            display: block;
+            width: 350px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        @media screen and (max-width: 1023px) {
+            .btn-red{
+                display: inline;
+            }
+        }
+
+        /* イベントボタン */
+        .bt_cover_a,
+        .bt_cover_b,
+        .bt_cover_spa,
+        .bt_cover_spm,
+        .bt_cover_spb{
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80vw;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .bt_cover_a{
+            display: flex;
+            margin-top: 3%;
+        }
+        .bt_cover_b{
+            display: flex;
+        }
+        .bt_cover_spa,
+        .bt_cover_spm,
+        .bt_cover_spb{
+            display: none;
+        }
+        .bt_cover_a1,
+        .bt_cover_a2,
+        .bt_cover_a3,
+        .bt_cover_b1,
+        .bt_cover_b2,
+        .bt_cover_b3,
+        .bt_cover_a1a,
+        .bt_cover_a2a,
+        .bt_cover_m1a,
+        .bt_cover_m2a,
+        .bt_cover_b1a,
+        .bt_cover_b2a{
+            width: 90%;
+            border-radius: 0.5vw;
+            margin: 5%;
+            box-shadow: 2px 2px 5px  #3E3A39;
+        }
+        @media screen and (max-width: 1023px){
+            .bt_cover_spa,
+            .bt_cover_spm,
+            .bt_cover_spb{
+                display: flex;
+            }
+            .bt_cover_spa{
+                margin-top: 3%;
+            }
+            .bt_cover_a,
+            .bt_cover_b{
+                display: none;
+            }
+        }
+
+        /* イベント詳細 */
+        #ev_title{
+            margin-top: 10%;
+            margin-bottom: 2%;
+        }
+        .ev_cover_container{
+            position: relative;
+        }
+        .ev_cover_wrapper{
+            display: flex;
+            flex-direction: column;/* exchanging point */
+        }
+        .ev_cover{
+            width: 90vw;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 4vh;/* exchanging point */
+            border-radius: 1vh;/* exchanging point */
+            background-color:rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;/* exchanging point */
+            position: relative;
+            overflow: hidden;
+        }
+        .ev_cover:first-child{
+            margin-top: 0;
+        }
+        .ev_left{
+            flex-basis: 45%;
+            z-index: 2;
+            padding: 3% 5% 3% 5%;
+        }
+        .ev_left > .paragraph{
+            margin-top: 5%;
+        }
+        .ev_block{
+            margin: 0 auto;
+            text-align: center;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            color: #3e3a39;
+        }
+        .evtitle_hr{
+            width: 40%;/* exchanging point */
+            max-width: 500px;/* exchanging point */
+            border: none;
+            border-bottom: solid 4px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            position: absolute;
+            left: -30px;
+        }
+        .evh1{
+            color: #e06d71;  
+        }
+        .evh2{
+            color: #7290be;
+        }
+        .evh3{
+            color: #efb2a2;
+        }
+        .evh4{
+            color: #e9a767;
+        }
+        .evh5{
+            color: #8daca9;
+        }
+        .evh6{
+            color: #7290be;
+        }
+        .ev_exp_photo{
+            width: 100%;
+            display: block;
+            margin: 10px auto 10px 0;
+        }
+        .ev_right{
+            flex-basis: 55%;
+            max-width: 600px;/* exchanging point */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        .ev_r_upper{
+            display: flex;
+            flex-direction: row;
+            z-index: 2;
+            padding: 5%;
+        }
+        .ev_r_left,
+        .ev_r_right{
+            flex-basis: 50%;
+            flex-basis: 50%;
+        }
+        .ev_r_left h,
+        .ev_r_dead h,
+        .ev_r_place h{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 26px;/* exchanging point */
+            color: #3e3a39;
+            margin-top: 10vh;
+            line-break: strict;/* 禁則処理 */
+        }
+        .ev_r_left p,
+        .ev_r_dead p,
+        .ev_r_place p{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 18px;/* exchanging point */
+            color: #3e3a39;
+            margin-bottom: 5vh;
+            line-break: strict;/* 禁則処理 */
+        }
+        .ev_minititle{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 14px;/* exchanging point */
+            color: #3e3a39;
+        }
+        .ev_emphasis{
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 28px;/* exchanging point */
+            color: #3e3a39;
+        }
+        .eve_end{
+            display: inline-block;
+            margin-bottom: 20px;/* exchanging point */
+        }
+        .ev_sunday{
+            color: #e06d71;
+        }
+        .ev_saturday{
+            color: #7290be;
+        }
+        .squarelink-rose,
+        .squarelink-blue,
+        .squarelink-sakura,
+        .squarelink-green,
+        .squarelink-yellow{
+            margin-block-start: 1.33em;/* exchanging point */
+            margin-block-end: 1.33em;/* exchanging point */
+            margin-inline-start: auto;
+            margin-inline-end: 20px;
+        }
+        .ev_hr{
+            width: 90%;
+            border: none;
+            border-bottom: #3E3A39 solid 2px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .ev_background_flower{
+            z-index: 0;
+            position: absolute;
+            top: -150px;
+            left: -220px;
+            transform: scale(120%);
+        }
+        @media screen and (max-width: 1023px) {
+            .ev_cover_container{
+                background-color: white;/* exchanging point */
+            }
+            .ev_cover_wrapper{
+                flex-direction: row;/* exchanging point */
+            }
+            .ev_cover{
+                margin-top: 0vh;/* exchanging point */
+                border-radius: 0vh;/* exchanging point */
+                flex-direction: column;/* exchanging point */
+            }
+            .evtitle_hr{
+                width: 70vw;/* exchanging point */
+                max-width: 600px;/* exchanging point */
+            }
+            .ev_right{
+                width: 90%;/* exchanging point */
+                max-width: 500px;/* exchanging point */
+            }
+            .ev_r_left h,
+            .ev_r_dead h,
+            .ev_r_place h{
+                font-size: 18px;/* exchanging point */
+            }
+            .ev_r_left p,
+            .ev_r_dead p,
+            .ev_r_place p{
+                font-size: 12px;/* exchanging point */
+            }
+            .ev_minititle{
+                font-size: 10px;/* exchanging point */
+            }
+            .ev_emphasis{
+                font-size: 22px;/* exchanging point */
+            }
+            .eve_end{
+                margin-bottom: 15px;/* exchanging point */
+            }
+            .squarelink-rose,
+            .squarelink-blue,
+            .squarelink-sakura,
+            .squarelink-green,
+            .squarelink-yellow{
+                margin: 0 auto;/* exchanging point */
+                margin-block-start: 0em;/* exchanging point */
+                margin-block-end: 4em;/* exchanging point */
+            }
+        }
+        /* イベントカルーセル */
+        @media screen and (min-width: 1024px) {
+            .swiper-button-prev,
+            .swiper-button-next{
+                visibility: hidden;
+            }
+            .swiper-pagination-bullet {
+                visibility: hidden;
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            .swiper-button-prev,
+            .swiper-button-next{
+                visibility: visible;
+                --swiper-navigation-color: #3e3a39;
+                --swiper-navigation-size: 30px;
+                top: initial;
+                bottom: 400px;
+                width: 15px;
+            }
+            .swiper-pagination-bullet {
+                visibility: visible;
+                background-color: #b53240;
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+        /* スクロール可能表示 */
+        .swipe-able-container {
+            display: none;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            height: 100px;
+            left: 50%;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 30%;
+            transition: opacity 1s;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            z-index: 100;
+        }
+        .swipe-able-item {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .swipe-able-icon {
+            display: block;
+            margin: 20px auto 0;
+            width: 200px;
+        }
+        .swipe-able-text {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        @media screen and (max-width: 1023px) {
+            .swipe-able-container{
+                display: block;
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            .is-animation {
+                animation: my-animation 3.5s ease-in;
+            }
+            .is-animation-move-icon {
+                animation: my-animation-move-icon 1s linear infinite;
+            }
+        }
+        @keyframes my-animation-move-icon {
+            0% {
+                display: block;
+                margin-left: 50%;
+                scale: 1;
+            }
+            100% {
+                display: block;
+                opacity: 0;
+                margin-left: 15%;
+                scale: 1;
+            }
+        }
+        @keyframes my-animation {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            90% {
+                opacity: .9;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* カレンダー */
+        #cal_title{
+            margin-top: 10%;
+            margin-bottom: 2%;
+        }
+        .calender{
+            background-color: #ffffff;
+            border-top: solid 1px #b53240;
+            border-bottom: solid 1px #b53240;
+            padding: 0 1%;
+            margin-bottom: 5%;
+        }
+        .cal_month{
+            text-align: center;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #3E3A39;
+            margin: 1%;
+        }
+        .calender_table{
+            margin: 0 auto;
+            /*reset*/
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        .onevent{
+            height: 25px;
+            border-top: 1px solid #3e3a39;
+        }
+        .offevent{
+            height: 115px;
+            border-top: 1px solid #3e3a39;
+        }
+        .evnetdays_row{
+            border: none;
+            height: 15px;
+        }
+        .calender_table tr th{
+            width: 150px;
+            text-align: center;
+            border-bottom: 2px double #3e3a39;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #3E3A39;
+            border-right: 1px solid #3e3a39;
+        }
+        .calender_table tr th:last-child{
+            border-right: 0;
+        }
+        .calender_table tr td{
+            position: relative;/*↑ポップアップ表示用*/
+            width: 150px;
+            text-align: center;
+            vertical-align: top;
+            font-size: 16px;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            padding: 0;
+            color: #3E3A39;
+            border-right: 1px solid #3e3a39;
+        }
+        .calender_table tr td:last-child{
+            border-right: 0;
+        }
+        .calender_table tr td > a{
+            text-decoration: none;
+        }
+        .days > td{
+            padding-top: 1px;
+        }
+        #sunday{
+            color: #e06d71;
+        }
+        #saturday{
+            color: #7290be;
+        }
+        .eventdays{
+            pointer-events: auto;/* hover有効化 */
+            cursor: pointer;
+            text-decoration: none;
+            color: #3e3a39;
+            width: 100%;
+            height: 14px;
+            border-radius: 10px;
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: middle;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 10px;
+            overflow: hidden;
+        }
+        .days1{
+            background-color: #e06d71;
+        }
+        .days2{
+            background-color: #7290be;
+        }
+        .days3{
+            background-color: #efb2a2;
+        }
+        .days4{
+            background-color: #e9a767;
+        }
+        .days5{
+            background-color: #8daca9;
+        }
+        .days6{
+            background-color: #7290be;
+        }
+        .leftsolid{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .rightsolid{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        /*カレンダー　ポップアップ*/
+        .balloon {
+            pointer-events: none;/* hover無効化 */
+            position: absolute;
+            display: block;
+            visibility: hidden;
+            top: -113px;
+            left: 0px;
+            margin: 1.5em 0;
+            padding: 7px 10px;
+            width: max-content;
+            color: #3e3a39;
+            font-size: 16px;
+            background: #efeae9;
+            border-radius: 5px;
+            z-index: 10;
+            border: 1px solid #3e3a39;
+        }
+        .balloon p {
+            font-family: "Noto Sans JP";
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+        .bl_emphasis{
+            display: inline;
+            color: #3E3A39;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+        }
+        .ble1{
+            background-color: #e06d71;
+        }
+        .ble2{
+            background-color: #7290be;
+        }
+        .ble3{
+            background-color: #efb2a2;
+        }
+        .ble4{
+            background-color: #e9a767;
+        }
+        .ble5{
+            background-color: #8daca9;
+        }
+        .ble6{
+            background-color: #7290be;
+        }
+        .days1:hover ~.bl1,
+        .days2:hover ~.bl2,
+        .days3:hover ~.bl3,
+        .days4:hover ~.bl4,
+        .days5:hover ~.bl5,
+        .days6:hover ~.bl6{
+            visibility: visible;
+        }
+
+        /* カレンダー 凡例 */
+        .calender_example{
+            margin: 3%;
+        }
+        .cal_ex_flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .cal_ex_flex .eventdays{
+            display: inline;
+            width: 100px;
+            margin: auto 0;
+            margin-left: 40px;
+        }
+        .cal_ex_flex > h{
+            width: 200px;
+            color: #3E3A39;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        @media screen and (max-width: 1023px) {
+            .calender_table tr th{
+                font-size: 14px;
+            }
+            .calender_table tr td{
+                font-size: 14px;
+            }
+            .cal_ex_flex .eventdays{
+                width: 60px;
+            }
+            .bl1,
+            .bl2,
+            .bl3,
+            .bl4,
+            .bl5,
+            .bl6{
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // カレンダーポップアップ表示
+        var int = 0;
+        const eventNumber = 15;
+        const windowWidth = window.innerWidth;//　ウィンドウ幅
+        var balloon = document.getElementsByClassName('balloon');// ポップアップオブジェクト
+        var targetElement = document.getElementsByClassName('eventdays');//　コンテンツ座標
+
+        //マウス移動時
+        document.onmousemove = function(e) {
+            for(int = 0; int < eventNumber; ++int){
+                var blWidth = balloon[int].clientWidth;
+                var blposX = balloon[int].getBoundingClientRect().left;
+                var clientRect = targetElement[int].getBoundingClientRect();
+                var px = window.pageXOffset + clientRect.left;
+
+                if (0.5*blWidth >= e.pageX) {
+                    balloon[int].style.left = -px + "px";
+                } else if (windowWidth - e.pageX <= 0.5*blWidth) {
+                    balloon[int].style.left = (windowWidth - px - blWidth) + "px";
+                } else {
+                    balloon[int].style.left = (e.pageX - px - 0.5*blWidth) + "px";
+                }
+            }
+        }
+        //マウス離脱時
+        document.onmouseout = function(e) {
+            for(int = 0; int < eventNumber; ++int){
+                balloon[int].style.left = ``;
+            }
+        };
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //　スムーススクロール
+        const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+        scorrllLinks.forEach((scorrllLink) => {
+            scorrllLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                const hrefLink = scorrllLink.getAttribute("href");
+                const targetContent = document.getElementById(hrefLink.replace("#", ""));
+                const rectTop = targetContent.getBoundingClientRect().top;
+                const positionY = window.pageYOffset;
+                const viewheight = window.outerHeight;
+                if (windowWidth <= 1023) {
+                    var target = rectTop + positionY - 70;
+                } else {
+                    var target = rectTop + positionY - 90;
+                }
+                window.scrollTo({
+                top: target,
+                behavior: "smooth",
+                });
+            });
+        });
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // スクロール可能表示
+        const myTarget = document.querySelector('.is-target');
+        const mySwipeAble = document.querySelector('.swipe-able-container');
+        const mySwipeAbleIcon = document.querySelector('.swipe-able-icon');
+        makeObserver();
+        function makeObserver() {
+            let myObserver;
+            
+            const myOptions = {
+                root: null,
+                rootMargin: '0px 0px',
+                threshold: '0'
+            };
+            
+            myObserver = new IntersectionObserver(myIntersect, myOptions);
+            myObserver.observe(myTarget);
+        }
+        function myIntersect(entries, myObserver) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    mySwipeAble.classList.add('is-animation');
+                    mySwipeAbleIcon.classList.add('is-animation-move-icon');
+                } else {
+                    return;
+                }
+            });
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Swiper
+        const swiperSlides = document.getElementsByClassName('swiper-slide');
+        const breakPoint = 1023;
+        let mySwiper ;
+        let mySwiperBool ;
+
+        window.addEventListener('load',()=>{
+        if( breakPoint < window.innerWidth){
+            mySwiperBool = false;
+        }else{
+            createSwiper();
+            mySwiperBool = true;
+        }
+        },false);
+
+        window.addEventListener('resize',()=>{
+        if( breakPoint < window.innerWidth && mySwiperBool){
+            mySwiper.destroy(false,true);
+            mySwiperBool = false;
+        }else if( breakPoint >= window.innerWidth && !(mySwiperBool)){
+            createSwiper();
+            mySwiperBool = true;
+        }
+        },false);
+
+        function createSwiper (){
+            mySwiper = new Swiper('.ev_cover_container', {
+                loop: true, //最後に達したら先頭に戻る
+                slidesPerView: '1', //何枚表示するか
+                speed: 700, // スライドアニメーションのスピード（ミリ秒）
+                centeredSlides : true,
+                // 前後スライドボタンを表示
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: { //ページネーション表示の設定
+                    el: '.swiper-pagination', //ページネーション要素のクラス名
+                    clickable: true, //クリック可能にするか
+                    type: 'bullets', //ページネーションの種類
+                },
+            });
+        };
+        function click01() {
+            mySwiper.slideTo(1);
+        };
+        function click02() {
+            mySwiper.slideTo(2);
+        };
+        function click03() {
+            mySwiper.slideTo(3);
+        };
+        function click04() {
+            mySwiper.slideTo(4);
+        };
+        function click05() {
+            mySwiper.slideTo(5);
+        };
+        function click06() {
+            mySwiper.slideTo(6);
+        };
+    </script>
+
+    <!-- PhotoSwipe -->
+    <script src="../static/js/photoswipe.umd.min.js"></script>
+    <script src="../static/js/photoswipe-lightbox.umd.min.js"></script>
+    <script type="text/javascript">
+        var lightbox = new PhotoSwipeLightbox({
+            gallery: '#js-gallery',
+            children: 'a',
+            pswpModule: PhotoSwipe
+        });
+        lightbox.init();
+    </script>
 </body>
 </html>
