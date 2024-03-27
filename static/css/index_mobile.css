@@ -115,7 +115,7 @@
     .nav-item{
         padding: 10px 0;
     }
-    .nav-item a {
+    .nav-item > a{
         display: block;
         color:#b53240;
         font-size: 16px;
