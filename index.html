@@ -90,7 +90,7 @@
 <div class="news" id="news">
     <p>NEWS</p>
     <div class="news-container">
-    <!-- <div>Coming soon...</div> -->
+        <div class="news-bun"><a href="./pages/event.html">交流企画一次募集受付開始！</a></div>
     </div>
 </div>
 
@@ -196,12 +196,12 @@
             <a class="mobile_view" href="./pages/comingsoon.html">入会方法</a>
             <a href="./pages/event.html">新歓イベント</a>
             <ul class="footer_event_list">
-                <li><a href="./pages/event.html#sec1">coming soon</a></li>
-                <li><a href="./pages/event.html#sec2">coming soon</a></li>
-                <li><a href="./pages/event.html#sec3">coming soon</a></li>
-                <li><a href="./pages/event.html#sec4">coming soon</a></li>
-                <li><a href="./pages/event.html#sec5">coming soon</a></li>
-                <li><a href="./pages/event.html#sec6">coming soon</a></li>
+                <li><a href="./pages/event.html#sec1">対面説明会</a></li>
+                <li><a href="./pages/event.html#sec2">運スタ王</a></li>
+                <li><a href="./pages/event.html#sec3">もしも運スタになったらツアーズ</a></li>
+                <li><a href="./pages/event.html#sec4">ワセダの知らない世界</a></li>
+                <li><a href="./pages/event.html#sec5">運スタゆるトーク</a></li>
+                <li><a href="./pages/event.html#sec6">運スタ相談所</a></li>
             </ul>
             <a href="./pages/photogallery.html">運スタ写真館</a>
             <a href="./pages/question.html">よくある質問・お問い合わせ</a>
@@ -395,6 +395,7 @@ body{
 .news-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow-y: scroll;
 }
 .news-container::-webkit-scrollbar{
@@ -408,7 +409,18 @@ body{
     border-radius: 100px;
     background-color: #b53240;
 }
-
+.news-bun{
+    font-size: 20px;
+    font-family: 'Noto Sans JP';
+    font-weight: normal;
+    color: #3e3a39;
+    width: 90%;
+    margin-top: 10px;
+}
+.news-bun > a{
+    text-decoration: none;
+    color: #b53240;
+}
 /* はじめに */
 .hajimeni-container{
     margin-top: 100px;
@@ -527,6 +539,9 @@ body{
         margin-right: 3px;
         width: 20px;
         height: 20px;
+    }
+    .news-bun{
+        font-size: 16px;
     }
     /* はじめに */
     .hajimeni-container{
