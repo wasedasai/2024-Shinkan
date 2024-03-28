@@ -112,15 +112,13 @@
         align-items: center;
         justify-content: space-between;
     }
-
     .nav-item{
         padding: 10px 0;
     }
-
-    .nav-item a {
+    .nav-item > a{
         display: block;
         color:#b53240;
-        font-size: 20px;
+        font-size: 16px;
         padding: 0px 0 5px 0px;
         position: relative;
         display: inline-block;
@@ -130,7 +128,7 @@
     .nav-item a:hover {
         color: #b53240;
     }
-
+    
     .nav-item a::after {
         position: absolute;
         bottom: -3px;
@@ -147,7 +145,7 @@
     .nav-item a:hover::after {
         transform: scale(1, 1);
     }
-
+    
     input[type="checkbox"]:checked ~ .nav {
         right: 0;
     }
@@ -272,12 +270,13 @@
     }
 
     /* SquareLink */
-    .squarelink-red a {
+    .squarelink-red > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
-    
+
     .btn-red {
         font-family: 'Zen Kaku Gothic New';
         font-size: 18px;
@@ -299,7 +298,7 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
+
     .squarelink-red > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-red.png);
         transform: scale(0.06); /*花びらのサイズ*/
@@ -312,12 +311,13 @@
         top: 2px;
     }
 
-    .squarelink-blue a {
+    .squarelink-blue > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
-    
+
     .btn-blue {
         font-family: 'Zen Kaku Gothic New';
         font-size: 18px;
@@ -352,12 +352,13 @@
         top: 2px;
     }
 
-    .squarelink-sakura a {
+    .squarelink-sakura > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
-    
+
     .btn-sakura {
         font-family: 'Zen Kaku Gothic New';
         font-size: 18px;
@@ -392,10 +393,11 @@
         top: 2px;
     }
 
-    .squarelink-yellow a {
+    .squarelink-yellow > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
     
     .btn-yellow {
@@ -432,10 +434,11 @@
         top: 2px;
     }
 
-    .squarelink-green a {
+    .squarelink-green > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
     
     .btn-green {
@@ -472,10 +475,11 @@
         top: 2px;
     }
 
-    .squarelink-rose a {
+    .squarelink-rose > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
     
     .btn-rose {
@@ -499,7 +503,7 @@
         display: inline-block;
         line-height: 25px; /*もし2行以上にする場合はここでheight調整*/
     }
-    
+
     .squarelink-rose > a::before { /*3/12yaga > なんか干渉してそうだったので「>」をつけたら治った*/
         content: url(../img/hanabira3-rose.png);
         transform: scale(0.06); /*花びらのサイズ*/

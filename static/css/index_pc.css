@@ -129,7 +129,6 @@
     .nav-item{
         padding: 10px 0;
     }
-    
     .nav-item a {
         display: block;
         color:#b53240;
@@ -157,6 +156,7 @@
         transition: transform .3s;
     }
     
+   
     .nav-item a:hover::after {
         transform: scale(1, 1);
     }
@@ -217,7 +217,7 @@
         width: 58px;
     }
 
-    /* BlockTitle　blocktitleのhtmlは文字の前後に空白つけたままで！ */
+    /* BlockTitle */
     .blocktitle-red{
         color: #3e3a39;
         font-family: 'Zen Kaku Gothic New';
@@ -285,10 +285,11 @@
     }
 
     /* SquareLink */
-    .squarelink-red a {
+    .squarelink-red > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-red {
@@ -325,10 +326,11 @@
         top: -43px;
     }
 
-    .squarelink-blue a {
+    .squarelink-blue > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-blue {
@@ -365,10 +367,11 @@
         top: -43px;
     }
 
-    .squarelink-sakura a {
+    .squarelink-sakura > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-sakura {
@@ -405,10 +408,11 @@
         top: -43px;
     }
 
-    .squarelink-yellow a {
+    .squarelink-yellow > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-yellow {
@@ -445,10 +449,11 @@
         top: -43px;
     }
 
-    .squarelink-green a {
+    .squarelink-green > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-green {
@@ -485,10 +490,11 @@
         top: -43px;
     }
 
-    .squarelink-rose a {
+    .squarelink-rose > a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        background-color: #ffffff;
     }
 
     .btn-rose {
@@ -604,7 +610,7 @@
         width: fit-content;
         font-family: 'Zen Kaku Gothic NEW';
         font-size: 13px;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
         font-weight: 700;
     }
     .footer_event_list > li > a{ /*3/12yaga > 干渉防止のタグ制限*/
