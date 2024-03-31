@@ -129,7 +129,6 @@
     .nav-item{
         padding: 10px 0;
     }
-    
     .nav-item a {
         display: block;
         color:#b53240;
@@ -157,6 +156,7 @@
         transition: transform .3s;
     }
     
+   
     .nav-item a:hover::after {
         transform: scale(1, 1);
     }
@@ -610,7 +610,7 @@
         width: fit-content;
         font-family: 'Zen Kaku Gothic NEW';
         font-size: 13px;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
         font-weight: 700;
     }
     .footer_event_list > li > a{ /*3/12yaga > 干渉防止のタグ制限*/

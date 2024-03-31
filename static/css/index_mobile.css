@@ -112,15 +112,13 @@
         align-items: center;
         justify-content: space-between;
     }
-
     .nav-item{
         padding: 10px 0;
     }
-
-    .nav-item a {
+    .nav-item > a{
         display: block;
         color:#b53240;
-        font-size: 20px;
+        font-size: 16px;
         padding: 0px 0 5px 0px;
         position: relative;
         display: inline-block;
@@ -130,7 +128,7 @@
     .nav-item a:hover {
         color: #b53240;
     }
-
+    
     .nav-item a::after {
         position: absolute;
         bottom: -3px;
@@ -147,7 +145,7 @@
     .nav-item a:hover::after {
         transform: scale(1, 1);
     }
-
+    
     input[type="checkbox"]:checked ~ .nav {
         right: 0;
     }
