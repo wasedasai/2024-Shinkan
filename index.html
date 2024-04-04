@@ -78,7 +78,6 @@
     </div>
     
     <div class="top_slide_animation_gorigoripush"></div>
-    <div class="top_slide_animation_alter"></div>
     <img class="top_overlogo" src="./static/img/logotypeV_trans.png"></img>
     <a class="top_underarrow" href="#news"></a>
     <a class="top_underarrow2" href="#news"></a>
@@ -186,7 +185,7 @@
             <a href="./pages/schedule.html">運スタの1年</a>
             <a href="./pages/introduce.html">局紹介</a>
             <a class="mobile_none" href="./pages/staffreal.html">運スタのリアル</a>
-            <a class="mobile_none" href="./pages/ocmingsoon.html">入会方法</a>
+            <a class="mobile_none" href="./pages/comingsoon.html">入会方法</a>
         </div>
 
         <img class="footer_logo" src="./static/img/logotypeV_trans.png"></img>
@@ -197,7 +196,7 @@
             <a class="mobile_view" href="./pages/comingsoon.html">入会方法</a>
             <a href="./pages/event.html">新歓イベント</a>
             <ul class="footer_event_list">
-                <li><a href="./pages/event.html#sec1">対面説明会</a></li>
+                <li><a href="./pages/event.html?id=1">対面説明会</a></li>
                 <li><a href="./pages/event.html#sec2">運スタ王</a></li>
                 <li><a href="./pages/event.html#sec3">もしも運スタになったらツアーズ</a></li>
                 <li><a href="./pages/event.html#sec4">ワセダの知らない世界</a></li>
@@ -257,7 +256,7 @@ body{
     left: 0;
     margin: auto auto 20% auto;
     width: 30vw;
-    max-width: 400px;
+    max-width: 600px;
     aspect-ratio: 1/1;
     z-index: 11;
 }
@@ -299,10 +298,11 @@ body{
     bottom: 0;
     right: 0;
     top: 0;
-    margin: auto auto 15% auto;
+    margin: auto auto 20% auto;
     z-index: 10;
     content: "";
-    width: 40%;
+    width: 30%;
+    max-width: 600px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     opacity: 0;
@@ -347,13 +347,13 @@ body{
         transform: scale(0%);
     }
     20% {
-        transform: scale(80%);
-    }
-    80% {
         transform: scale(100%);
     }
+    80% {
+        transform: scale(130%);
+    }
     100% {
-        transform: scale(200%);
+        transform: scale(240%);
     }
 }
 
