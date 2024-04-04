@@ -35,6 +35,7 @@
         <div class="header-container">
             <div class="header-logo_pc">
             <a href="../index.html"><img src="../static/img/header-logo_pc.png"></a>
+
             </div>
             <div class="header-logo_sp">
             <a href="../index.html"><img src="../static/img/header-logo_sp.png"></a>
@@ -246,7 +247,7 @@
             <a href="../pages/schedule.html">運スタの1年</a>
             <a href="../pages/introduce.html">局紹介</a>
             <a class="mobile_none" href="../pages/staffreal.html">運スタのリアル</a>
-            <a class="mobile_none" href="../pages/comingsoon.html">入会方法</a>
+            <a class="mobile_none" href="../pages/howto.html">入会方法</a>
         </div>
 
         <img class="footer_logo" src="../static/img/logotypeV_trans.png"></img>
@@ -254,7 +255,7 @@
 
         <div class="footer_right_list">
             <a class="mobile_view" href="../pages/staffreal.html">運スタのリアル</a>
-            <a class="mobile_view" href="../pages/comingsoon.html">入会方法</a>
+            <a class="mobile_view" href="../pages/howto.html">入会方法</a>
             <a href="../pages/event.html">新歓イベント</a>
             <ul class="footer_event_list">
                 <li><a href="../pages/event.html#sec1">対面説明会</a></li>
@@ -308,11 +309,19 @@
 
 
 @media screen and (min-width:1024px){
+body{
+  background-color: #efeae9;
+}
 
 .katudoubun > .paragraph > a{
   text-decoration: none;
   font-weight: bold;
   color: #b53240;
+}
+.paragraph > a {
+  list-style-type: none;
+  color: #b53240;
+  font-weight: bold;
 }
 .txt-hide{display:none;}
 .txt-show{display:none;}
@@ -384,6 +393,7 @@ color:#b53240;
 display: flex;
 flex-direction: row;
 align-items: center;
+background-color: #fff;
 }
 .shozokubun{
     text-align: center;
@@ -409,7 +419,8 @@ width:90%;
 }
 
 .happi{
-    margin-top: 10%;
+    padding: 10%;
+    background-color: #fff;
 }
 
 .poto{
@@ -425,8 +436,9 @@ width:90%;
 }
 
 .reku{
-margin-top: 10%;
+padding: 10%;
 padding-bottom: 10%;
+background-color: #fff;
 }
 .rekubun{
     width: 40%;
@@ -478,7 +490,9 @@ padding-bottom: 10%;
 
 @media screen and (max-width:1024px){
 
-
+  body{
+  background-color: #efeae9;
+}
   #wrap > .paragraph{
     margin:0 50px;
   }
@@ -486,7 +500,11 @@ padding-bottom: 10%;
 .txt-hide{
 display: none;
 }
-
+.paragraph > a {
+  text-decoration: none;
+  color: #b53240;
+  font-weight: bold;
+}
 .for-sp  button.more {
   font-family: 'Noto Sans JP';
   font-weight: bolder;
@@ -545,7 +563,7 @@ content: "閉じる";
 
 
 .katudounaiyou{
-     
+        padding-top: 10%;
         margin-top: 10%;
         background-color: #fff;
 }
@@ -583,6 +601,7 @@ content: "閉じる";
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        background-color: #fff;
 
 
 }
@@ -619,7 +638,8 @@ content: "閉じる";
 }
 
 .happi{
-    margin-top: 10%;
+    padding: 10%;
+    background-color: #fff;
 }
 
 .poto{
@@ -635,8 +655,9 @@ content: "閉じる";
 }
 
 .reku{
-        margin-top: 10%;
+        padding-top: 10%;
         padding-bottom: 10%;
+        background-color: #fff;
 }
 .rekubun{
         width: 60%;
