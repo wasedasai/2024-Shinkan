@@ -124,7 +124,6 @@
             <div class="daihyo-box">
                 <img class="daihyo-pic" src="../static/img/samatasan.jpg">
                 <div class="accordion-area">
-
                     <div class="flower-box">
                         <img class="flower-img" src="../static/img/hana2-red.png">
                         <div class="paragraph flower-c">
@@ -144,7 +143,6 @@
                             </div>
                         </section>
                     </div>
-
                     <div class="flower-box">
                         <img class="flower-img" src="../static/img/hana2-red.png">
                         <div class="paragraph flower-c">
@@ -164,7 +162,6 @@
                             </div>
                         </section>
                     </div>
-
                     <div class="flower-box">
                         <img class="flower-img" src="../static/img/hana2-red.png">
                         <div class="paragraph flower-c">
@@ -203,7 +200,6 @@
                             </div>
                         </section>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -740,16 +736,62 @@
     background-color: #EFEAE9;
 }
 
-@media screen and (max-width:768px) { /*ここからスマホ版*/
-
-.sectiontitle {
-    padding: 40px 0 30px;
-}
-
 .child-box {
     text-align: center; /*グラフ下の文字を中央揃え*/
     display: flex;
     flex-wrap: wrap;
+}
+
+.child-box > .paragraph {
+    margin: 20px auto 40px; /*文字を中央に*/ /*SP版だけautoないと中央に揃わないんだけど何故..？*/
+}
+
+.daihyo-box {
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.daihyo-pic {
+    height: auto;
+    display: block; /*margin:autoをかけるためにブロック要素に*/
+}
+
+.real-teamQA {
+    background-color: #EFEAE9;
+    text-align: center; /*inline-blockの子要素(BlockTitle)を中央揃えするため*/
+}
+
+section > div > .paragraph {
+    padding-bottom: 0%; /*コンポーネントCSSをリセット*/
+}
+
+.allteam-name {
+    background: #E7DBD9;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-b {
+    text-align: center;
+    font-weight: bold;
+}
+
+.teamA {
+    text-align: center;
+    width: auto;
+}
+
+.staffreal-img {
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px) { /*ここからスマホ版*/
+
+.sectiontitle {
+    padding: 40px 0 30px;
 }
 
 .graph-title {
@@ -762,7 +804,6 @@
 }
 
 .child-box > .paragraph {
-    margin: 20px auto 40px; /*文字を中央に*/ /*SP版だけこれないと中央に揃わないんだけど何故..？*/
     padding: 0 30px;
 }
 
@@ -772,16 +813,12 @@
 
 .daihyo-box {
     width: 85%;
-    margin: auto;
     border-radius: 13px;
     border: 2px solid #B53240;
-    background-color: #ffffff;
 }
 
 .daihyo-pic {
     width: 90%;
-    height: auto;
-    display: block; /*margin:autoをかけるためにブロック要素に*/
     margin: 13px auto;
     border-radius: 13px;
     border: 2px solid #B53240;
@@ -866,38 +903,26 @@
     border-radius: 13px;
 }
 
-section > div > .paragraph {
-    padding-bottom: 0%; /*コンポーネントCSSをリセット*/
-}
-
 .last-daihyo-box {
     margin: 0 0 10px;
 }
 
 .real-teamQA {
-    background-color: #EFEAE9;
-    text-align: center; /*inline-blockの子要素(BlockTitle)を中央揃えするため*/
     padding-bottom: 30px;
 }
 
 .allteam-name {
     width: 76%;
-    background: #E7DBD9;
     padding: 1.2% 2% 1%;
-    margin: 0 auto;
     border-radius: 13px;
     border: 1px solid #B53240;
-
 }
 
 .center {
-    text-align: center;
     padding-top: 7px;
 }
 
 .center-b {
-    text-align: center;
-    font-weight: bold;
     margin: 20px 0 12px;
 }
 
@@ -931,8 +956,6 @@ section > div > .paragraph {
 }
 
 .teamA {
-    text-align: center;
-    width: auto;
     padding: 0 15px 20px;
 }
 
@@ -966,10 +989,6 @@ section > div > .paragraph {
     border: 3px solid #B53240;
     margin: 2vw 3vw;
 }
-
-.staffreal-img {
-    object-fit: cover;
-}
 } /*ここまでスマホ版*/
 
 @media screen and (min-width:768px) { /*ここからPC版*/
@@ -986,9 +1005,6 @@ section > div > .paragraph {
 }
 
 .child-box {
-    text-align: center; /*グラフ下の文字を中央揃え*/
-    display: flex;
-    flex-wrap: wrap;
     width: 50%;
 }
 
@@ -1002,22 +1018,14 @@ section > div > .paragraph {
     height: auto; /*なぜかimg縦横比が固定できないのでなくてもいいかも*/
 }
 
-.child-box > .paragraph {
-    margin: 20px auto 40px; /*文字を中央に*/ /*なんか、これ無くても中央に揃うんだけど何故..？*/
-}
-
 .daihyo-box {
     width: 80%;
-    margin: auto;
     border-radius: 20px;
     border: 5px solid #B53240;
-    background-color: #ffffff;
 }
 
 .daihyo-pic {
     width: 60%;
-    height: auto;
-    display: block; /*margin:autoをかけるためにブロック要素に*/
     margin: 80px auto;
     border-radius: 25px;
     border: 4px solid #B53240;
@@ -1039,10 +1047,6 @@ section > div > .paragraph {
     background-color: #E7DBD9;
 }
 
-section > div > .paragraph {
-    padding-bottom: 0%; /*コンポーネントCSSをリセット*/
-}
-
 .title {
     display: none;
 }
@@ -1058,28 +1062,17 @@ section > div > .paragraph {
 }
 
 .real-teamQA {
-    background-color: #EFEAE9;
-    text-align: center; /*inline-blockの子要素(BlockTitle)を中央揃えするため*/
     padding-bottom: 60px;
 }
 
 .allteam-name {
     width: 55%;
-    background: #E7DBD9;
     padding: 1.2% 5% 1%;
-    margin: 0 auto;
     border-radius: 25px;
     border: 3px solid #B53240;
-
-}
-
-.center {
-    text-align: center;
 }
 
 .center-b {
-    text-align: center;
-    font-weight: bold;
     margin: 30px 0 22px;
 }
 
@@ -1137,8 +1130,6 @@ section > div > .paragraph {
 }
 
 .teamA {
-    text-align: center;
-    width: auto;
     padding: 0 20px 20px;
 }
 
@@ -1147,11 +1138,6 @@ section > div > .paragraph {
     height: 21vw;
     overflow-y: auto;
 }
-
-.staffreal-img {
-    object-fit: cover;
-}
-
 }
 </style>
 
